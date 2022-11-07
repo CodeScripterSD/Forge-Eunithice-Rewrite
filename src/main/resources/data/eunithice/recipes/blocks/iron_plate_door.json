@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:iron_plate_block"
+    }
+  },
+  "result": {
+    "item": "eunithice:iron_plate_door",
+    "count":6
+  }
+}

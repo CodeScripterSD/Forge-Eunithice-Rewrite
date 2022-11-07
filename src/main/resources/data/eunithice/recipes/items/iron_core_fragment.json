@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:tier_one_hammer"
+    },
+    {
+      "item": "eunithice:heavy_compressed_iron_plate_block"
+    },
+    {
+      "item": "eunithice:heavy_compressed_iron_plate_block"
+    }
+  ],
+  "result": {
+    "item": "eunithice:iron_core_fragment",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ID",
+    " #I",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "I": {
+      "item": "eunithice:gold_plate"
+    },
+    "D": {
+      "item": "eunithice:iron_core"
+    }
+  },
+  "result": {
+    "item": "eunithice:tier_two_hammer",
+    "count": 1
+  }
+}

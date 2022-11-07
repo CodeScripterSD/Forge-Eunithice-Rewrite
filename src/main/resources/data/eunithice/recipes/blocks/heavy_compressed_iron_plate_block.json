@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IBI",
+    "P#P",
+    "IBI"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:compressed_iron_plate_block"
+    },
+    "P": {
+      "item": "eunithice:iron_plate"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "eunithice:heavy_compressed_iron_plate_block",
+    "count": 1
+  }
+}

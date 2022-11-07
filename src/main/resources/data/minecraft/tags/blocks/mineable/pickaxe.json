@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "eunithice:asphalt",
+    "eunithice:speed_infused_asphalt",
+    "eunithice:bounce_infused_asphalt",
+    "eunithice:honey_infused_asphalt",
+    "eunithice:iron_plate_block",
+    "eunithice:compressed_iron_plate_block",
+    "eunithice:heavy_compressed_iron_plate_block",
+    "eunithice:gold_plate_block",
+    "eunithice:compressed_gold_plate_block",
+    "eunithice:heavy_compressed_gold_plate_block",
+    "eunithice:diamond_plate_block",
+    "eunithice:compressed_diamond_plate_block",
+    "eunithice:heavy_compressed_diamond_plate_block"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "eunithice_plates",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "eunithice:tier_one_hammer"
+    }
+  ],
+  "result": {
+    "item": "eunithice:gold_plate",
+    "count": 4
+  }
+}

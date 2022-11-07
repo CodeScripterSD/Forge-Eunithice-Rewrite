@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "top": "eunithice:blocks/iron_plate_door_top",
+    "bottom": "eunithice:blocks/iron_plate_door_bottom"
+  }
+}

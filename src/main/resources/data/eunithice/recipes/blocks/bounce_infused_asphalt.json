@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "eunithice_asphalts",
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:speed_infused_asphalt"
+    },
+    "A": {
+      "item": "minecraft:slime_block"
+    }
+  },
+  "result": {
+    "item": "eunithice:bounce_infused_asphalt",
+    "count": 8
+  }
+}

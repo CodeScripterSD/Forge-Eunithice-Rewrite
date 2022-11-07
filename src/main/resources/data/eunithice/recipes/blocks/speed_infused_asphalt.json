@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "eunithice_asphalts",
+  "pattern": [
+    "###",
+    "#S#",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "eunithice:asphalt"
+    },
+    "#": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "eunithice:speed_infused_asphalt",
+    "count": 8
+  }
+}

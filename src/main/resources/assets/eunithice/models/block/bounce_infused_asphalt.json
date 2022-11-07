@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "eunithice:blocks/bounce_infused_asphalt"
+  }
+}

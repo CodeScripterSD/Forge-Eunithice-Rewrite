@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PIP",
+    "B#B",
+    "PIP"
+  ],
+  "key": {
+    "P": {
+      "item": "eunithice:iron_core_fragment"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "eunithice:compressed_iron_plate_block"
+    },
+    "#": {
+      "item": "eunithice:heavy_compressed_iron_plate_block"
+    }
+  },
+  "result": {
+    "item": "eunithice:iron_core"
+  }
+}

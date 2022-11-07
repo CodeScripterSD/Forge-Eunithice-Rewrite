@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IBI",
+    "P#P",
+    "IBI"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:compressed_gold_plate_block"
+    },
+    "P": {
+      "item": "eunithice:gold_plate"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "eunithice:heavy_compressed_gold_plate_block",
+    "count": 1
+  }
+}

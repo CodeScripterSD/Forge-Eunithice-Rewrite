@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "eunithice_asphalts",
+  "ingredients": [
+    {
+      "item": "eunithice:bounce_infused_asphalt"
+    }
+  ],
+  "result": {
+    "item": "eunithice:speed_infused_asphalt",
+    "count": 1
+  }
+}

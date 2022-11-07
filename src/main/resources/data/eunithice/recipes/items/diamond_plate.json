@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "eunithice_plates",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "eunithice:tier_two_hammer"
+    }
+  ],
+  "result": {
+    "item": "eunithice:diamond_plate",
+    "count": 2
+  }
+}
