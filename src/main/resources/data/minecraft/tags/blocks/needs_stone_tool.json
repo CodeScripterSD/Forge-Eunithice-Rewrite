@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "eunithice:iron_plate_block",
+    "eunithice:compressed_iron_plate_block",
+    "eunithice:heavy_compressed_iron_plate_block",
+    "eunithice:iron_plate_door",
+    "eunithice:iron_plate_trapdoor",
     "eunithice:asphalt",
     "eunithice:speed_infused_asphalt",
     "eunithice:bounce_infused_asphalt",

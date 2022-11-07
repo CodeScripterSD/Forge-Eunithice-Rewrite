@@ -79,14 +79,13 @@ public class EunithiceItems {
     public static final RegistryObject<HammerItem> TIER_ONE_HAMMER = ITEMS.register("tier_one_hammer", () ->
         new HammerItem(new Item.Properties()
                 .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                .defaultDurability(640),
-                "tooltip.eunithice.tier_one_hammer"
+                .defaultDurability(640)
         ));
 
     public static final RegistryObject<HammerItem> TIER_TWO_HAMMER = ITEMS.register("tier_two_hammer", () ->
             new HammerItem(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .defaultDurability(50)
+                    .defaultDurability(5120)
             ));
 
     public static final RegistryObject<HandheldEnderChest> HANDHELD_ENDER_CHEST = ITEMS.register("handheld_ender_chest",

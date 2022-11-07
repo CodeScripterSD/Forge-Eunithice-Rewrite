@@ -13,6 +13,8 @@
     "eunithice:heavy_compressed_gold_plate_block",
     "eunithice:diamond_plate_block",
     "eunithice:compressed_diamond_plate_block",
-    "eunithice:heavy_compressed_diamond_plate_block"
+    "eunithice:heavy_compressed_diamond_plate_block",
+    "eunithice:iron_plate_door",
+    "eunithice:iron_plate_trapdoor"
   ]
 }

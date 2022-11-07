@@ -2,7 +2,7 @@
   "container.eunithice.handheld_ender_chest": "Handheld Ender Chest",
 
   "item.eunithice.tier_one_hammer": "Iron Hammer",
-  "item.eunithice.tier_two_hammer": "Tier Two Hammer",
+  "item.eunithice.tier_two_hammer": "Extremely Heavy Iron Hammer",
   "item.eunithice.handheld_ender_chest": "Handheld Ender Chest",
   "item.eunithice.motion_controller": "Motion Inverter",
   "item.eunithice.burn_core": "Burn Core",
@@ -11,6 +11,7 @@
   "item.eunithice.iron_core_fragment": "Fragment of Iron",
   "item.eunithice.iron_core": "Iron Purity",
   "item.eunithice.gold_plate": "Gold Plate",
+  "item.eunithice.diamond_plate": "Diamond Plate",
   "item.eunithice.speed_gel": "Speed Gel",
   "item.eunithice.bounce_gel": "Bounce Gel",
 
@@ -56,8 +57,7 @@
   "tooltip.eunithice.meatball_soup":"\u00A77Who would eat this?",
   "tooltip.eunithice.vegetable_salad":"\u00A77Sounds good, but tastes awful.",
   "tooltip.eunithice.fruit_dish":"\u00A77What even is this?",
-  "tooltip.eunithice.tier_one_hammer": "\u00A77Tier One Hammer",
-  "tooltip.eunithice.burn_core":"\u00A77Burns for 800 ticks, 320 times",
+  "tooltip.eunithice.burn_core":"\u00A77Burns for 800 ticks, per durability",
   "tooltip.eunithice.extraction_core":"\u00A75\u00A7oIt is vibrating with an unknown energy",
 
   "block.eunithice.iron_plate_block": "Plated Iron Block",

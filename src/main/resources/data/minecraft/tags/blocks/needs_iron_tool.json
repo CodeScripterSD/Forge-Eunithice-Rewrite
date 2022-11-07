@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "eunithice:iron_plate_block",
-    "eunithice:compressed_iron_plate_block",
-    "eunithice:heavy_compressed_iron_plate_block",
     "eunithice:gold_plate_block",
     "eunithice:compressed_gold_plate_block",
     "eunithice:heavy_compressed_gold_plate_block",

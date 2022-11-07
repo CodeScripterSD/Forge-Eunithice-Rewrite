@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "eunithice:iron_plate_block"
+      "item": "eunithice:iron_plate"
     }
   },
   "result": {
     "item": "eunithice:iron_plate_door",
-    "count":6
+    "count": 1
   }
 }

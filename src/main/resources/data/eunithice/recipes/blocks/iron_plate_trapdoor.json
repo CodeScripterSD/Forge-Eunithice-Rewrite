@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "eunithice:iron_plate_block"
+      "item": "eunithice:iron_plate"
     }
   },
   "result": {
     "item": "eunithice:iron_plate_trapdoor",
-    "count":4
+    "count": 1
   }
 }

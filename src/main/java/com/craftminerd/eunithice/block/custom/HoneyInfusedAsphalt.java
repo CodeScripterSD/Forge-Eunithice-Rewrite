@@ -33,7 +33,7 @@ public class HoneyInfusedAsphalt extends Block {
     }
 
     public void fallOn(Level p_153362_, BlockState p_153363_, BlockPos p_153364_, Entity p_153365_, float p_153366_) {
-        p_153365_.causeFallDamage(p_153366_, 0.5F, DamageSource.FALL);
+        p_153365_.causeFallDamage(p_153366_, 0.1F, DamageSource.FALL);
     }
 
 }
