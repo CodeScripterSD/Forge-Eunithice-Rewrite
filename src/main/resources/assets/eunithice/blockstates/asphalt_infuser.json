@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eunithice:block/asphalt_infuser" },
+    "facing=east": { "model": "eunithice:block/asphalt_infuser", "y": 90 },
+    "facing=south": { "model": "eunithice:block/asphalt_infuser", "y": 180 },
+    "facing=west": { "model": "eunithice:block/asphalt_infuser", "y": 270 }
+  }
+}

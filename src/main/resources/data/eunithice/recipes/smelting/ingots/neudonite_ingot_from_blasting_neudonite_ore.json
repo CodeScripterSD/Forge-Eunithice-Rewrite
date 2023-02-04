@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "neudonite_ingot",
+  "ingredient": {
+    "item": "eunithice:neudonite_ore"
+  },
+  "result": "eunithice:neudonite_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

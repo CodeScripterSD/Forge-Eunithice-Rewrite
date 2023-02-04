@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:extraction_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    },
+    {
+      "item": "minecraft:deepslate_diamond_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:diamond",
+    "count": 3
+  }
+}

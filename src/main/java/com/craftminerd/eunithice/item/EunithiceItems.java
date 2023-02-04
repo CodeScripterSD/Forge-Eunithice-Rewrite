@@ -33,16 +33,40 @@ public class EunithiceItems {
                     .defaultDurability(1280)
             ));
 
+    // INGOTS
+
+    public static final RegistryObject<Item> NEUDONITE_INGOT = ITEMS.register("neudonite_ingot",
+            () -> new Item(new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+            ));
+
+    public static final RegistryObject<Item> LEURIUM_INGOT = ITEMS.register("leurium_ingot",
+            () -> new Item(new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+            ));
+
+    // ORES
+
+    public static final RegistryObject<Item> RAW_NEUDONITE = ITEMS.register("raw_neudonite",
+            () -> new Item(new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+            ));
+
     // INGREDIENTS
 
     public static final RegistryObject<Item> SPEED_GEL = ITEMS.register("speed_gel",
             () -> new Item(new Item.Properties()
-//                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
             ));
 
     public static final RegistryObject<Item> BOUNCE_GEL = ITEMS.register("bounce_gel",
             () -> new Item(new Item.Properties()
-//                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+            ));
+
+    public static final RegistryObject<Item> HONEY_GEL = ITEMS.register("honey_gel",
+            () -> new Item(new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
             ));
 
     public static final RegistryObject<Item> IRON_PLATE = ITEMS.register("iron_plate",
@@ -94,11 +118,15 @@ public class EunithiceItems {
                     .stacksTo(1)
             ));
 
+/*
     public static final RegistryObject<MotionController> MOTION_CONTROLLER = ITEMS.register("motion_controller",
             () -> new MotionController(new Item.Properties()
-//                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
                     .stacksTo(1)
             ));
+*/
+
+    // OLD
 
     public static final RegistryObject<ShovelItem> PLATED_IRON_SHOVEL = ITEMS.register("plated_iron_shovel",
             () -> new ShovelItem(EunithiceToolTiers.PLATED_IRON, 1.5f, -3.0f, new Item.Properties()
@@ -164,6 +192,7 @@ public class EunithiceItems {
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     // ARMOR
+    // OLD
 
     public static final RegistryObject<ArmorItem> PLATED_IRON_HELMET = ITEMS.register("plated_iron_helmet",
             () -> new ArmorItem(EunithiceArmorMaterials.PLATED_IRON, EquipmentSlot.HEAD, new Item.Properties()

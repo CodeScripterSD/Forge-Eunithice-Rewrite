@@ -1,0 +1,16 @@
+{
+  "type": "eunithice:asphalt_infuser",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:asphalt"
+    },
+    {
+      "item": "eunithice:honey_gel"
+    }
+  ],
+  "result": {
+    "item": "eunithice:honey_infused_asphalt",
+    "count": 8
+  }
+}

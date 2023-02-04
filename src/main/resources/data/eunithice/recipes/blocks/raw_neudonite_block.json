@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:raw_neudonite"
+    }
+  },
+  "result": {
+    "item": "eunithice:raw_neudonite_block",
+    "count": 1
+  }
+}

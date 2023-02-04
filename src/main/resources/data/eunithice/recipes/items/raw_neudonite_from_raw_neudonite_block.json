@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:raw_neudonite_block"
+    }
+  ],
+  "result": {
+    "item": "eunithice:raw_neudonite",
+    "count": 9
+  }
+}

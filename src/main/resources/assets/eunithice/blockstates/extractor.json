@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eunithice:block/extractor" },
+    "facing=east": { "model": "eunithice:block/extractor", "y": 90 },
+    "facing=south": { "model": "eunithice:block/extractor", "y": 180 },
+    "facing=west": { "model": "eunithice:block/extractor", "y": 270 }
+  }
+}

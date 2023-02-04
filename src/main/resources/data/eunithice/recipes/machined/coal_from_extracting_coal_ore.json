@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:extraction_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    },
+    {
+      "item": "minecraft:coal_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:coal",
+    "count": 3
+  }
+}

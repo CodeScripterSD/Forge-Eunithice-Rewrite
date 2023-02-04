@@ -1,6 +1,10 @@
 {
   "container.eunithice.handheld_ender_chest": "Handheld Ender Chest",
 
+  "item.eunithice.neudonite_ingot": "Neudonite Ingot",
+  "item.eunithice.raw_neudonite": "Raw Neudonite",
+  "item.eunithice.leurium_ingot": "Leurium Ingot",
+
   "item.eunithice.tier_one_hammer": "Iron Hammer",
   "item.eunithice.tier_two_hammer": "Extremely Heavy Iron Hammer",
   "item.eunithice.handheld_ender_chest": "Handheld Ender Chest",
@@ -14,6 +18,7 @@
   "item.eunithice.diamond_plate": "Diamond Plate",
   "item.eunithice.speed_gel": "Speed Gel",
   "item.eunithice.bounce_gel": "Bounce Gel",
+  "item.eunithice.honey_gel": "Honey Gel",
 
   "item.eunithice.plated_iron_sword": "Plated Iron Sword",
   "item.eunithice.plated_iron_pickaxe": "Plated Iron Pickaxe",
@@ -75,6 +80,15 @@
   "block.eunithice.honey_infused_asphalt": "Honey Infused Asphalt Block",
   "block.eunithice.iron_plate_door": "Plated Iron Door",
   "block.eunithice.iron_plate_trapdoor": "Plated Iron Trapdoor",
+
+  "block.eunithice.raw_neudonite_block": "Block of Raw Neudonite",
+  "block.eunithice.neudonite_block": "Neudonite Block",
+  "block.eunithice.neudonite_ore": "Neudonite Ore",
+
+  "block.eunithice.asphalt_infuser":"Asphalt Infuser",
+  "block_entity.eunithice.display_name.asphalt_infuser": "Asphalt Infuser",
+  "block.eunithice.extractor":"Extractor",
+  "block_entity.eunithice.display_name.extractor": "Extractor",
 
   "enchantment.eunithice.withered_thorns": "Withered Thorns",
 

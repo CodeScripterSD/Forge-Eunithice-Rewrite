@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:extraction_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    },
+    {
+      "item": "minecraft:copper_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:copper_ingot",
+    "count": 3
+  }
+}

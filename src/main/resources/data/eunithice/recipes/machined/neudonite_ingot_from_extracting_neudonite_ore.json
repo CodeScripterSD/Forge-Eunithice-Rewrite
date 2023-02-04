@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:extraction_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    },
+    {
+      "item": "eunithice:neudonite_ore"
+    }
+  ],
+  "result": {
+    "item": "eunithice:neudonite_ingot",
+    "count": 3
+  }
+}

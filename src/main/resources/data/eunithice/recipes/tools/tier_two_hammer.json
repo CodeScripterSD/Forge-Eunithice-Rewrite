@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "minecraft:iron_ingot"
     },
     "I": {
-      "item": "eunithice:gold_plate"
+      "item": "eunithice:neudonite_ingot"
     },
     "D": {
-      "item": "eunithice:iron_core"
+      "item": "eunithice:iron_plate"
     }
   },
   "result": {

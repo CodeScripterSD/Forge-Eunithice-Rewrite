@@ -6,7 +6,7 @@
       "item": "minecraft:gold_ingot"
     },
     {
-      "item": "eunithice:tier_one_hammer"
+      "tag": "eunithice:hammers"
     }
   ],
   "result": {

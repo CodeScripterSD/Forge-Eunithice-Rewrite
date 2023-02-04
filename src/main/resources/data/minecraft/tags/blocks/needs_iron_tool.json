@@ -6,6 +6,10 @@
     "eunithice:heavy_compressed_gold_plate_block",
     "eunithice:diamond_plate_block",
     "eunithice:compressed_diamond_plate_block",
-    "eunithice:heavy_compressed_diamond_plate_block"
+    "eunithice:heavy_compressed_diamond_plate_block",
+    "eunithice:asphalt_infuser",
+    "eunithice:extractor",
+    "eunithice:neudonite_ore",
+    "eunithice:neudonite_block"
   ]
 }
