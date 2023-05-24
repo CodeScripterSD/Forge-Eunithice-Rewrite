@@ -10,7 +10,7 @@
       "item": "minecraft:diamond_block"
     },
     "Q": {
-      "item": "eunithice:tier_one_hammer"
+      "tag": "eunithice:hammers"
     },
     "?": {
       "item": "eunithice:gold_plate_block"

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:neudonite_ingot"
+    }
+  },
+  "result": {
+    "item": "eunithice:neudonite_helmet"
+  }
+}

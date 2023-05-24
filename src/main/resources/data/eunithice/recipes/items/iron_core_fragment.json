@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "eunithice:tier_one_hammer"
+      "tag": "eunithice:hammers"
     },
     {
       "item": "eunithice:heavy_compressed_iron_plate_block"

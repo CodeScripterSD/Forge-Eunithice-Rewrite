@@ -2,6 +2,7 @@ package com.craftminerd.eunithice.item.tiers;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
+import com.craftminerd.eunithice.item.EunithiceItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -12,7 +13,9 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum EunithiceArmorMaterials implements ArmorMaterial {
-
+    NEUDONITE("neudonite",18, new int[] { 2, 6, 6, 2 }, 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
+        return Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get());
+    }),
     PLATED_IRON("plated_iron",27, new int[] { 3, 6, 7, 3 }, 20, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
         return Ingredient.of(EunithiceBlocks.PLATED_IRON_BLOCK.get());
     }),

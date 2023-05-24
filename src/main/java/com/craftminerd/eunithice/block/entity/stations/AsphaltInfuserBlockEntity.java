@@ -162,7 +162,11 @@ public class AsphaltInfuserBlockEntity extends BlockEntity implements MenuProvid
                     if (match.get().getIgnoreDurability()) {
                         entityItemHandler.extractItem(0, 1, false);
                     } else {
-                        entityItemHandler.getStackInSlot(0).hurt(1, new Random(), null);
+                        if (entityItemHandler.getStackInSlot(0).getDamageValue() +1 >= entityItemHandler.getStackInSlot(0).getMaxDamage()) {
+                            entityItemHandler.extractItem(0, 1, false);
+                        } else {
+                            entityItemHandler.getStackInSlot(0).hurt(1, new Random(), null);
+                        }
                     }
                 } else {
                     entityItemHandler.extractItem(0, 1, false);
@@ -173,7 +177,11 @@ public class AsphaltInfuserBlockEntity extends BlockEntity implements MenuProvid
                     if (match.get().getIgnoreDurability()) {
                         entityItemHandler.extractItem(1, 1, false);
                     } else {
-                        entityItemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+                        if (entityItemHandler.getStackInSlot(1).getDamageValue() +1 >= entityItemHandler.getStackInSlot(1).getMaxDamage()) {
+                            entityItemHandler.extractItem(1, 1, false);
+                        } else {
+                            entityItemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+                        }
                     }
                 } else {
                     entityItemHandler.extractItem(1, 1, false);

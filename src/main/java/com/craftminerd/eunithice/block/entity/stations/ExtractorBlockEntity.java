@@ -3,7 +3,6 @@ package com.craftminerd.eunithice.block.entity.stations;
 import com.craftminerd.eunithice.block.entity.EunithiceBlockEntities;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
 import com.craftminerd.eunithice.screen.ExtractorMenu;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +15,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -163,7 +161,12 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                     if (match.get().getIgnoreDurability()) {
                         entityItemHandler.extractItem(0, 1, false);
                     } else {
-                        entityItemHandler.getStackInSlot(0).hurt(1, new Random(), null);
+                        if (entityItemHandler.getStackInSlot(0).getDamageValue() +1 >= entityItemHandler.getStackInSlot(0).getMaxDamage()) {
+                            entityItemHandler.extractItem(0, 1, false);
+                        } else {
+                            entityItemHandler.getStackInSlot(0).hurt(1, new Random(), null);
+                        }
+
                     }
                 } else {
                     entityItemHandler.extractItem(0, 1, false);
@@ -174,7 +177,11 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                     if (match.get().getIgnoreDurability()) {
                         entityItemHandler.extractItem(1, 1, false);
                     } else {
-                        entityItemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+                        if (entityItemHandler.getStackInSlot(1).getDamageValue() +1 >= entityItemHandler.getStackInSlot(1).getMaxDamage()) {
+                            entityItemHandler.extractItem(1, 1, false);
+                        } else {
+                            entityItemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+                        }
                     }
                 } else {
                     entityItemHandler.extractItem(1, 1, false);
@@ -185,7 +192,11 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                     if (match.get().getIgnoreDurability()) {
                         entityItemHandler.extractItem(2, 1, false);
                     } else {
-                        entityItemHandler.getStackInSlot(2).hurt(1, new Random(), null);
+                        if (entityItemHandler.getStackInSlot(2).getDamageValue() +1 >= entityItemHandler.getStackInSlot(2).getMaxDamage()) {
+                            entityItemHandler.extractItem(2, 1, false);
+                        } else {
+                            entityItemHandler.getStackInSlot(2).hurt(1, new Random(), null);
+                        }
                     }
                 } else {
                     entityItemHandler.extractItem(2, 1, false);

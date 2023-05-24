@@ -1,4 +1,4 @@
-# Forge Eunithice 1.18.2-0.0.2
+# Forge Eunithice 0.0.3-1.18.2
 
 A Forge 1.18.2 Minecraft Mod
 
@@ -7,6 +7,29 @@ _Note: Every single thing is subject to change_
 _Note 2: You will need a lot of resources to progress in this mod._
 
 
+## Version 0.0.3
+- Removed recipes for Iron/Gold/Diamond plated tool sets and armor
+  - Planned removal of features entirely
+- Added Neudonite Tools and Armor
+- Added new Effect, "Weakened"
+  - Does nothing for now
+- Added Serrated Blade
+  - Each hit adds a stack of Weakened effect
+  - Deals extra damage depending on how many stacks of Weakened are on the tartet
+- Added functionality to Gels
+  - Right click Gel on Asphalt turns the asphalt into the gel's infuse type
+  - Added durability (8 uses)
+  - Tweaked recipe in Asphalt Infuser
+    - 1 Durability and 1 Asphalt creates 2 Infused Asphalt of the Gel's type
+- Fixed a bug in Extractor & Asphalt Infuser
+  - Previously would use a durability item past 0, leading to negative values
+- Fixed some recipes that use the tier_one_hammer to use all tiers of hammers
+- Added Stone Door and Trapdoor
+- Changed hammer durability values
+  - Tier 1 from 640 to 128
+  - Tier 2 from 5120 to 1024
+- Changed recipe for Speed Imbued Asphalt to mimic the other Infused variant's recipes
+
 ## Version 0.0.2
 - Made Revival Sandwich less overpowered
   - Regeneration 3 for 40 seconds
@@ -14,6 +37,10 @@ _Note 2: You will need a lot of resources to progress in this mod._
   - Fire Resistance for 6 minutes
   - Absorption 5 for 2 minutes
 - Iron Core is obsolete
+- Added 3 "Gels"
+  - [Honey Gel], [Bounce Gel], [Speed Gel] (Textures will be added in a later update)
+  - Used in Asphalt Infuser to create Infused variants of Asphalt
+
 - Added a new Ore, Neudonite
   - Used in some recipes
   - Found (Hopefully) in a range of Y=64 to Y=-64, Becoming increasingly more common closer to -64 (Only spawns below Y=0 if it can replace stone; no Deepslate version)
@@ -29,10 +56,10 @@ _Note 2: You will need a lot of resources to progress in this mod._
     - Uses Iron Ingots instead of Sticks
     - Uses Iron Plate instead of Iron Core
 - Added crafting stations (Models are placeholder, old models from earlier attempts at Eunithice)
-  - Gel Mixer
-    - Turns [Honey Block], [Slime Block], [Sugar], into [Honey Gel], [Bounce Gel], [Speed Gel] (Textures will be added in a later update)
   - Asphalt Infuser
     - Apply gels to asphalt blocks
+  - Extractor
+    - Use Cores and Hammers to extract resources
 - Crafting Station Recipes
   - Asphalt from extracting Honey, Bounce, or Speed Infused variants
   - Charcoal
@@ -64,7 +91,6 @@ _Note 2: You will need a lot of resources to progress in this mod._
     - Infusing Asphalt with Honey Gel -> 8 Honey Infused Asphalt
   - Speed Infused Asphalt
     - Infusing Asphalt with Speed Gel -> 8 Speed Infused Asphalt
-- Added Leurium Ingot (Not Yet Finished)
 
 ## Version 0.0.1
 

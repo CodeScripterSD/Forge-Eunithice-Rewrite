@@ -10,7 +10,7 @@
       "item": "minecraft:gold_block"
     },
     "C": {
-      "item": "eunithice:tier_one_hammer"
+      "tag": "eunithice:hammers"
     },
     "O": {
       "item": "minecraft:obsidian"

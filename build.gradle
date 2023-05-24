@@ -18,7 +18,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-version = '0.0.2-1.18.2'
+version = '0.0.3-1.18.2'
 group = 'com.craftminerd.eunithice' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'eunithice'
 
@@ -147,11 +147,11 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
-    maven {
-        // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
+//    maven {
+//        // location of the maven that hosts JEI files
+//        name = "Progwml6 maven"
+//        url = "https://dvs1.progwml6.com/files/maven/"
+//    }
     maven {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"

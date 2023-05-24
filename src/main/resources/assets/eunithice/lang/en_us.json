@@ -1,9 +1,11 @@
 {
   "container.eunithice.handheld_ender_chest": "Handheld Ender Chest",
 
+  "effect.eunithice.weakened": "Weakened",
+
   "item.eunithice.neudonite_ingot": "Neudonite Ingot",
   "item.eunithice.raw_neudonite": "Raw Neudonite",
-  "item.eunithice.leurium_ingot": "Leurium Ingot",
+  "item.eunithice.leuridium_ingot": "Leuridium Ingot",
 
   "item.eunithice.tier_one_hammer": "Iron Hammer",
   "item.eunithice.tier_two_hammer": "Extremely Heavy Iron Hammer",
@@ -50,6 +52,18 @@
   "item.eunithice.plated_diamond_leggings": "Plated Diamond Leggings",
   "item.eunithice.plated_diamond_boots": "Plated Diamond Boots",
 
+  "item.eunithice.neudonite_shovel": "Neudonite Shovel",
+  "item.eunithice.neudonite_hoe": "Neudonite Hoe",
+  "item.eunithice.neudonite_axe": "Neudonite Axe",
+  "item.eunithice.neudonite_pickaxe": "Neudonite Pickaxe",
+  "item.eunithice.neudonite_sword": "Neudonite Sword",
+  "item.eunithice.neudonite_helmet": "Neudonite Helmet",
+  "item.eunithice.neudonite_chestplate": "Neudonite Chestplate",
+  "item.eunithice.neudonite_leggings": "Neudonite Leggings",
+  "item.eunithice.neudonite_boots": "Neudonite Boots",
+
+  "item.eunithice.serrated_blade": "Serrated Blade",
+
   "block.eunithice.leurite_crop":"Leurite Seeds",
   "item.eunithice.leurite_grains":"Leurite Grains",
   "item.eunithice.meatball_soup":"Meatball Soup",
@@ -92,5 +106,9 @@
 
   "enchantment.eunithice.withered_thorns": "Withered Thorns",
 
-  "itemGroup.eunithice": "Eunithice Items"
+  "itemGroup.eunithice": "Eunithice Items",
+
+
+  "block.eunithice.stone_trapdoor":"Stone Trapdoor",
+  "block.eunithice.stone_door":"Stone Door"
 }

@@ -2,11 +2,7 @@ package com.craftminerd.eunithice.item;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
-import com.craftminerd.eunithice.item.custom.BurnCore;
-import com.craftminerd.eunithice.item.custom.HammerItem;
-import com.craftminerd.eunithice.item.custom.HandheldEnderChest;
-import com.craftminerd.eunithice.item.custom.MotionController;
-import com.craftminerd.eunithice.item.custom.ExtractionCore;
+import com.craftminerd.eunithice.item.custom.*;
 import com.craftminerd.eunithice.item.custom.foods.*;
 import com.craftminerd.eunithice.item.tiers.EunithiceArmorMaterials;
 import com.craftminerd.eunithice.item.tiers.EunithiceToolTiers;
@@ -55,18 +51,24 @@ public class EunithiceItems {
     // INGREDIENTS
 
     public static final RegistryObject<Item> SPEED_GEL = ITEMS.register("speed_gel",
-            () -> new Item(new Item.Properties()
+            () -> new GelItem(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .defaultDurability(4),
+                    EunithiceBlocks.SPEED_INFUSED_ASPHALT.get()
             ));
 
     public static final RegistryObject<Item> BOUNCE_GEL = ITEMS.register("bounce_gel",
-            () -> new Item(new Item.Properties()
+            () -> new GelItem(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .defaultDurability(4),
+                    EunithiceBlocks.BOUNCE_INFUSED_ASPHALT.get()
             ));
 
     public static final RegistryObject<Item> HONEY_GEL = ITEMS.register("honey_gel",
-            () -> new Item(new Item.Properties()
+            () -> new GelItem(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .defaultDurability(4),
+                    EunithiceBlocks.HONEY_INFUSED_ASPHALT.get()
             ));
 
     public static final RegistryObject<Item> IRON_PLATE = ITEMS.register("iron_plate",
@@ -103,13 +105,13 @@ public class EunithiceItems {
     public static final RegistryObject<HammerItem> TIER_ONE_HAMMER = ITEMS.register("tier_one_hammer", () ->
         new HammerItem(new Item.Properties()
                 .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                .defaultDurability(640)
+                .defaultDurability(128)
         ));
 
     public static final RegistryObject<HammerItem> TIER_TWO_HAMMER = ITEMS.register("tier_two_hammer", () ->
             new HammerItem(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .defaultDurability(5120)
+                    .defaultDurability(1024)
             ));
 
     public static final RegistryObject<HandheldEnderChest> HANDHELD_ENDER_CHEST = ITEMS.register("handheld_ender_chest",
@@ -281,4 +283,51 @@ public class EunithiceItems {
     public static final RegistryObject<BlockItem> LEURITE_SEEDS = ITEMS.register("leurite_seeds",
             () -> new BlockItem(EunithiceBlocks.LEURITE.get(), new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    // WEAPONS
+
+
+    public static final RegistryObject<SerratedBlade> SERRATED_BLADE = ITEMS.register("serrated_blade",
+            () -> new SerratedBlade(EunithiceToolTiers.DRIPSTONE, 3, -2.4f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    //NEUDONITE GEAR
+
+    public static final RegistryObject<ShovelItem> NEUDONITE_SHOVEL = ITEMS.register("neudonite_shovel",
+            () -> new ShovelItem(EunithiceToolTiers.NEUDONITE, 1.5f, -3.0f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<PickaxeItem> NEUDONITE_PICKAXE = ITEMS.register("neudonite_pickaxe",
+            () -> new PickaxeItem(EunithiceToolTiers.NEUDONITE, 1, -2.8f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<AxeItem> NEUDONITE_AXE = ITEMS.register("neudonite_axe",
+            () -> new AxeItem(EunithiceToolTiers.NEUDONITE, 7f, -3.2f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<HoeItem> NEUDONITE_HOE = ITEMS.register("neudonite_hoe",
+            () -> new HoeItem(EunithiceToolTiers.NEUDONITE, 0, -2.5f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<SwordItem> NEUDONITE_SWORD = ITEMS.register("neudonite_sword",
+            () -> new SwordItem(EunithiceToolTiers.NEUDONITE, 3, -2.4f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> NEUDONITE_HELMET = ITEMS.register("neudonite_helmet",
+            () -> new ArmorItem(EunithiceArmorMaterials.NEUDONITE, EquipmentSlot.HEAD, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> NEUDONITE_CHESTPLATE = ITEMS.register("neudonite_chestplate",
+            () -> new ArmorItem(EunithiceArmorMaterials.NEUDONITE, EquipmentSlot.CHEST, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> NEUDONITE_LEGGINGS = ITEMS.register("neudonite_leggings",
+            () -> new ArmorItem(EunithiceArmorMaterials.NEUDONITE, EquipmentSlot.LEGS, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> NEUDONITE_BOOTS = ITEMS.register("neudonite_boots",
+            () -> new ArmorItem(EunithiceArmorMaterials.NEUDONITE, EquipmentSlot.FEET, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
+
 }

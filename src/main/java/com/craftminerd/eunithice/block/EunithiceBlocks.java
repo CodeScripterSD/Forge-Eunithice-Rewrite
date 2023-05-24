@@ -199,4 +199,23 @@ public class EunithiceBlocks {
     public static final RegistryObject<Extractor> EXTRACTOR = registerBlock("extractor",
             () -> new Extractor(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             Eunithice.EUNITHICE_ITEMS_TAB);
+
+
+    public static final RegistryObject<DoorBlock> STONE_DOOR = registerBlock("stone_door",
+            () -> new DoorBlock(BlockBehaviour.Properties
+                    .of(Material.STONE, MaterialColor.STONE)
+                    .strength(1.5F, 6.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+                    .noOcclusion()),
+            Eunithice.EUNITHICE_ITEMS_TAB);
+
+    public static final RegistryObject<TrapDoorBlock> STONE_TRAPDOOR = registerBlock("stone_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties
+                    .of(Material.STONE, MaterialColor.STONE)
+                    .strength(1.5F, 6.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+                    .noOcclusion()),
+            Eunithice.EUNITHICE_ITEMS_TAB);
 }
