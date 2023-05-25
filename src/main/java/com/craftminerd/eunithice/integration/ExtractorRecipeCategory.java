@@ -32,7 +32,7 @@ public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe>
 
     @Override
     public RecipeType<ExtractorRecipe> getRecipeType() {
-        return null;
+        return JEIEunithicePlugin.EXTRACTION;
     }
 
     @Override

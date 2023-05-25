@@ -31,7 +31,7 @@ public class AsphaltInfuserRecipeCategory implements IRecipeCategory<AsphaltInfu
 
     @Override
     public RecipeType<AsphaltInfuserRecipe> getRecipeType() {
-        return null;
+        return JEIEunithicePlugin.ASPHALT_INFUSER;
     }
 
     @Override
