@@ -10,9 +10,9 @@ import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
+import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -27,12 +27,17 @@ public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe>
 
     public ExtractorRecipeCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 23, 20, 130, 44);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(EunithiceBlocks.EXTRACTOR.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EunithiceBlocks.EXTRACTOR.get()));
+    }
+
+    @Override
+    public RecipeType<ExtractorRecipe> getRecipeType() {
+        return null;
     }
 
     @Override
     public Component getTitle() {
-        return new TranslatableComponent("block_entity.eunithice.display_name.extractor");
+        return Component.translatable("block_entity.eunithice.display_name.extractor");
     }
     @Override
     public IDrawable getBackground() {
@@ -42,14 +47,14 @@ public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe>
     public IDrawable getIcon() {
         return this.icon;
     }
-    @Override
-    public ResourceLocation getUid() {
-        return UID;
-    }
-    @Override
-    public Class<? extends ExtractorRecipe> getRecipeClass() {
-        return ExtractorRecipe.class;
-    }
+//    @Override
+//    public ResourceLocation getUid() {
+//        return UID;
+//    }
+//    @Override
+//    public Class<? extends ExtractorRecipe> getRecipeClass() {
+//        return ExtractorRecipe.class;
+//    }
 
     @Override
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull ExtractorRecipe recipe, @Nonnull IFocusGroup focusGroup) {

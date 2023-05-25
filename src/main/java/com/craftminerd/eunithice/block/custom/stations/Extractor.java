@@ -79,7 +79,7 @@ public class Extractor extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof ExtractorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (ExtractorBlockEntity)entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (ExtractorBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Our container provider is missing!");
             }

@@ -35,6 +35,7 @@ public class ExtractorRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
+        if (pLevel.isClientSide()) return false;
         StackedContents stackedcontents = new StackedContents();
         java.util.List<ItemStack> inputs = new java.util.ArrayList<>();
         int i = 0;
@@ -130,21 +131,21 @@ public class ExtractorRecipe implements Recipe<SimpleContainer> {
             buf.writeItem(recipe.getResultItem());
         }
 
-        @Override
-        public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-            return INSTANCE;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getRegistryName() {
-            return ID;
-        }
-
-        @Override
-        public Class<RecipeSerializer<?>> getRegistryType() {
-            return Serializer.castClass(RecipeSerializer.class);
-        }
+//        @Override
+//        public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
+//            return INSTANCE;
+//        }
+//
+//        @Nullable
+//        @Override
+//        public ResourceLocation getRegistryName() {
+//            return ID;
+//        }
+//
+//        @Override
+//        public Class<RecipeSerializer<?>> getRegistryType() {
+//            return Serializer.castClass(RecipeSerializer.class);
+//        }
 
         private static <G> Class<G> castClass(Class<?> cls) {
             return (Class<G>)cls;

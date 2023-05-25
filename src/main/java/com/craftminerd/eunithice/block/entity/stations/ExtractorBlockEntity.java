@@ -7,7 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -74,7 +74,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("block_entity.eunithice.display_name.extractor");
+        return Component.translatable("block_entity.eunithice.display_name.extractor");
     }
 
     @Nullable
@@ -164,7 +164,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                         if (entityItemHandler.getStackInSlot(0).getDamageValue() +1 >= entityItemHandler.getStackInSlot(0).getMaxDamage()) {
                             entityItemHandler.extractItem(0, 1, false);
                         } else {
-                            entityItemHandler.getStackInSlot(0).hurt(1, new Random(), null);
+                            entityItemHandler.getStackInSlot(0).hurt(1, RandomSource.create(), null);
                         }
 
                     }
@@ -180,7 +180,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                         if (entityItemHandler.getStackInSlot(1).getDamageValue() +1 >= entityItemHandler.getStackInSlot(1).getMaxDamage()) {
                             entityItemHandler.extractItem(1, 1, false);
                         } else {
-                            entityItemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+                            entityItemHandler.getStackInSlot(1).hurt(1, RandomSource.create(), null);
                         }
                     }
                 } else {
@@ -195,7 +195,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                         if (entityItemHandler.getStackInSlot(2).getDamageValue() +1 >= entityItemHandler.getStackInSlot(2).getMaxDamage()) {
                             entityItemHandler.extractItem(2, 1, false);
                         } else {
-                            entityItemHandler.getStackInSlot(2).hurt(1, new Random(), null);
+                            entityItemHandler.getStackInSlot(2).hurt(1, RandomSource.create(), null);
                         }
                     }
                 } else {

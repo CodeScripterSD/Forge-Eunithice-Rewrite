@@ -1,5 +1,6 @@
 package com.craftminerd.eunithice.item.custom;
 
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -7,14 +8,18 @@ import java.util.Random;
 
 public class CoreType extends Item {
 
-    Random random = new Random();
-
     public CoreType(Properties pProperties) {
         super(pProperties);
     }
 
+//    @Override
+//    public boolean hasContainerItem(ItemStack stack) {
+//        return true;
+//    }
+
+
     @Override
-    public boolean hasContainerItem(ItemStack stack) {
+    public boolean hasCraftingRemainingItem(ItemStack stack) {
         return true;
     }
 
@@ -32,9 +37,17 @@ public class CoreType extends Item {
         return false;
     }
 
+//    @Override
+//    public ItemStack getContainerItem(ItemStack itemstack) {
+//        ItemStack stack = itemstack.copy();
+//        hurtItem(stack);
+//        return stack;
+//    }
+
+
     @Override
-    public ItemStack getContainerItem(ItemStack itemstack) {
-        ItemStack stack = itemstack.copy();
+    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
+        ItemStack stack = itemStack.copy();
         hurtItem(stack);
         return stack;
     }
@@ -43,7 +56,7 @@ public class CoreType extends Item {
         if (stack.getMaxDamage() - stack.getDamageValue() <= 1) {
             stack.shrink(1);
         } else {
-            stack.hurt(1, random, null);
+            stack.hurt(1, RandomSource.create(), null);
         }
     }
 

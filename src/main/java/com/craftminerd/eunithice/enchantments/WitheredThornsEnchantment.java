@@ -1,5 +1,6 @@
 package com.craftminerd.eunithice.enchantments;
 
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -41,7 +42,7 @@ public class WitheredThornsEnchantment extends Enchantment {
 
     @Override
     public void doPostHurt(LivingEntity pUser, Entity pAttacker, int pLevel) {
-        Random random = pUser.getRandom();
+        RandomSource random = pUser.getRandom();
         Map.Entry<EquipmentSlot, ItemStack> entry = EnchantmentHelper.getRandomItemWith(EunithiceEnchantments.WITHERED_THORNS.get(), pUser);
         if (shouldApplyEffect(pLevel, random)) {
             if (pAttacker != null && pAttacker instanceof LivingEntity) {
@@ -60,11 +61,11 @@ public class WitheredThornsEnchantment extends Enchantment {
         }
     }
 
-    public static int getDurationOfEffect(int pLevel, Random pRnd) {
+    public static int getDurationOfEffect(int pLevel, RandomSource pRnd) {
         return pLevel > 10 ? (pLevel - 10) * 20 : ((1 + pRnd.nextInt(4)) * 20) + 80;
     }
 
-    private static boolean shouldApplyEffect(int pLevel, Random pRnd) {
+    private static boolean shouldApplyEffect(int pLevel, RandomSource pRnd) {
         if (pLevel <= 0) {
             return false;
         } else {

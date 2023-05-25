@@ -3,7 +3,6 @@ package com.craftminerd.eunithice.item.custom;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -38,7 +37,7 @@ public class BurnCore extends CoreType {
 
     @Override
     public void appendHoverText(ItemStack pStack, Level pLevel, List<Component> pToolTipComponents, TooltipFlag pIsAdvanced) {
-        pToolTipComponents.add(new TranslatableComponent("tooltip.eunithice.burn_core"));
+        pToolTipComponents.add(Component.translatable("tooltip.eunithice.burn_core"));
 
         super.appendHoverText(pStack, pLevel, pToolTipComponents, pIsAdvanced);
     }

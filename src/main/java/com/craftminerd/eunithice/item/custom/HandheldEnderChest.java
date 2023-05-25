@@ -1,7 +1,6 @@
 package com.craftminerd.eunithice.item.custom;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -16,7 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class HandheldEnderChest extends Item {
-    private static final Component CONTAINER_TITLE = new TranslatableComponent("container.eunithice.handheld_ender_chest");
+    private static final Component CONTAINER_TITLE = Component.translatable("container.eunithice.handheld_ender_chest");
 
     public HandheldEnderChest(Properties pProperties) {
         super(pProperties);

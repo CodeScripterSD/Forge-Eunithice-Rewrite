@@ -1,0 +1,5 @@
+{
+  "type": "eunithice:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "eunithice:neudonite_ore_placed"
+}

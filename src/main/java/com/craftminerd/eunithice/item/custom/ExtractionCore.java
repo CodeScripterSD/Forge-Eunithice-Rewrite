@@ -1,7 +1,6 @@
 package com.craftminerd.eunithice.item.custom;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -15,7 +14,7 @@ public class ExtractionCore extends CoreType {
 
     @Override
     public void appendHoverText(ItemStack pStack, Level pLevel, List<Component> pToolTipComponents, TooltipFlag pIsAdvanced) {
-        pToolTipComponents.add(new TranslatableComponent("tooltip.eunithice.extraction_core"));
+        pToolTipComponents.add(Component.translatable("tooltip.eunithice.extraction_core"));
         super.appendHoverText(pStack, pLevel, pToolTipComponents, pIsAdvanced);
     }
 

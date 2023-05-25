@@ -1,7 +1,7 @@
 package com.craftminerd.eunithice.item.custom;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -17,8 +17,6 @@ public class HammerItem extends Item {
 
     private final int BURNTIME;
     private final String HOVERTEXT;
-
-    public Random random = new Random();
 
     public HammerItem(Properties p_41383_) {
         super(p_41383_);
@@ -44,8 +42,12 @@ public class HammerItem extends Item {
         this.HOVERTEXT = hoverText;
     }
 
+//    @Override
+//    public boolean hasContainerItem(ItemStack stack) {
+//        return true;
+//    }
     @Override
-    public boolean hasContainerItem(ItemStack stack) {
+    public boolean hasCraftingRemainingItem(ItemStack stack) {
         return true;
     }
 
@@ -59,9 +61,15 @@ public class HammerItem extends Item {
     }
 
     @Nonnull
+//    @Override
+//    public ItemStack getContainerItem(@Nonnull ItemStack itemstack) {
+//        ItemStack stack = itemstack.copy();
+//        hurtItem(stack);
+//        return stack;
+//    }
     @Override
-    public ItemStack getContainerItem(@Nonnull ItemStack itemstack) {
-        ItemStack stack = itemstack.copy();
+    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
+        ItemStack stack = itemStack.copy();
         hurtItem(stack);
         return stack;
     }
@@ -70,7 +78,7 @@ public class HammerItem extends Item {
         if (stack.getMaxDamage() - stack.getDamageValue() <= 1) {
             stack.shrink(1);
         } else {
-            stack.hurt(1, random, null);
+            stack.hurt(1, RandomSource.create(), null);
         }
     }
 
@@ -82,7 +90,7 @@ public class HammerItem extends Item {
     @Override
     public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> pToolTipComponents, TooltipFlag p_41424_) {
         if (HOVERTEXT != null) {
-            pToolTipComponents.add(new TranslatableComponent(HOVERTEXT));
+            pToolTipComponents.add(Component.translatable(HOVERTEXT));
         }
         super.appendHoverText(p_41421_, p_41422_, pToolTipComponents, p_41424_);
     }

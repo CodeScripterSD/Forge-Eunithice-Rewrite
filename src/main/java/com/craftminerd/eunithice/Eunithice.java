@@ -7,6 +7,8 @@ import com.craftminerd.eunithice.enchantments.EunithiceEnchantments;
 import com.craftminerd.eunithice.item.EunithiceItems;
 import com.craftminerd.eunithice.recipe.EunithiceRecipes;
 import com.craftminerd.eunithice.screen.EunithiceMenuTypes;
+import com.craftminerd.eunithice.world.biomemods.EunithiceBiomeModifiers;
+import com.craftminerd.eunithice.world.feature.EunithicePlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -45,6 +47,8 @@ public class Eunithice
         EunithiceRecipes.register(eventBus);
         EunithiceEnchantments.register(eventBus);
         EunithiceEffects.register(eventBus);
+        EunithiceBiomeModifiers.register(eventBus);
+        EunithicePlacedFeatures.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

@@ -3,12 +3,11 @@ package com.craftminerd.eunithice.block.entity.stations;
 import com.craftminerd.eunithice.block.entity.EunithiceBlockEntities;
 import com.craftminerd.eunithice.recipe.AsphaltInfuserRecipe;
 import com.craftminerd.eunithice.screen.AsphaltInfuserMenu;
-import com.craftminerd.eunithice.util.EunithiceTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -75,7 +74,7 @@ public class AsphaltInfuserBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("block_entity.eunithice.display_name.asphalt_infuser");
+        return Component.translatable("block_entity.eunithice.display_name.asphalt_infuser");
     }
 
     @Nullable
@@ -165,7 +164,7 @@ public class AsphaltInfuserBlockEntity extends BlockEntity implements MenuProvid
                         if (entityItemHandler.getStackInSlot(0).getDamageValue() +1 >= entityItemHandler.getStackInSlot(0).getMaxDamage()) {
                             entityItemHandler.extractItem(0, 1, false);
                         } else {
-                            entityItemHandler.getStackInSlot(0).hurt(1, new Random(), null);
+                            entityItemHandler.getStackInSlot(0).hurt(1, RandomSource.create(), null);
                         }
                     }
                 } else {
@@ -180,7 +179,7 @@ public class AsphaltInfuserBlockEntity extends BlockEntity implements MenuProvid
                         if (entityItemHandler.getStackInSlot(1).getDamageValue() +1 >= entityItemHandler.getStackInSlot(1).getMaxDamage()) {
                             entityItemHandler.extractItem(1, 1, false);
                         } else {
-                            entityItemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+                            entityItemHandler.getStackInSlot(1).hurt(1, RandomSource.create(), null);
                         }
                     }
                 } else {

@@ -10,13 +10,15 @@ import com.craftminerd.eunithice.screen.ExtractorScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.Registry;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegisterEvent;
+
+import javax.annotation.Nonnull;
 
 @EventBusSubscriber(modid = Eunithice.MODID, bus = Bus.MOD)
 public class EunithiceEventBusEvents {
@@ -33,9 +35,11 @@ public class EunithiceEventBusEvents {
     }
 
     @SubscribeEvent
-    public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
-        Registry.register(Registry.RECIPE_TYPE, AsphaltInfuserRecipe.Type.ID, AsphaltInfuserRecipe.Type.INSTANCE);
-        Registry.register(Registry.RECIPE_TYPE, ExtractorRecipe.Type.ID, ExtractorRecipe.Type.INSTANCE);
+    public static void registerModifierSerializers(@Nonnull final RegisterEvent event) {
+        event.register(ForgeRegistries.Keys.RECIPE_TYPES, helper -> {
+            helper.register(new ResourceLocation(Eunithice.MODID, AsphaltInfuserRecipe.Type.ID), AsphaltInfuserRecipe.Type.INSTANCE);
+            helper.register(new ResourceLocation(Eunithice.MODID, ExtractorRecipe.Type.ID), ExtractorRecipe.Type.INSTANCE);
+        });
     }
 
 }

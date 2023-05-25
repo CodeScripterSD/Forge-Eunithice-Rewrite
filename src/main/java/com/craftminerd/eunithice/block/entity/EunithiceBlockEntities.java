@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class EunithiceBlockEntities {
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Eunithice.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Eunithice.MODID);
 
     public static final RegistryObject<BlockEntityType<AsphaltInfuserBlockEntity>> ASPHALT_INFUSER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("asphalt_infuser_block_entity", ()->
