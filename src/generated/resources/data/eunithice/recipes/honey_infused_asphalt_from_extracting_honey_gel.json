@@ -1,0 +1,16 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:honey_gel"
+    },
+    {
+      "item": "eunithice:asphalt"
+    }
+  ],
+  "result": {
+    "item": "eunithice:honey_infused_asphalt",
+    "count": 2
+  }
+}

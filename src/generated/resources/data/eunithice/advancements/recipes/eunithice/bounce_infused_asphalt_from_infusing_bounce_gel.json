@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipe/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:bounce_infused_asphalt_from_infusing_bounce_gel"
+    ]
+  },
+  "criteria": {
+    "has_bounce_gel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:bounce_gel"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:bounce_infused_asphalt_from_infusing_bounce_gel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bounce_gel",
+      "has_the_recipe"
+    ]
+  ]
+}

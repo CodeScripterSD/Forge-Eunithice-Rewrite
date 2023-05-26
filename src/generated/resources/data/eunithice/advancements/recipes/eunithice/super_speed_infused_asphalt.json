@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:super_speed_infused_asphalt"
+    ]
+  },
+  "criteria": {
+    "has_speed_asphalt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:speed_infused_asphalt"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:super_speed_infused_asphalt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_speed_asphalt",
+      "has_the_recipe"
+    ]
+  ]
+}

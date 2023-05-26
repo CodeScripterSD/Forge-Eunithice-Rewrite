@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "eunithice:block/honey_infused_asphalt"
+  }
+}

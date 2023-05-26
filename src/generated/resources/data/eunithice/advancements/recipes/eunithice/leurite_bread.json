@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:leurite_bread"
+    ]
+  },
+  "criteria": {
+    "has_leurite_grains": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:leurite_grains"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:leurite_bread"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_leurite_grains",
+      "has_the_recipe"
+    ]
+  ]
+}

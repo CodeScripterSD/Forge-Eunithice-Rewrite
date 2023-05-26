@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bone_block"
+    },
+    "A": {
+      "item": "eunithice:speed_infused_asphalt"
+    }
+  },
+  "result": {
+    "item": "eunithice:super_speed_infused_asphalt"
+  }
+}

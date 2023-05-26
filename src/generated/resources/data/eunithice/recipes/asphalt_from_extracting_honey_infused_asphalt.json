@@ -1,0 +1,15 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:honey_infused_asphalt"
+    },
+    {
+      "item": "eunithice:extraction_core"
+    }
+  ],
+  "result": {
+    "item": "eunithice:asphalt"
+  }
+}

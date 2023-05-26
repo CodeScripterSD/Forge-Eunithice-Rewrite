@@ -8,12 +8,14 @@ _Note 2: You will need a lot of resources to progress in this mod._
 
 
 ## Version 0.0.3
-- Removed recipes for Iron/Gold/Diamond plated tool sets and armor
-  - Planned removal of features entirely
+- Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
+- Removed Iron/Gold/Diamond plated tool sets and armor
 - Added Neudonite Tools and Armor
+  - Uses old Plated Gold textures as a placeholder
 - Added new Effect, "Weakened"
   - Does nothing for now
 - Added Serrated Blade
+  - Uses old Diamond Plated Sword texture as a placeholder 
   - Each hit adds a stack of Weakened effect
   - Deals extra damage depending on how many stacks of Weakened are on the tartet
 - Added functionality to Gels

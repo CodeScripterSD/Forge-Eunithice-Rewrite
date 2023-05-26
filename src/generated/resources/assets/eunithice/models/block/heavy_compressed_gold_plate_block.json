@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "eunithice:block/heavy_compressed_gold_plate_block_side",
+    "end": "eunithice:block/heavy_compressed_gold_plate_block_end"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "eunithice:burn_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    }
+  ],
+  "result": {
+    "item": "minecraft:iron_ingot",
+    "count": 2
+  }
+}

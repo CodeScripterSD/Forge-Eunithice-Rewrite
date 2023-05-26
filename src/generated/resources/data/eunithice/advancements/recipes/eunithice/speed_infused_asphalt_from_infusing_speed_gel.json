@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipe/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:speed_infused_asphalt_from_infusing_speed_gel"
+    ]
+  },
+  "criteria": {
+    "has_speed_gel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:speed_gel"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:speed_infused_asphalt_from_infusing_speed_gel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_speed_gel",
+      "has_the_recipe"
+    ]
+  ]
+}

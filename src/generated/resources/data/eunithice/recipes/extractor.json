@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "SAS",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:redstone_block"
+    },
+    "A": {
+      "item": "eunithice:neudonite_block"
+    }
+  },
+  "result": {
+    "item": "eunithice:extractor"
+  }
+}

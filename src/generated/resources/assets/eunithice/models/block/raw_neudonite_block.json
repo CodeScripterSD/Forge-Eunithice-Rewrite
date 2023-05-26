@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "eunithice:block/raw_neudonite_block"
+  }
+}

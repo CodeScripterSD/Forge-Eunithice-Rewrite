@@ -1,10 +1,7 @@
 package com.craftminerd.eunithice.block;
 
 import com.craftminerd.eunithice.Eunithice;
-import com.craftminerd.eunithice.block.custom.BounceInfusedAsphalt;
-import com.craftminerd.eunithice.block.custom.HoneyInfusedAsphalt;
-import com.craftminerd.eunithice.block.custom.LeuriteCrop;
-import com.craftminerd.eunithice.block.custom.SpeedInfusedAsphalt;
+import com.craftminerd.eunithice.block.custom.*;
 import com.craftminerd.eunithice.block.custom.stations.AsphaltInfuser;
 import com.craftminerd.eunithice.block.custom.stations.Extractor;
 import com.craftminerd.eunithice.item.EunithiceItems;
@@ -80,6 +77,15 @@ public class EunithiceBlocks {
                     1.9D),
             Eunithice.EUNITHICE_ITEMS_TAB);
 
+    public static final RegistryObject<SpeedInfusedAsphalt> SUPER_SPEED_INFUSED_ASPHALT = registerBlock("super_speed_infused_asphalt",
+            () -> new SpeedInfusedAsphalt(BlockBehaviour.Properties
+                    .of(Material.STONE, MaterialColor.COLOR_BLUE)
+                    .strength(3f, 7f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.BASALT),
+                    10D),
+            Eunithice.EUNITHICE_ITEMS_TAB);
+
     public static final RegistryObject<BounceInfusedAsphalt> BOUNCE_INFUSED_ASPHALT = registerBlock("bounce_infused_asphalt",
             () -> new BounceInfusedAsphalt(BlockBehaviour.Properties
                     .of(Material.STONE, MaterialColor.COLOR_LIGHT_GREEN)
@@ -105,7 +111,7 @@ public class EunithiceBlocks {
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> COMPRESSED_PLATED_IRON_BLOCK = registerBlock("compressed_iron_plate_block",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties
                     .of(Material.METAL, MaterialColor.RAW_IRON)
                     .strength(5f, 15f)
                     .requiresCorrectToolForDrops()
@@ -113,7 +119,7 @@ public class EunithiceBlocks {
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> HEAVY_COMPRESSED_PLATED_IRON_BLOCK = registerBlock("heavy_compressed_iron_plate_block",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties
                     .of(Material.METAL, MaterialColor.RAW_IRON)
                     .strength(5f, 25f)
                     .requiresCorrectToolForDrops()
@@ -148,7 +154,7 @@ public class EunithiceBlocks {
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> COMPRESSED_PLATED_GOLD_BLOCK = registerBlock("compressed_gold_plate_block",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties
                     .of(Material.METAL, MaterialColor.GOLD)
                     .strength(6f, 15f)
                     .requiresCorrectToolForDrops()
@@ -156,7 +162,7 @@ public class EunithiceBlocks {
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> HEAVY_COMPRESSED_PLATED_GOLD_BLOCK = registerBlock("heavy_compressed_gold_plate_block",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties
                     .of(Material.METAL, MaterialColor.GOLD)
                     .strength(6f, 25f)
                     .requiresCorrectToolForDrops()
@@ -173,7 +179,7 @@ public class EunithiceBlocks {
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> COMPRESSED_DIAMOND_PLATE_BLOCK = registerBlock("compressed_diamond_plate_block",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties
                     .of(Material.METAL, MaterialColor.DIAMOND)
                     .strength(7f,50f)
                     .requiresCorrectToolForDrops()
@@ -181,7 +187,7 @@ public class EunithiceBlocks {
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> HEAVY_COMPRESSED__DIAMOND_PLATE_BLOCK = registerBlock("heavy_compressed_diamond_plate_block",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties
                     .of(Material.METAL, MaterialColor.DIAMOND)
                     .strength(7f,65f)
                     .requiresCorrectToolForDrops()

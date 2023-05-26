@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "BAB",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:diamond_block"
+    },
+    "A": {
+      "item": "eunithice:compressed_diamond_plate_block"
+    },
+    "B": {
+      "item": "eunithice:diamond_plate"
+    }
+  },
+  "result": {
+    "item": "eunithice:heavy_compressed_diamond_plate_block"
+  }
+}

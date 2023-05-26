@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "SAS",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:neudonite_ingot"
+    },
+    "S": {
+      "item": "minecraft:redstone"
+    },
+    "A": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "eunithice:asphalt_infuser"
+  }
+}

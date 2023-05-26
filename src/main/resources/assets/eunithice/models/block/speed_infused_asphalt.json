@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "eunithice:blocks/speed_infused_asphalt"
-  }
-}

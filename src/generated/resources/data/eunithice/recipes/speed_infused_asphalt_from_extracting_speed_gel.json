@@ -1,0 +1,16 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "eunithice:speed_gel"
+    },
+    {
+      "item": "eunithice:asphalt"
+    }
+  ],
+  "result": {
+    "item": "eunithice:speed_infused_asphalt",
+    "count": 2
+  }
+}

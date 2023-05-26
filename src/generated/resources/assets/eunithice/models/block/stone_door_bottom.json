@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "bottom": "eunithice:block/stone_door_bottom",
+    "top": "eunithice:block/stone_door_top"
+  }
+}

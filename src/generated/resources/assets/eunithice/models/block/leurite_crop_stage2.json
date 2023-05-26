@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "eunithice:block/leurite_crop_stage2"
+  }
+}

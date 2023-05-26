@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipe/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:neudonite_ingot_from_smelting_neudonite_ore"
+    ]
+  },
+  "criteria": {
+    "has_neudonite_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:neudonite_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:neudonite_ingot_from_smelting_neudonite_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_neudonite_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

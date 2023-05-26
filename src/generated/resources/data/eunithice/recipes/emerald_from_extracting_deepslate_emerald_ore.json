@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_emerald_ore"
+    },
+    {
+      "item": "eunithice:extraction_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    }
+  ],
+  "result": {
+    "item": "minecraft:emerald",
+    "count": 5
+  }
+}

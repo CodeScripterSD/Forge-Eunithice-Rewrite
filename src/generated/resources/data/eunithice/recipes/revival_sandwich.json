@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:fruit_dish"
+    },
+    {
+      "item": "eunithice:meatball_soup"
+    },
+    {
+      "item": "eunithice:vegetable_salad"
+    },
+    {
+      "item": "eunithice:leurite_bread"
+    },
+    {
+      "item": "minecraft:enchanted_golden_apple"
+    }
+  ],
+  "result": {
+    "item": "eunithice:revival_sandwich"
+  }
+}

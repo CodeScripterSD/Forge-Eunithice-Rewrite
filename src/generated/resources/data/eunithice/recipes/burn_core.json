@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#I#",
+    "#@#",
+    "NNN"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:charcoal"
+    },
+    "I": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "@": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "eunithice:burn_core"
+  }
+}

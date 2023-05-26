@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "eunithice:blocks/compressed_gold_plate_block_side",
-    "end": "eunithice:blocks/compressed_gold_plate_block_top"
-  }
-}

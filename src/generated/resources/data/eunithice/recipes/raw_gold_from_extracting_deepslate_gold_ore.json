@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_gold_ore"
+    },
+    {
+      "item": "eunithice:extraction_core"
+    },
+    {
+      "tag": "eunithice:hammers"
+    }
+  ],
+  "result": {
+    "item": "minecraft:raw_gold",
+    "count": 6
+  }
+}

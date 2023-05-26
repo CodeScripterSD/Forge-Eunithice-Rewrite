@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "BAB",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:iron_plate"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    },
+    "A": {
+      "item": "eunithice:iron_plate_block"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "eunithice:compressed_iron_plate_block"
+  }
+}
