@@ -548,16 +548,13 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
     }
 
     protected static void eunithiceItemInfusing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, ItemLike pResult, int pCount, boolean pIgnoreDurability) {
-        eunithiceItemMachining(pFinishedRecipeConsumer, pIngredients, pResult, pCount, pIgnoreDurability, "_from_infusing");
-    }
-
-    protected static void eunithiceItemExtracting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, ItemLike pResult, int pCount, boolean pIgnoreDurability) {
-        eunithiceItemMachining(pFinishedRecipeConsumer, pIngredients, pResult, pCount, pIgnoreDurability, "_from_extracting");
-    }
-
-    protected static void eunithiceItemMachining(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, ItemLike pResult, int pCount, boolean pIgnoreDurability, String pRecipeName) {
         new ExtractorRecipeBuilder(pIngredients, pResult, pCount, pIgnoreDurability)
                 .unlockedBy(getHasName(pIngredients.get(0).getItems()[0].getItem()), has(pIngredients.get(0).getItems()[0].getItem()))
-                .save(pFinishedRecipeConsumer, getItemName(pResult) + pRecipeName + "_" + getItemName(pIngredients.get(0).getItems()[0].getItem()));
+                .save(pFinishedRecipeConsumer, getItemName(pResult) + "_from_infusing" + "_" + getItemName(pIngredients.get(0).getItems()[0].getItem()));
+    }
+    protected static void eunithiceItemExtracting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, ItemLike pResult, int pCount, boolean pIgnoreDurability) {
+        new ExtractorRecipeBuilder(pIngredients, pResult, pCount, pIgnoreDurability)
+                .unlockedBy(getHasName(pIngredients.get(0).getItems()[0].getItem()), has(pIngredients.get(0).getItems()[0].getItem()))
+                .save(pFinishedRecipeConsumer, getItemName(pResult) + "_from_extracting" + "_" + getItemName(pIngredients.get(0).getItems()[0].getItem()));
     }
 }
