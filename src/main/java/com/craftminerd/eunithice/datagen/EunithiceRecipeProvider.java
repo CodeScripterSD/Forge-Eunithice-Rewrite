@@ -548,7 +548,7 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
     }
 
     protected static void eunithiceItemInfusing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, ItemLike pResult, int pCount, boolean pIgnoreDurability) {
-        new ExtractorRecipeBuilder(pIngredients, pResult, pCount, pIgnoreDurability)
+        new AsphaltInfuserRecipeBuilder(pIngredients, pResult, pCount, pIgnoreDurability)
                 .unlockedBy(getHasName(pIngredients.get(0).getItems()[0].getItem()), has(pIngredients.get(0).getItems()[0].getItem()))
                 .save(pFinishedRecipeConsumer, getItemName(pResult) + "_from_infusing" + "_" + getItemName(pIngredients.get(0).getItems()[0].getItem()));
     }

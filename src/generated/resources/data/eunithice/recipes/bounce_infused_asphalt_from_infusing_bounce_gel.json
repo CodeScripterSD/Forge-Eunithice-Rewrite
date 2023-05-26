@@ -1,16 +1,16 @@
 {
-  "type": "eunithice:extraction",
+  "type": "eunithice:asphalt_infuser",
   "ignore_durability": false,
   "ingredients": [
     {
-      "item": "eunithice:speed_gel"
+      "item": "eunithice:bounce_gel"
     },
     {
       "item": "eunithice:asphalt"
     }
   ],
   "result": {
-    "item": "eunithice:speed_infused_asphalt",
+    "item": "eunithice:bounce_infused_asphalt",
     "count": 2
   }
 }
