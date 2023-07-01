@@ -25,7 +25,7 @@ public class HoneyInfusedAsphalt extends Block {
     }
 
     private void slowDown(Entity entity) {
-        double slowDownFactor = 0.6D;
+        double slowDownFactor = 0.4D;
         Vec3 vec3 = entity.getDeltaMovement();
         if (abs(vec3.x) > 0.10D || abs(vec3.z) > 0.10D) {
             entity.setDeltaMovement(vec3.x * slowDownFactor, vec3.y, vec3.z * slowDownFactor);

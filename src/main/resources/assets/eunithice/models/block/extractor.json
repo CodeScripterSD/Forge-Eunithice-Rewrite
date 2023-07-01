@@ -1,8 +1,8 @@
 {
   "texture_size": [64, 64],
   "textures": {
-    "0": "eunithice:machines/extractor",
-    "particle": "eunithice:machines/extractor"
+    "0": "eunithice:machine/extractor",
+    "particle": "eunithice:machine/extractor"
   },
   "elements": [
     {

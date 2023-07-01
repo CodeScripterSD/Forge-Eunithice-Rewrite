@@ -15,15 +15,6 @@ import java.util.function.Supplier;
 public enum EunithiceArmorMaterials implements ArmorMaterial {
     NEUDONITE("neudonite",18, new int[] { 2, 6, 6, 2 }, 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
         return Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get());
-    }),
-    PLATED_IRON("plated_iron",27, new int[] { 3, 6, 7, 3 }, 20, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
-        return Ingredient.of(EunithiceBlocks.PLATED_IRON_BLOCK.get());
-    }),
-    PLATED_GOLD("plated_gold",60, new int[] { 5, 7, 9, 5 }, 60, SoundEvents.ARMOR_EQUIP_GOLD, 2.0f, 0.1f, () -> {
-        return Ingredient.of(EunithiceBlocks.COMPRESSED_PLATED_GOLD_BLOCK.get());
-    }),
-    PLATED_DIAMOND("plated_diamond",90, new int[] { 7, 9, 11, 7 }, 90, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.0f, 0.1f, () -> {
-        return Ingredient.of(EunithiceBlocks.DIAMOND_PLATE_BLOCK.get());
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

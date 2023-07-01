@@ -8,16 +8,21 @@ _Note 2: You will need a lot of resources to progress in this mod._
 
 
 ## Version 0.0.3
+- Increased the strength of Honey Infused Asphalt
+- Search bar added to Eunithice creative tab
+- Burn Core now works when used by a dispenser
+- Fixed some wrong code in the Withered Thorns enchantment
 - Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
 - Removed Iron/Gold/Diamond plated tool sets and armor
 - Added Neudonite Tools and Armor
   - Uses old Plated Gold textures as a placeholder
+- Tweaked Withered Thorns enchantment
 - Added new Effect, "Weakened"
-  - Does nothing for now
+  - Does nothing on its own, used in conjunction with Serrated Blade
 - Added Serrated Blade
   - Uses old Diamond Plated Sword texture as a placeholder 
-  - Each hit adds a stack of Weakened effect
-  - Deals extra damage depending on how many stacks of Weakened are on the tartet
+  - Each hit adds a stack of "Weakened" effect
+  - Deals extra damage depending on how many stacks of Weakened are on the target
 - Added functionality to Gels
   - Right click Gel on Asphalt turns the asphalt into the gel's infuse type
   - Added durability (8 uses)

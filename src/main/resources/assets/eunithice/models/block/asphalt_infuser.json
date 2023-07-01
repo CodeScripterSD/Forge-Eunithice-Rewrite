@@ -1,8 +1,8 @@
 {
   "texture_size": [64, 64],
   "textures": {
-    "0": "eunithice:machines/asphalt_infuser",
-    "particle": "eunithice:machines/asphalt_infuser"
+    "0": "eunithice:machine/asphalt_infuser",
+    "particle": "eunithice:machine/asphalt_infuser"
   },
   "elements": [
     {

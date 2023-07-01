@@ -119,6 +119,11 @@ public class EunithiceItems {
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
                     .stacksTo(1)
             ));
+    public static final RegistryObject<HandheldCraftingTable> HANDHELD_CRAFTING_TABLE = ITEMS.register("handheld_crafting_table",
+            () -> new HandheldCraftingTable(new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
+                    .stacksTo(1)
+            ));
 
 /*
     public static final RegistryObject<MotionController> MOTION_CONTROLLER = ITEMS.register("motion_controller",
@@ -182,7 +187,7 @@ public class EunithiceItems {
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     public static final RegistryObject<AxeItem> NEUDONITE_AXE = ITEMS.register("neudonite_axe",
-            () -> new AxeItem(EunithiceToolTiers.NEUDONITE, 7f, -3.2f, new Item.Properties()
+            () -> new AxeItem(EunithiceToolTiers.NEUDONITE, 6f, -3.1f, new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     public static final RegistryObject<HoeItem> NEUDONITE_HOE = ITEMS.register("neudonite_hoe",

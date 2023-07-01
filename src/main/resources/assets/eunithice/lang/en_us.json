@@ -1,5 +1,6 @@
 {
   "container.eunithice.handheld_ender_chest": "Handheld Ender Chest",
+  "container.eunithice.handheld_crafting_table": "Crafting",
 
   "effect.eunithice.weakened": "Weakened",
 
@@ -10,6 +11,7 @@
   "item.eunithice.tier_one_hammer": "Iron Hammer",
   "item.eunithice.tier_two_hammer": "Extremely Heavy Iron Hammer",
   "item.eunithice.handheld_ender_chest": "Handheld Ender Chest",
+  "item.eunithice.handheld_crafting_table": "Handheld Crafting Table",
   "item.eunithice.motion_controller": "Motion Inverter",
   "item.eunithice.burn_core": "Burn Core",
   "item.eunithice.extraction_core": "Extraction Core",
@@ -77,7 +79,7 @@
 
   "enchantment.eunithice.withered_thorns": "Withered Thorns",
 
-  "itemGroup.eunithice": "Eunithice Items",
+  "itemGroup.eunithice": "Eunithice",
 
 
   "block.eunithice.stone_trapdoor":"Stone Trapdoor",

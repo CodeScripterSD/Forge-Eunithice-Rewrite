@@ -206,6 +206,14 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .pattern("NNN")
                 .unlockedBy(getHasName(Items.NETHERRACK), has(Items.NETHERRACK))
                 .save(pFinishedRecipeConsumer);
+        ShapelessRecipeBuilder.shapeless(EunithiceItems.HANDHELD_CRAFTING_TABLE.get())
+                .requires(Items.CRAFTING_TABLE)
+                .unlockedBy("has_crafting_table", inventoryTrigger(ItemPredicate.Builder.item().of(Items.CRAFTING_TABLE).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapelessRecipeBuilder.shapeless(Items.CRAFTING_TABLE)
+                .requires(EunithiceItems.HANDHELD_CRAFTING_TABLE.get())
+                .unlockedBy("has_handheld_crafting_table", inventoryTrigger(ItemPredicate.Builder.item().of(EunithiceItems.HANDHELD_CRAFTING_TABLE.get()).build()))
+                .save(pFinishedRecipeConsumer);
         ShapelessRecipeBuilder.shapeless(EunithiceItems.FRUIT_DISH.get())
                 .requires(Items.APPLE)
                 .requires(Items.MELON_SLICE)
