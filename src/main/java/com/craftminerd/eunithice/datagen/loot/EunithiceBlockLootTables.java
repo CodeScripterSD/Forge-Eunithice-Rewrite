@@ -34,6 +34,8 @@ public class EunithiceBlockLootTables extends BlockLoot {
 
         this.add(EunithiceBlocks.NEUDONITE_ORE.get(),
                 (block) -> createOreDrop(EunithiceBlocks.NEUDONITE_ORE.get(), EunithiceItems.RAW_NEUDONITE.get()));
+        this.add(EunithiceBlocks.DEEPSLATE_NEUDONITE_ORE.get(),
+                (block) -> createOreDrop(EunithiceBlocks.DEEPSLATE_NEUDONITE_ORE.get(), EunithiceItems.RAW_NEUDONITE.get()));
 
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(EunithiceBlocks.LEURITE.get())
@@ -41,6 +43,7 @@ public class EunithiceBlockLootTables extends BlockLoot {
         this.add(EunithiceBlocks.LEURITE.get(), createCropDrops(EunithiceBlocks.LEURITE.get(), EunithiceItems.LEURITE_GRAINS.get(), EunithiceItems.LEURITE_SEEDS.get(), lootitemcondition$builder));
         this.add(EunithiceBlocks.ASPHALT_INFUSER.get(), BlockLoot::createNameableBlockEntityTable);
         this.add(EunithiceBlocks.EXTRACTOR.get(), BlockLoot::createNameableBlockEntityTable);
+        this.add(EunithiceBlocks.DISPLAY_CASE.get(), BlockLoot::createNameableBlockEntityTable);
         this.add(EunithiceBlocks.IRON_PLATE_DOOR.get(), BlockLoot::createDoorTable);
         this.add(EunithiceBlocks.STONE_DOOR.get(), BlockLoot::createDoorTable);
     }

@@ -8,6 +8,11 @@ _Note 2: You will need a lot of resources to progress in this mod._
 
 
 ## Version 0.0.3
+- Added an Autosmelt enchantment, blocks mined with a tool using this enchantment will have their normal drops smelted. Incompatible with Silk Touch
+- Added Deepslate Neudonite Ore and modified Neudonite spawn rate and range. (New range: -36 to 68)
+- Added configs for Neudonite Ore vein spawning & size
+- Removed handheld ender chest
+  - Moved to a new mod, "Handheld Utilities"
 - Increased the strength of Honey Infused Asphalt
 - Search bar added to Eunithice creative tab
 - Burn Core now works when used by a dispenser
@@ -15,7 +20,6 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
 - Removed Iron/Gold/Diamond plated tool sets and armor
 - Added Neudonite Tools and Armor
-  - Uses old Plated Gold textures as a placeholder
 - Tweaked Withered Thorns enchantment
 - Added new Effect, "Weakened"
   - Does nothing on its own, used in conjunction with Serrated Blade

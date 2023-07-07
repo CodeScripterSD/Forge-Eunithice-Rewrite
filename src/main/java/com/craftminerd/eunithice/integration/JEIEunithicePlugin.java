@@ -2,10 +2,12 @@ package com.craftminerd.eunithice.integration;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
+import com.craftminerd.eunithice.item.EunithiceItems;
 import com.craftminerd.eunithice.recipe.AsphaltInfuserRecipe;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.constants.RecipeTypes;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;

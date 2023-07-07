@@ -10,7 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum EunithiceToolTiers implements Tier {
-    NEUDONITE(2, 750, 10.0f, 2f, 16,
+    NEUDONITE(2, 750, 10.0f, 2.6f, 16,
             () -> Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get())),
     DRIPSTONE(3, 900, 25f, 6f, 90,
             () -> Ingredient.of(Items.POINTED_DRIPSTONE));

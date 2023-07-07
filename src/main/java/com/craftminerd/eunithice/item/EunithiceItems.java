@@ -114,17 +114,6 @@ public class EunithiceItems {
                     .defaultDurability(1024)
             ));
 
-    public static final RegistryObject<HandheldEnderChest> HANDHELD_ENDER_CHEST = ITEMS.register("handheld_ender_chest",
-            () -> new HandheldEnderChest(new Item.Properties()
-                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .stacksTo(1)
-            ));
-    public static final RegistryObject<HandheldCraftingTable> HANDHELD_CRAFTING_TABLE = ITEMS.register("handheld_crafting_table",
-            () -> new HandheldCraftingTable(new Item.Properties()
-                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .stacksTo(1)
-            ));
-
 /*
     public static final RegistryObject<MotionController> MOTION_CONTROLLER = ITEMS.register("motion_controller",
             () -> new MotionController(new Item.Properties()
@@ -178,6 +167,10 @@ public class EunithiceItems {
 
     //NEUDONITE GEAR
 
+    public static final RegistryObject<SwordItem> NEUDONITE_SWORD = ITEMS.register("neudonite_sword",
+            () -> new SwordItem(EunithiceToolTiers.NEUDONITE, 3, -2.4f, new Item.Properties()
+                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
+
     public static final RegistryObject<ShovelItem> NEUDONITE_SHOVEL = ITEMS.register("neudonite_shovel",
             () -> new ShovelItem(EunithiceToolTiers.NEUDONITE, 1.5f, -3.0f, new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
@@ -187,15 +180,11 @@ public class EunithiceItems {
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     public static final RegistryObject<AxeItem> NEUDONITE_AXE = ITEMS.register("neudonite_axe",
-            () -> new AxeItem(EunithiceToolTiers.NEUDONITE, 6f, -3.1f, new Item.Properties()
+            () -> new AxeItem(EunithiceToolTiers.NEUDONITE, 5.5f, -3.1f, new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     public static final RegistryObject<HoeItem> NEUDONITE_HOE = ITEMS.register("neudonite_hoe",
             () -> new HoeItem(EunithiceToolTiers.NEUDONITE, 0, -2.5f, new Item.Properties()
-                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
-
-    public static final RegistryObject<SwordItem> NEUDONITE_SWORD = ITEMS.register("neudonite_sword",
-            () -> new SwordItem(EunithiceToolTiers.NEUDONITE, 3, -2.4f, new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     public static final RegistryObject<ArmorItem> NEUDONITE_HELMET = ITEMS.register("neudonite_helmet",

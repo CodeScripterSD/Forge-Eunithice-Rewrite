@@ -110,15 +110,6 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .pattern("?#?")
                 .unlockedBy("has_hammer", inventoryTrigger(ItemPredicate.Builder.item().of(EunithiceTags.Items.HAMMERS).build()))
                 .save(pFinishedRecipeConsumer);
-        ShapedRecipeBuilder.shaped(EunithiceItems.HANDHELD_ENDER_CHEST.get())
-                .define('#', Items.STICK)
-                .define('@', EunithiceItems.NEUDONITE_INGOT.get())
-                .define('&', Blocks.ENDER_CHEST)
-                .pattern(" @&")
-                .pattern(" #@")
-                .pattern("#  ")
-                .unlockedBy("has_neudonite_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(EunithiceItems.NEUDONITE_INGOT.get()).build()))
-                .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.NEUDONITE_SWORD.get())
                 .define('#', Items.STICK)
                 .define('@', EunithiceItems.NEUDONITE_INGOT.get())
@@ -205,14 +196,6 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .pattern("@I@")
                 .pattern("NNN")
                 .unlockedBy(getHasName(Items.NETHERRACK), has(Items.NETHERRACK))
-                .save(pFinishedRecipeConsumer);
-        ShapelessRecipeBuilder.shapeless(EunithiceItems.HANDHELD_CRAFTING_TABLE.get())
-                .requires(Items.CRAFTING_TABLE)
-                .unlockedBy("has_crafting_table", inventoryTrigger(ItemPredicate.Builder.item().of(Items.CRAFTING_TABLE).build()))
-                .save(pFinishedRecipeConsumer);
-        ShapelessRecipeBuilder.shapeless(Items.CRAFTING_TABLE)
-                .requires(EunithiceItems.HANDHELD_CRAFTING_TABLE.get())
-                .unlockedBy("has_handheld_crafting_table", inventoryTrigger(ItemPredicate.Builder.item().of(EunithiceItems.HANDHELD_CRAFTING_TABLE.get()).build()))
                 .save(pFinishedRecipeConsumer);
         ShapelessRecipeBuilder.shapeless(EunithiceItems.FRUIT_DISH.get())
                 .requires(Items.APPLE)

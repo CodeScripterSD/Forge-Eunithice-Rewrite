@@ -8,6 +8,8 @@ import com.craftminerd.eunithice.item.EunithiceItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -16,6 +18,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
@@ -32,9 +35,25 @@ public class EunithiceBlocks {
         return toReturn;
     }
 
+    private static <T extends Block> RegistryObject<T> registerBlockFuel(String name, Supplier<T> block, CreativeModeTab tab, int burnTime) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockFuelItem(name, toReturn, tab, burnTime);
+        return toReturn;
+    }
+
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return EunithiceItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
+    }
+
+    private static <T extends Block>RegistryObject<Item> registerBlockFuelItem(String name, RegistryObject<T> block, CreativeModeTab tab, int burnTime) {
+        return EunithiceItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(tab)) {
+            @Override
+            public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+                return burnTime;
+            }
+        });
     }
 
     public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt",
@@ -66,6 +85,14 @@ public class EunithiceBlocks {
                     .strength(3f, 3.5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)),
+            Eunithice.EUNITHICE_ITEMS_TAB);
+
+    public static final RegistryObject<Block> DEEPSLATE_NEUDONITE_ORE = registerBlock("deepslate_neudonite_ore",
+            () -> new Block(BlockBehaviour.Properties
+                    .copy(NEUDONITE_ORE.get())
+                    .color(MaterialColor.DEEPSLATE)
+                    .strength(4.5f, 3.5f)
+                    .sound(SoundType.DEEPSLATE)),
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<SpeedInfusedAsphalt> SPEED_INFUSED_ASPHALT = registerBlock("speed_infused_asphalt",
@@ -204,6 +231,14 @@ public class EunithiceBlocks {
 
     public static final RegistryObject<Extractor> EXTRACTOR = registerBlock("extractor",
             () -> new Extractor(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            Eunithice.EUNITHICE_ITEMS_TAB);
+
+    public static final RegistryObject<DisplayCase> DISPLAY_CASE = registerBlock("display_case",
+            () -> new DisplayCase(BlockBehaviour.Properties
+                    .of(Material.STONE, MaterialColor.COLOR_BLACK)
+                    .strength(1f, 6f)
+                    .speedFactor(1.1f)
+                    .noOcclusion()),
             Eunithice.EUNITHICE_ITEMS_TAB);
 
 

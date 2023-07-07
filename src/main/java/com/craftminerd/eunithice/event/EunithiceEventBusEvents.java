@@ -7,6 +7,7 @@ import com.craftminerd.eunithice.recipe.ExtractorRecipe;
 import com.craftminerd.eunithice.screen.AsphaltInfuserScreen;
 import com.craftminerd.eunithice.screen.EunithiceMenuTypes;
 import com.craftminerd.eunithice.screen.ExtractorScreen;
+import com.craftminerd.eunithice.util.EunithiceItemProperties;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -25,8 +26,10 @@ public class EunithiceEventBusEvents {
     public static void clientSetup(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(EunithiceBlocks.IRON_PLATE_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EunithiceBlocks.IRON_PLATE_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(EunithiceBlocks.DISPLAY_CASE.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(EunithiceBlocks.LEURITE.get(), RenderType.cutout());
+        EunithiceItemProperties.addCustomItemProperties();
 
         MenuScreens.register(EunithiceMenuTypes.ASPHALT_INFUSER_MENU.get(), AsphaltInfuserScreen::new);
         MenuScreens.register(EunithiceMenuTypes.EXTRACTOR_MENU.get(), ExtractorScreen::new);

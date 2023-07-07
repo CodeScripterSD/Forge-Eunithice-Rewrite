@@ -1,5 +1,6 @@
 package com.craftminerd.eunithice.world.feature;
 
+import com.craftminerd.eunithice.config.EunithiceCommonConfigs;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -8,6 +9,6 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class EunithicePlacedFeatures {
     public static final Holder<PlacedFeature> NEUDONITE_ORE_PLACED = PlacementUtils.register("neudonite_ore_placed",
-            EunithiceConfiguredFeatures.NEUDONITE_ORE, EunithiceOrePlacements.commonOrePlacement(9, // Veins per chunk
-                    HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(128))));
+            EunithiceConfiguredFeatures.NEUDONITE_ORE, EunithiceOrePlacements.commonOrePlacement(EunithiceCommonConfigs.NEUDONITE_ORE_VEINS_PER_CHUNK.get(), // Veins per chunk
+                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-36), VerticalAnchor.absolute(68))));
 }

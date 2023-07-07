@@ -13,7 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum EunithiceArmorMaterials implements ArmorMaterial {
-    NEUDONITE("neudonite",18, new int[] { 2, 6, 6, 2 }, 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
+    NEUDONITE("neudonite",26, new int[] { 2, 6, 6, 3 }, 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
         return Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get());
     });
 
@@ -27,15 +27,15 @@ public enum EunithiceArmorMaterials implements ArmorMaterial {
     private final float toughness;
     private final SoundEvent sound;
 
-    private EunithiceArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_, SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
-        this.name = p_40474_;
-        this.durabilityMultiplier = p_40475_;
-        this.slotProtections = p_40476_;
-        this.enchantmentValue = p_40477_;
-        this.sound = p_40478_;
-        this.toughness = p_40479_;
-        this.knockbackResistance = p_40480_;
-        this.repairIngredient = new LazyLoadedValue<>(p_40481_);
+    private EunithiceArmorMaterials(String pName, int pDurabilityMultiplier, int[] pSlotProtections, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier<Ingredient> pRepairIngredient) {
+        this.name = pName;
+        this.durabilityMultiplier = pDurabilityMultiplier;
+        this.slotProtections = pSlotProtections;
+        this.enchantmentValue = pEnchantmentValue;
+        this.sound = pSound;
+        this.toughness = pToughness;
+        this.knockbackResistance = pKnockbackResistance;
+        this.repairIngredient = new LazyLoadedValue<>(pRepairIngredient);
     }
 
     public int getDurabilityForSlot(EquipmentSlot p_40484_) {

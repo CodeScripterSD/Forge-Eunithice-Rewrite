@@ -39,7 +39,7 @@ public class SerratedBlade extends SwordItem {
             amplifier += 1;
             pTarget.removeEffect(EunithiceEffects.WEAKENED.get());
         }
-        pTarget.addEffect(new MobEffectInstance(EunithiceEffects.WEAKENED.get(), (1/(amplifier+1))*200, amplifier+0), pAttacker); //60* 1/(amplifier+1)
+        pTarget.addEffect(new MobEffectInstance(EunithiceEffects.WEAKENED.get(), (1/(amplifier+1))*200, amplifier), pAttacker); //60* 1/(amplifier+1)
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
 

@@ -21,4 +21,7 @@ public class EunithiceEnchantments {
 
     public static final RegistryObject<Enchantment> WITHERED_THORNS = ENCHANTMENTS.register("withered_thorns",
             () -> new WitheredThornsEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.CHEST));
+    public static final RegistryObject<Enchantment> SMELTING = ENCHANTMENTS.register("smelting",
+            () -> new AutoSmeltEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.DIGGER, EquipmentSlot.MAINHAND));
+
 }

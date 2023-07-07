@@ -21,6 +21,10 @@ public class EunithiceBlockEntities {
             BLOCK_ENTITIES.register("extractor_block_entity", ()->
                     BlockEntityType.Builder.of(ExtractorBlockEntity::new, EunithiceBlocks.EXTRACTOR.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<DisplayCaseBlockEntity>> DISPLAY_CASE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("display_case_block_entity", () ->
+                    BlockEntityType.Builder.of(DisplayCaseBlockEntity::new, EunithiceBlocks.DISPLAY_CASE.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

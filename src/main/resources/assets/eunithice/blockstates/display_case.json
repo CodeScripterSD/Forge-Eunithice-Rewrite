@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eunithice:block/display_case" },
+    "facing=east": { "model": "eunithice:block/display_case", "y": 90 },
+    "facing=south": { "model": "eunithice:block/display_case", "y": 180 },
+    "facing=west": { "model": "eunithice:block/display_case", "y": 270 }
+  }
+}

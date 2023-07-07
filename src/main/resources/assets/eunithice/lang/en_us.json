@@ -71,13 +71,16 @@
   "block.eunithice.raw_neudonite_block": "Block of Raw Neudonite",
   "block.eunithice.neudonite_block": "Neudonite Block",
   "block.eunithice.neudonite_ore": "Neudonite Ore",
+  "block.eunithice.deepslate_neudonite_ore": "Deepslate Neudonite Ore",
 
   "block.eunithice.asphalt_infuser":"Asphalt Infuser",
   "block_entity.eunithice.display_name.asphalt_infuser": "Asphalt Infuser",
   "block.eunithice.extractor":"Extractor",
   "block_entity.eunithice.display_name.extractor": "Extractor",
+  "block.eunithice.display_case":"Display Case",
 
   "enchantment.eunithice.withered_thorns": "Withered Thorns",
+  "enchantment.eunithice.smelting": "Smelting",
 
   "itemGroup.eunithice": "Eunithice",
 
