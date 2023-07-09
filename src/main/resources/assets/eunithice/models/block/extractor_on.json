@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "eunithice:block/extractor",
+    "front": "eunithice:block/extractor_front_on",
+    "side": "eunithice:block/extractor"
+  }
+}

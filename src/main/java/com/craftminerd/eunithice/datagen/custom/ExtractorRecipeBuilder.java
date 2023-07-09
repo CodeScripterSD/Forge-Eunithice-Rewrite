@@ -2,6 +2,7 @@ package com.craftminerd.eunithice.datagen.custom;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
+import com.craftminerd.eunithice.util.ItemStackJSONUtil;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
@@ -14,23 +15,24 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.fluids.FluidStack;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
 public class ExtractorRecipeBuilder implements RecipeBuilder {
-    private final Item result;
+    private final NonNullList<ItemStack> resultItems;
     private final NonNullList<Ingredient> recipeItems;
-    private final int count;
+    private final FluidStack fluidStack;
     private final boolean ignoreDurability;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
-    public ExtractorRecipeBuilder(NonNullList<Ingredient> recipeItems, ItemLike result, int count, boolean ignoreDurability) {
-        this.result = result.asItem();
+    public ExtractorRecipeBuilder(NonNullList<Ingredient> recipeItems, NonNullList<ItemStack> resultItems, FluidStack fluidStack, boolean ignoreDurability) {
+        this.resultItems = resultItems;
         this.recipeItems = recipeItems;
-        this.count = count;
+        this.fluidStack = fluidStack;
         this.ignoreDurability = ignoreDurability;
     }
     @Override
@@ -46,7 +48,7 @@ public class ExtractorRecipeBuilder implements RecipeBuilder {
 
     @Override
     public Item getResult() {
-        return result;
+        return resultItems.get(0).getItem();
     }
 
     @Override
@@ -55,49 +57,53 @@ public class ExtractorRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe",
                         RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
-        pFinishedRecipeConsumer.accept(new ExtractorRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ignoreDurability, this.recipeItems,
-                this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" +
-                this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
+        pFinishedRecipeConsumer.accept(new ExtractorRecipeBuilder.Result(pRecipeId, this.resultItems, this.ignoreDurability, this.recipeItems,
+                this.fluidStack, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" +
+                this.resultItems.get(0).getItem().getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
-        private final Item result;
+        private final NonNullList<ItemStack> resultItems;
         private final NonNullList<Ingredient> recipeItems;
-        private final int count;
+        private final FluidStack stack;
         private final boolean ignoreDurability;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation id, Item result, int count, boolean ignoreDurability, NonNullList<Ingredient> recipeItems, Advancement.Builder advancement, ResourceLocation advancementId) {
+        public Result(ResourceLocation id, NonNullList<ItemStack> resultItems, boolean ignoreDurability, NonNullList<Ingredient> recipeItems, FluidStack stack, Advancement.Builder advancement, ResourceLocation advancementId) {
             this.id = id;
-            this.result = result;
-            this.count = count;
+            this.resultItems = resultItems;
             this.ignoreDurability = ignoreDurability;
             this.recipeItems = recipeItems;
+            this.stack = stack;
             this.advancement = advancement;
             this.advancementId = advancementId;
         }
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
-            JsonArray jsonArray = new JsonArray();
             pJson.addProperty("ignore_durability", ignoreDurability);
-            for (int i= 0; i < recipeItems.size(); i++) {
-                jsonArray.add(recipeItems.get(i).toJson());
+            JsonArray recipeIngredients = new JsonArray();
+            for (Ingredient recipeItem : recipeItems) {
+                recipeIngredients.add(recipeItem.toJson());
             }
-            pJson.add("ingredients", jsonArray);
-            JsonObject jsonObject = new JsonObject();
-            jsonObject.addProperty("item", this.result.getRegistryName().toString());
-            if (this.count > 1) {
-                jsonObject.addProperty("count", this.count);
+            pJson.add("ingredients", recipeIngredients);
+            JsonObject fluidObject = new JsonObject();
+            fluidObject.addProperty("FluidName", stack.getFluid().getRegistryName().toString());
+            fluidObject.addProperty("Amount", stack.getAmount());
+            pJson.add("fluid", fluidObject);
+            JsonArray recipeResults = new JsonArray();
+            for (ItemStack resultItem : resultItems) {
+                if (!resultItem.isEmpty())
+                    recipeResults.add(ItemStackJSONUtil.toJson(resultItem));
             }
-            pJson.add("result", jsonObject);
+            pJson.add("results", recipeResults);
         }
 
         @Override
         public ResourceLocation getId() {
-            return new ResourceLocation(Eunithice.MODID, this.result.getRegistryName().getPath() + "_from_extracting_" + this.recipeItems.get(0).getItems()[0].getItem().getRegistryName().getPath());
+            return id;
         }
 
         @Override

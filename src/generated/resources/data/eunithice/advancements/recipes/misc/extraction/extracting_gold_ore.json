@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipe/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:extraction/extracting_gold_ore"
+    ]
+  },
+  "criteria": {
+    "has_gold_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gold_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:extraction/extracting_gold_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gold_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

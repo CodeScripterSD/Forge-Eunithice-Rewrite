@@ -1,0 +1,22 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_emerald_ore"
+    },
+    {
+      "tag": "eunithice:hammers"
+    }
+  ],
+  "fluid": {
+    "FluidName": "eunithice:extraction_fluid",
+    "Amount": 150
+  },
+  "results": [
+    {
+      "item": "minecraft:emerald",
+      "count": 3
+    }
+  ]
+}

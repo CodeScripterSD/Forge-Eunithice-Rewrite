@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_ore"
+    }
+  ],
+  "fluid": {
+    "FluidName": "eunithice:extraction_fluid",
+    "Amount": 150
+  },
+  "results": [
+    {
+      "item": "minecraft:diamond",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_coal_ore"
+    }
+  ],
+  "fluid": {
+    "FluidName": "eunithice:extraction_fluid",
+    "Amount": 100
+  },
+  "results": [
+    {
+      "item": "minecraft:coal",
+      "count": 5
+    }
+  ]
+}

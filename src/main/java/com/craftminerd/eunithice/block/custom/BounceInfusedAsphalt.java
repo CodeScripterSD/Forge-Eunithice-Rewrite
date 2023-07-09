@@ -32,12 +32,14 @@ public class BounceInfusedAsphalt extends Block {
             double bounceFactor = 0;
             float fairSpeedMultFactor = 1.2F;
 
-            if (Math.abs(vec3.x) > Math.abs(vec3.z)) {
-                bounceFactor = fairSpeedMultFactor * Math.abs(vec3.x);
-            }
-            else if (Math.abs(vec3.x) < Math.abs(vec3.z)) {
-                bounceFactor = fairSpeedMultFactor * Math.abs(vec3.z);
-            }
+//            if (Math.abs(vec3.x) > Math.abs(vec3.z)) {
+//                bounceFactor = fairSpeedMultFactor * Math.abs(vec3.x);
+//            }
+//            else if (Math.abs(vec3.x) < Math.abs(vec3.z)) {
+//                bounceFactor = fairSpeedMultFactor * Math.abs(vec3.z);
+//            }
+
+            bounceFactor = fairSpeedMultFactor * Math.sqrt(Math.pow(vec3.x, 2d)+Math.pow(vec3.z, 2d));
 
             double d0 = entity instanceof LivingEntity ? 1.2D : 1.0D;
             entity.setDeltaMovement(vec3.x, bounceFactor * d0, vec3.z);

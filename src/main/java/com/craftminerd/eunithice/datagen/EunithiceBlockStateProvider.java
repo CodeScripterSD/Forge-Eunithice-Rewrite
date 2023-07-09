@@ -34,10 +34,10 @@ public class EunithiceBlockStateProvider extends BlockStateProvider {
             } else if (entry.get() instanceof RotatedPillarBlock pillarBlock) {
                 axisBlock(pillarBlock, new ResourceLocation(Eunithice.MODID, "block/" + pillarBlock.getRegistryName().getPath() + "_side"),
                         new ResourceLocation(Eunithice.MODID, "block/" + pillarBlock.getRegistryName().getPath() + "_end"));
-            } else if (!(entry.get() instanceof BaseEntityBlock baseEntityBlock)) {
+            } else if (!(entry.get() instanceof BaseEntityBlock baseEntityBlock) && !(entry.get() instanceof LiquidBlock liquidBlock)) {
                 simpleBlock(entry.get());
             } else {
-                LOGGER.warn("A model has not been created for " + baseEntityBlock.getRegistryName());
+                LOGGER.warn("A model has not been created for " + entry.get().getRegistryName());
             }
         }
     }

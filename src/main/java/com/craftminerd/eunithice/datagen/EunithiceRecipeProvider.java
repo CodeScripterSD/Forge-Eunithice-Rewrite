@@ -1,16 +1,21 @@
 package com.craftminerd.eunithice.datagen;
 
+import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
 import com.craftminerd.eunithice.datagen.custom.AsphaltInfuserRecipeBuilder;
 import com.craftminerd.eunithice.datagen.custom.EunithiceCookingRecipeBuilder;
+//import com.craftminerd.eunithice.datagen.custom.ExtractorRecipeBuilder;
 import com.craftminerd.eunithice.datagen.custom.ExtractorRecipeBuilder;
+import com.craftminerd.eunithice.fluid.EunithiceFluids;
 import com.craftminerd.eunithice.item.EunithiceItems;
 import com.craftminerd.eunithice.util.EunithiceTags;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.NonNullList;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -21,6 +26,8 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
 import net.minecraft.world.item.crafting.SimpleCookingSerializer;
+import net.minecraftforge.fluids.FluidStack;
+
 import java.util.function.Consumer;
 
 public class EunithiceRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -436,9 +443,9 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
         ////////////////
         // SMELTING RECIPES
         ////////////////
+        eunithiceOreSmelting(pFinishedRecipeConsumer, List.of(EunithiceBlocks.NEUDONITE_ORE.get(), EunithiceItems.RAW_NEUDONITE.get(), EunithiceBlocks.DEEPSLATE_NEUDONITE_ORE.get()), EunithiceItems.NEUDONITE_INGOT.get(), 0.7F, 200, "neudonite_ingot");
+        eunithiceOreBlasting(pFinishedRecipeConsumer, List.of(EunithiceBlocks.NEUDONITE_ORE.get(), EunithiceItems.RAW_NEUDONITE.get(), EunithiceBlocks.DEEPSLATE_NEUDONITE_ORE.get()), EunithiceItems.NEUDONITE_INGOT.get(), 0.7F, 100, "neudonite_ingot");
 
-        eunithiceOreSmelting(pFinishedRecipeConsumer, List.of(EunithiceBlocks.NEUDONITE_ORE.get(), EunithiceItems.RAW_NEUDONITE.get()), EunithiceItems.NEUDONITE_INGOT.get(), 0.7F, 200, "neudonite_ingot");
-        eunithiceOreBlasting(pFinishedRecipeConsumer, List.of(EunithiceBlocks.NEUDONITE_ORE.get(), EunithiceItems.RAW_NEUDONITE.get()), EunithiceItems.NEUDONITE_INGOT.get(), 0.7F, 100, "neudonite_ingot");
 
         ////////////////
         // MACHINE RECIPES
@@ -454,73 +461,134 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceItems.HONEY_GEL.get()), Ingredient.of(EunithiceBlocks.ASPHALT.get())),
                 EunithiceBlocks.HONEY_INFUSED_ASPHALT.get(), 2, false);
 
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.SPEED_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
-                EunithiceBlocks.ASPHALT.get(), 1, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.BOUNCE_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
-                EunithiceBlocks.ASPHALT.get(), 1, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.HONEY_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
-                EunithiceBlocks.ASPHALT.get(), 1, false);
+
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.IRON_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.RAW_IRON, 4, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_IRON_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.RAW_IRON, 6, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Items.RAW_IRON), Ingredient.of(EunithiceItems.BURN_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.IRON_INGOT, 2, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.SPEED_INFUSED_ASPHALT.get().asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(EunithiceBlocks.ASPHALT.get().asItem(), 1)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 10), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.GOLD_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.RAW_GOLD, 4, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_GOLD_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.RAW_GOLD, 6, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Items.RAW_GOLD), Ingredient.of(EunithiceItems.BURN_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.GOLD_INGOT, 2, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.HONEY_INFUSED_ASPHALT.get().asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(EunithiceBlocks.ASPHALT.get().asItem(), 1)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 10), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.COPPER_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.RAW_COPPER, 8, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_COPPER_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.RAW_COPPER, 14, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Items.RAW_COPPER), Ingredient.of(EunithiceItems.BURN_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.COPPER_INGOT, 2, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.BOUNCE_INFUSED_ASPHALT.get().asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(EunithiceBlocks.ASPHALT.get().asItem(), 1)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 10), false);
+
+
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DIAMOND_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.DIAMOND, 3, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_DIAMOND_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.DIAMOND, 5, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.COAL_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.COAL, 3)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 50), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.COAL_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.COAL, 3, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_COAL_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.COAL, 5, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_COAL_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.COAL, 5)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.EMERALD_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.EMERALD, 3, false);
-        eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_EMERALD_ORE), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                Items.EMERALD, 5, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.IRON_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.RAW_IRON, 2)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.NEUDONITE_ORE.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                EunithiceItems.RAW_NEUDONITE.get(), 4, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_IRON_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.RAW_IRON, 4)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceItems.RAW_NEUDONITE.get()), Ingredient.of(EunithiceItems.BURN_CORE.get()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
-                EunithiceItems.NEUDONITE_INGOT.get(), 2, false);
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.COPPER_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.RAW_COPPER, 4)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 75), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_COPPER_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.RAW_COPPER, 6)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.GOLD_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.RAW_GOLD, 2)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_GOLD_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.RAW_GOLD, 4)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.REDSTONE_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.REDSTONE, 8)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_REDSTONE_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.REDSTONE, 12)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.EMERALD_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.EMERALD, 2)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_EMERALD_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.EMERALD, 3)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.LAPIS_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.LAPIS_LAZULI, 6)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_LAPIS_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.LAPIS_LAZULI, 9)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DIAMOND_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.DIAMOND, 2)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_DIAMOND_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.DIAMOND, 4)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 250), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.NETHER_GOLD_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.GOLD_NUGGET, 6)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 75), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.NETHER_QUARTZ_ORE.asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.QUARTZ, 4)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 200), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.NEUDONITE_ORE.get().asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(EunithiceItems.RAW_NEUDONITE.get(), 3)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 100), false);
+
+        eunithiceItemExtracting(pFinishedRecipeConsumer,
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.DEEPSLATE_NEUDONITE_ORE.get().asItem())),
+                NonNullList.of(ItemStack.EMPTY, new ItemStack(EunithiceItems.RAW_NEUDONITE.get(), 4)),
+                new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
+
+//        eunithiceItemExtracting(pFinishedRecipeConsumer,
+//                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.SPEED_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
+//                EunithiceBlocks.ASPHALT.get(), 1, false);
+//        eunithiceItemExtracting(pFinishedRecipeConsumer,
+//                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.BOUNCE_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
+//                EunithiceBlocks.ASPHALT.get(), 1, false);
+//        eunithiceItemExtracting(pFinishedRecipeConsumer,
+//                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.HONEY_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
+//                EunithiceBlocks.ASPHALT.get(), 1, false);
 
     }
 
@@ -543,9 +611,9 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .unlockedBy(getHasName(pIngredients.get(0).getItems()[0].getItem()), has(pIngredients.get(0).getItems()[0].getItem()))
                 .save(pFinishedRecipeConsumer, getItemName(pResult) + "_from_infusing" + "_" + getItemName(pIngredients.get(0).getItems()[0].getItem()));
     }
-    protected static void eunithiceItemExtracting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, ItemLike pResult, int pCount, boolean pIgnoreDurability) {
-        new ExtractorRecipeBuilder(pIngredients, pResult, pCount, pIgnoreDurability)
+    protected static void eunithiceItemExtracting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, NonNullList<Ingredient> pIngredients, NonNullList<ItemStack> pResults, FluidStack stack, boolean pIgnoreDurability) {
+        new ExtractorRecipeBuilder(pIngredients, pResults, stack, pIgnoreDurability)
                 .unlockedBy(getHasName(pIngredients.get(0).getItems()[0].getItem()), has(pIngredients.get(0).getItems()[0].getItem()))
-                .save(pFinishedRecipeConsumer, getItemName(pResult) + "_from_extracting" + "_" + getItemName(pIngredients.get(0).getItems()[0].getItem()));
+                .save(pFinishedRecipeConsumer, new ResourceLocation(Eunithice.MODID, "extraction/extracting_" + getItemName(pIngredients.get(0).getItems()[0].getItem())));
     }
 }

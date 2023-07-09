@@ -8,11 +8,16 @@ _Note 2: You will need a lot of resources to progress in this mod._
 
 
 ## Version 0.0.3
+- Added a new fluid "Extraction Fluid" (Basically retextured water - infinite source)
+  - Used in Extractor for increasing ore gains
+- Extractor recipes can now support multiple outputs
+- Extraction cores now supply Extraction Fluid for extractor recipes
 - Added an Autosmelt enchantment, blocks mined with a tool using this enchantment will have their normal drops smelted. Incompatible with Silk Touch
-- Added Deepslate Neudonite Ore and modified Neudonite spawn rate and range. (New range: -36 to 68)
+- Added Deepslate Neudonite Ore and modified Neudonite spawn rate and range. (New range: -20 to 40)
 - Added configs for Neudonite Ore vein spawning & size
 - Removed handheld ender chest
   - Moved to a new mod, "Handheld Utilities"
+- Changed the way Bounce Infused Asphalt calculates bounce power
 - Increased the strength of Honey Infused Asphalt
 - Search bar added to Eunithice creative tab
 - Burn Core now works when used by a dispenser

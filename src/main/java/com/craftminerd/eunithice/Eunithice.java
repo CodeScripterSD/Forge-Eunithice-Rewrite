@@ -6,26 +6,15 @@ import com.craftminerd.eunithice.config.EunithiceCommonConfigs;
 import com.craftminerd.eunithice.effect.EunithiceEffects;
 import com.craftminerd.eunithice.enchantments.EunithiceEnchantments;
 import com.craftminerd.eunithice.event.loot.EunithiceGlobalLootModifiers;
+import com.craftminerd.eunithice.fluid.EunithiceFluids;
 import com.craftminerd.eunithice.item.EunithiceItems;
+import com.craftminerd.eunithice.networking.EunithiceMessages;
 import com.craftminerd.eunithice.recipe.EunithiceRecipes;
 import com.craftminerd.eunithice.screen.EunithiceMenuTypes;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.BlockSource;
-import net.minecraft.core.Direction;
-import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraftforge.client.IItemRenderProperties;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -60,14 +49,15 @@ public class Eunithice
         // Register the setup method for modloading
         eventBus.addListener(this::setup);
 
-        EunithiceItems.ITEMS.register(eventBus);
+        EunithiceItems.register(eventBus);
         EunithiceBlocks.register(eventBus);
         EunithiceBlockEntities.register(eventBus);
         EunithiceMenuTypes.register(eventBus);
         EunithiceRecipes.register(eventBus);
         EunithiceEnchantments.register(eventBus);
         EunithiceEffects.register(eventBus);
-        EunithiceGlobalLootModifiers.LOOT_MODIFIERS.register(eventBus);
+        EunithiceGlobalLootModifiers.register(eventBus);
+        EunithiceFluids.register(eventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EunithiceCommonConfigs.SPEC, "eunithice-common.toml");
 
@@ -77,6 +67,9 @@ public class Eunithice
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+            EunithiceMessages.register();
+        });
         // some preinit code
 //        LOGGER.info("HELLO FROM PREINIT");
 //        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());

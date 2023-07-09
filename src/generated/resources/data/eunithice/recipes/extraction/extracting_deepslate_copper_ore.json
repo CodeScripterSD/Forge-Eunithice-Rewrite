@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_copper_ore"
+    }
+  ],
+  "fluid": {
+    "FluidName": "eunithice:extraction_fluid",
+    "Amount": 100
+  },
+  "results": [
+    {
+      "item": "minecraft:raw_copper",
+      "count": 6
+    }
+  ]
+}

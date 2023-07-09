@@ -1,8 +1,34 @@
 {
   "variants": {
-    "facing=north": { "model": "eunithice:block/extractor" },
-    "facing=east": { "model": "eunithice:block/extractor", "y": 90 },
-    "facing=south": { "model": "eunithice:block/extractor", "y": 180 },
-    "facing=west": { "model": "eunithice:block/extractor", "y": 270 }
+    "facing=east,active=false": {
+      "model": "eunithice:block/extractor",
+      "y": 90
+    },
+    "facing=east,active=true": {
+      "model": "eunithice:block/extractor_on",
+      "y": 90
+    },
+    "facing=north,active=false": {
+      "model": "eunithice:block/extractor"
+    },
+    "facing=north,active=true": {
+      "model": "eunithice:block/extractor_on"
+    },
+    "facing=south,active=false": {
+      "model": "eunithice:block/extractor",
+      "y": 180
+    },
+    "facing=south,active=true": {
+      "model": "eunithice:block/extractor_on",
+      "y": 180
+    },
+    "facing=west,active=false": {
+      "model": "eunithice:block/extractor",
+      "y": 270
+    },
+    "facing=west,active=true": {
+      "model": "eunithice:block/extractor_on",
+      "y": 270
+    }
   }
 }

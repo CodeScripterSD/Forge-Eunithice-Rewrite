@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "eunithice:deepslate_neudonite_ore"
+  },
+  "result": "eunithice:neudonite_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

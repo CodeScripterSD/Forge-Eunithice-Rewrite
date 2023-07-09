@@ -2,18 +2,21 @@ package com.craftminerd.eunithice.integration;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
-import com.craftminerd.eunithice.item.EunithiceItems;
 import com.craftminerd.eunithice.recipe.AsphaltInfuserRecipe;
+import com.craftminerd.eunithice.recipe.EunithiceRecipes;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
+import com.craftminerd.eunithice.screen.ExtractorScreen;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.RecipeTypes;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import mezz.jei.api.registration.IGuiHandlerRegistration;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.inventory.CraftingScreen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -61,5 +64,10 @@ public class JEIEunithicePlugin implements IModPlugin {
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(EunithiceBlocks.ASPHALT_INFUSER.get()), ASPHALT_INFUSER);
         registration.addRecipeCatalyst(new ItemStack(EunithiceBlocks.EXTRACTOR.get()), EXTRACTION);
+    }
+
+    @Override
+    public void registerGuiHandlers(IGuiHandlerRegistration registration) {
+        registration.addRecipeClickArea(ExtractorScreen.class, 87, 38, 19, 20, EXTRACTION);
     }
 }

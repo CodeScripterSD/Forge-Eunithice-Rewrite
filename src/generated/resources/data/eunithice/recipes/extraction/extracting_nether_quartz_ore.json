@@ -1,0 +1,19 @@
+{
+  "type": "eunithice:extraction",
+  "ignore_durability": false,
+  "ingredients": [
+    {
+      "item": "minecraft:nether_quartz_ore"
+    }
+  ],
+  "fluid": {
+    "FluidName": "eunithice:extraction_fluid",
+    "Amount": 200
+  },
+  "results": [
+    {
+      "item": "minecraft:quartz",
+      "count": 4
+    }
+  ]
+}

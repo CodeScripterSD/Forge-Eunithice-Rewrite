@@ -2,12 +2,14 @@ package com.craftminerd.eunithice.item;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
+import com.craftminerd.eunithice.fluid.EunithiceFluids;
 import com.craftminerd.eunithice.item.custom.*;
 import com.craftminerd.eunithice.item.custom.foods.*;
 import com.craftminerd.eunithice.item.tiers.EunithiceArmorMaterials;
 import com.craftminerd.eunithice.item.tiers.EunithiceToolTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -203,5 +205,13 @@ public class EunithiceItems {
             () -> new ArmorItem(EunithiceArmorMaterials.NEUDONITE, EquipmentSlot.FEET, new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
+    public static final RegistryObject<BucketItem> EXTRACTION_BUCKET = ITEMS.register("extraction_bucket",
+            () -> new BucketItem(EunithiceFluids.EXTRACTION_FLUID,
+                    new Item.Properties().tab(Eunithice.EUNITHICE_ITEMS_TAB).stacksTo(1)));
+
+
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
 
 }

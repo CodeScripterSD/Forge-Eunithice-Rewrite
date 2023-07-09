@@ -5,6 +5,7 @@ import com.craftminerd.eunithice.block.EunithiceBlocks;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
 import com.craftminerd.eunithice.util.EunithiceTags;
 import mezz.jei.api.constants.VanillaTypes;
+import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -17,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 @SuppressWarnings("removal")
 public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe> {
@@ -26,7 +28,7 @@ public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe>
     private final IDrawable icon;
 
     public ExtractorRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 23, 20, 130, 44);
+        this.background = helper.drawableBuilder(TEXTURE, 41, 13, 120, 61).build();
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(EunithiceBlocks.EXTRACTOR.get()));
     }
 
@@ -54,15 +56,25 @@ public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe>
     @Override
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull ExtractorRecipe recipe, @Nonnull IFocusGroup focusGroup) {
         for (int i = 0; i < recipe.getIngredients().size(); i++) {
-            if (recipe.getIngredients().get(i).getItems()[0].is(EunithiceTags.Items.CORES)) {
-                builder.addSlot(RecipeIngredientRole.INPUT, 2, 14).addIngredients(recipe.getIngredients().get(i)); // CORE SLOT
-            }
-            else if (recipe.getIngredients().get(i).getItems()[0].is(EunithiceTags.Items.HAMMERS)) {
-                builder.addSlot(RecipeIngredientRole.INPUT, 36, 2).addIngredients(recipe.getIngredients().get(i)); // HAMMER SLOT
+            if (recipe.getIngredients().get(i).getItems()[0].is(EunithiceTags.Items.HAMMERS)) {
+                builder.addSlot(RecipeIngredientRole.INPUT, 28, 10).addIngredients(recipe.getIngredients().get(i)); // HAMMER SLOT
             } else {
-                builder.addSlot(RecipeIngredientRole.INPUT, 36, 26).addIngredients(recipe.getIngredients().get(i));
+                builder.addSlot(RecipeIngredientRole.INPUT, 28, 35).addIngredients(recipe.getIngredients().get(i));
             }
         }
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 76, 5).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.INPUT, 1, 1).addIngredients(
+                ForgeTypes.FLUID_STACK, List.of(recipe.getFluid())
+        ).setFluidRenderer(64000, false, 16, 59);
+        for (int i = 0; i < recipe.getResultItemStacks().size(); i++) {
+            switch (i) {
+                case 0: builder.addSlot(RecipeIngredientRole.OUTPUT, 68, 13).addItemStack(recipe.getResultItemStacks().get(0)); break;
+                case 1: builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 13).addItemStack(recipe.getResultItemStacks().get(1)); break;
+                case 2: builder.addSlot(RecipeIngredientRole.OUTPUT, 104, 13).addItemStack(recipe.getResultItemStacks().get(2)); break;
+                case 3: builder.addSlot(RecipeIngredientRole.OUTPUT, 68, 31).addItemStack(recipe.getResultItemStacks().get(3)); break;
+                case 4: builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 31).addItemStack(recipe.getResultItemStacks().get(4)); break;
+                case 5: builder.addSlot(RecipeIngredientRole.OUTPUT, 104, 31).addItemStack(recipe.getResultItemStacks().get(5)); break;
+            }
+        }
     }
+
 }

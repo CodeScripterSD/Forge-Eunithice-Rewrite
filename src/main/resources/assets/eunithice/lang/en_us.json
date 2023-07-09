@@ -23,6 +23,7 @@
   "item.eunithice.speed_gel": "Speed Gel",
   "item.eunithice.bounce_gel": "Bounce Gel",
   "item.eunithice.honey_gel": "Honey Gel",
+  "item.eunithice.extraction_bucket": "Extraction Fluid Bucket",
 
   "item.eunithice.neudonite_shovel": "Neudonite Shovel",
   "item.eunithice.neudonite_hoe": "Neudonite Hoe",
@@ -50,6 +51,9 @@
   "tooltip.eunithice.fruit_dish":"\u00A77What even is this?",
   "tooltip.eunithice.burn_core":"\u00A77Burns for 800 ticks, per durability",
   "tooltip.eunithice.extraction_core":"\u00A75\u00A7oIt is vibrating with an unknown energy",
+
+  "eunithice.tooltip.liquid.amount.with.capacity":"%s / %s mB",
+  "eunithice.tooltip.liquid.amount":"%s mB",
 
   "block.eunithice.iron_plate_block": "Plated Iron Block",
   "block.eunithice.compressed_iron_plate_block": "Compressed Iron Block",
@@ -84,7 +88,8 @@
 
   "itemGroup.eunithice": "Eunithice",
 
-
   "block.eunithice.stone_trapdoor":"Stone Trapdoor",
-  "block.eunithice.stone_door":"Stone Door"
+  "block.eunithice.stone_door":"Stone Door",
+
+  "fluid.eunithice.extraction_fluid": "Extraction Fluid"
 }
