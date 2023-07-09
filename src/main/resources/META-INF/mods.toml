@@ -29,11 +29,19 @@ displayName="Eunithice" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="craftminerD" #optional
+credits="Major credit goes to Kaupenjoe (https://github.com/Kaupenjoe, https://www.youtube.com/@ModdingByKaupenjoe) for providing excellent resources on Minecraft modding." #optional
 # A text field displayed in the mod UI
-authors="craftminerD" #optional
+authors="craftminerD/CodeScripter (me)" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
+Eunithice is a mod that currently lacks a real central topic. The mod so-far includes:
++ New fluid
++ New block entities & recipes
++ New items
++ New Armors & Tools
++ A new ore
++ JEI Integration for custom recipes
++ A new enchantment
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 #[[dependencies.examplemod]] #optional
