@@ -64,7 +64,7 @@ public class ExtractorRecipeCategory implements IRecipeCategory<ExtractorRecipe>
         }
         builder.addSlot(RecipeIngredientRole.INPUT, 1, 1).addIngredients(
                 ForgeTypes.FLUID_STACK, List.of(recipe.getFluid())
-        ).setFluidRenderer(64000, false, 16, 59);
+        ).setFluidRenderer(16000, false, 16, 59);
         for (int i = 0; i < recipe.getResultItemStacks().size(); i++) {
             switch (i) {
                 case 0: builder.addSlot(RecipeIngredientRole.OUTPUT, 68, 13).addItemStack(recipe.getResultItemStacks().get(0)); break;

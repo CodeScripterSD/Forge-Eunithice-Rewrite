@@ -22,13 +22,13 @@ public class EunithiceItems {
     public static final RegistryObject<BurnCore> BURN_CORE = ITEMS.register("burn_core",
             () -> new BurnCore(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .defaultDurability(640)
+                    .defaultDurability(321)
             ));
 
     public static final RegistryObject<ExtractionCore> EXTRACTION_CORE = ITEMS.register("extraction_core",
             () -> new ExtractionCore(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .defaultDurability(641)
+                    .defaultDurability(321)
             ));
 
     // INGOTS

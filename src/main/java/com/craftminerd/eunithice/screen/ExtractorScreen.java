@@ -30,7 +30,7 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
     }
 
     private void assignFluidRenderer() {
-        renderer = new FluidTankRenderer(64000, true, 16, 59);
+        renderer = new FluidTankRenderer(16000, true, 16, 59);
     }
 
     @Override

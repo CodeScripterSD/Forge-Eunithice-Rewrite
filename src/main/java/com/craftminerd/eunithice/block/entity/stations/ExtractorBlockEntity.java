@@ -9,6 +9,7 @@ import com.craftminerd.eunithice.networking.EunithiceMessages;
 import com.craftminerd.eunithice.networking.packet.FluidSyncS2CPacket;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
 import com.craftminerd.eunithice.screen.ExtractorMenu;
+import com.craftminerd.eunithice.util.EunithiceTags;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -161,7 +162,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    private final FluidTank FLUID_TANK = new FluidTank(64000) {
+    private final FluidTank FLUID_TANK = new FluidTank(16000) {
         @Override
         protected void onContentsChanged() {
             setChanged();
@@ -172,9 +173,13 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
 
         @Override
         public boolean isFluidValid(FluidStack stack) {
-            return stack.getFluid() == EunithiceFluids.EXTRACTION_FLUID.get();
+            return  (this.getFluid().isEmpty() || stack.getFluid().isSame(this.getFluid().getFluid())) && stack.getFluid().is(EunithiceTags.Fluids.EXTRACTOR_ACCEPTED_FLUIDS);
         }
     };
+
+    private static boolean isFluidSameAsTankFluid(FluidStack stack, ExtractorBlockEntity pEntity) {
+        return stack.getFluid().isSame(pEntity.FLUID_TANK.getFluid().getFluid());
+    }
 
     public void setFluid(FluidStack stack) {
         this.FLUID_TANK.setFluid(stack);
@@ -270,8 +275,8 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
         if (pEntity.itemHandler.getStackInSlot(1).is(EunithiceItems.EXTRACTION_CORE.get())
                 && pEntity.itemHandler.getStackInSlot(1).getDamageValue() > 0) {
             int drainAmount = 25;
-            FluidStack stack = pEntity.FLUID_TANK.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
-            if (pEntity.FLUID_TANK.isFluidValid(stack)) {
+            FluidStack stack = new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), drainAmount);
+            if (isFluidSameAsTankFluid(stack, pEntity)) {
                 pEntity.FLUID_TANK.drain(stack, IFluidHandler.FluidAction.EXECUTE);
                 pEntity.itemHandler.getStackInSlot(1).hurt(-1, pEntity.level.getRandom(), null);
             }
