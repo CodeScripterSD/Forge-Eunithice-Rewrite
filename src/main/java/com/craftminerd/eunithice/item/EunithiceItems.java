@@ -28,7 +28,7 @@ public class EunithiceItems {
     public static final RegistryObject<ExtractionCore> EXTRACTION_CORE = ITEMS.register("extraction_core",
             () -> new ExtractionCore(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-                    .defaultDurability(1280)
+                    .defaultDurability(641)
             ));
 
     // INGOTS

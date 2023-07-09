@@ -4,6 +4,9 @@
   "ingredients": [
     {
       "item": "minecraft:nether_gold_ore"
+    },
+    {
+      "tag": "eunithice:hammers"
     }
   ],
   "fluid": {

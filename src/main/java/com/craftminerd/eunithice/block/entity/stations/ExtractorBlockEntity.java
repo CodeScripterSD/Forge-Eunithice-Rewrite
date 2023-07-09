@@ -212,6 +212,8 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
                 pBlockEntity.resetProgress();
             }
         } else {
+            pState = pState.setValue(Extractor.ACTIVE, false);
+            level.setBlock(pPos, pState, 3);
             pBlockEntity.resetProgress();
             setChanged(level,pPos,pState);
         }
@@ -234,17 +236,27 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
 
     private static void transferItemFluidToFluidTank(ExtractorBlockEntity pEntity) {
         if (pEntity.itemHandler.getStackInSlot(0).is(EunithiceItems.EXTRACTION_CORE.get())
-                && pEntity.itemHandler.getStackInSlot(0).getDamageValue() < pEntity.itemHandler.getStackInSlot(0).getMaxDamage()) {
-            int drainAmount = 100;
+                && pEntity.itemHandler.getStackInSlot(0).getDamageValue() < pEntity.itemHandler.getStackInSlot(0).getMaxDamage() - 1) {
+            int drainAmount = 25;
             if (pEntity.FLUID_TANK.getSpace() < drainAmount) return;
             FluidStack stack = new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), drainAmount);
             if (pEntity.FLUID_TANK.isFluidValid(stack)) {
                 fillTankWithFluid(pEntity, stack, ItemStack.EMPTY);
             }
         } else {
+            if (pEntity.itemHandler.getStackInSlot(0).getItem() instanceof BucketItem) {
+                pEntity.itemHandler.getStackInSlot(0).getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).ifPresent(handler -> {
+                    int drainAmount = 1000;
+                    if (pEntity.FLUID_TANK.getSpace() < drainAmount) return;
+                    FluidStack stack = handler.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
+                    if (pEntity.FLUID_TANK.isFluidValid(stack)) {
+                        handler.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+                        fillTankWithFluid(pEntity, stack, handler.getContainer());
+                    }
+                });
+            }
             pEntity.itemHandler.getStackInSlot(0).getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).ifPresent(handler -> {
-                int drainAmount = 1000;
-                if (pEntity.FLUID_TANK.getSpace() < drainAmount) return;
+                int drainAmount = Math.min(pEntity.FLUID_TANK.getSpace(), 1000);
                 FluidStack stack = handler.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
                 if (pEntity.FLUID_TANK.isFluidValid(stack)) {
                     handler.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
@@ -255,16 +267,15 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private static void transferTankFluidToItem(ExtractorBlockEntity pEntity) {
-        if (pEntity.FLUID_TANK.getFluidAmount() >= 100
-                && pEntity.itemHandler.getStackInSlot(1).is(EunithiceItems.EXTRACTION_CORE.get())
+        if (pEntity.itemHandler.getStackInSlot(1).is(EunithiceItems.EXTRACTION_CORE.get())
                 && pEntity.itemHandler.getStackInSlot(1).getDamageValue() > 0) {
-            int drainAmount = 100;
+            int drainAmount = 25;
             FluidStack stack = pEntity.FLUID_TANK.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
             if (pEntity.FLUID_TANK.isFluidValid(stack)) {
                 pEntity.FLUID_TANK.drain(stack, IFluidHandler.FluidAction.EXECUTE);
                 pEntity.itemHandler.getStackInSlot(1).hurt(-1, pEntity.level.getRandom(), null);
             }
-        } else if (pEntity.FLUID_TANK.getFluidAmount() >= 1000 && pEntity.itemHandler.getStackInSlot(1).getItem() instanceof BucketItem) {
+        } else if (pEntity.itemHandler.getStackInSlot(1).getItem() instanceof BucketItem) {
             int drainAmount = 1000;
             FluidStack stack = pEntity.FLUID_TANK.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
             if (pEntity.FLUID_TANK.isFluidValid(stack)) {
@@ -295,11 +306,6 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
             pEntity.itemHandler.insertItem(0, container, false);
         }
 
-    }
-
-    private static void emptyTankOfFluid(ExtractorBlockEntity pEntity, FluidStack stack, ItemStack container) {
-        if (pEntity.itemHandler.getStackInSlot(1).getItem() instanceof ExtractionCore) {
-        }
     }
 
     private static boolean hasFluidItemInSourceSlot(ExtractorBlockEntity pEntity) {

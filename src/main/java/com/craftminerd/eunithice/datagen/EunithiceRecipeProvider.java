@@ -551,17 +551,17 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DIAMOND_ORE.asItem())),
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DIAMOND_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
                 NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.DIAMOND, 2)),
                 new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 150), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_DIAMOND_ORE.asItem())),
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.DEEPSLATE_DIAMOND_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
                 NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.DIAMOND, 4)),
                 new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 250), false);
 
         eunithiceItemExtracting(pFinishedRecipeConsumer,
-                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.NETHER_GOLD_ORE.asItem())),
+                NonNullList.of(Ingredient.EMPTY, Ingredient.of(Blocks.NETHER_GOLD_ORE.asItem()), Ingredient.of(EunithiceTags.Items.HAMMERS)),
                 NonNullList.of(ItemStack.EMPTY, new ItemStack(Items.GOLD_NUGGET, 6)),
                 new FluidStack(EunithiceFluids.EXTRACTION_FLUID.get(), 75), false);
 
