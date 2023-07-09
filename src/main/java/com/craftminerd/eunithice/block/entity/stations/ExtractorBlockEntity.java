@@ -292,7 +292,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
             }
         } else {
             pEntity.itemHandler.getStackInSlot(1).getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).ifPresent(handler -> {
-                int drainAmount = Math.min(pEntity.FLUID_TANK.getSpace(), 1000);
+                int drainAmount = Math.min(pEntity.FLUID_TANK.getFluidAmount(), 1000);
                 FluidStack stack = pEntity.FLUID_TANK.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
                 if (pEntity.FLUID_TANK.isFluidValid(stack)) {
                     pEntity.FLUID_TANK.drain(stack, IFluidHandler.FluidAction.EXECUTE);
