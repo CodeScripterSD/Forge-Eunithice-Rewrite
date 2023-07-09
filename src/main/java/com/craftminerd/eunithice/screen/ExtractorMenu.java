@@ -6,7 +6,6 @@ import com.craftminerd.eunithice.screen.slot.EunithiceFuelSlot;
 import com.craftminerd.eunithice.screen.slot.EunithiceHammerOnlySlot;
 import com.craftminerd.eunithice.screen.slot.EunithiceNormalItemSlot;
 import com.craftminerd.eunithice.screen.slot.EunithiceResultSlot;
-import com.mojang.logging.LogUtils;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -16,10 +15,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.items.CapabilityItemHandler;
-import org.slf4j.Logger;
 
 public class ExtractorMenu extends AbstractContainerMenu {
-    private static final Logger LOGGER = LogUtils.getLogger();
     private final ExtractorBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
@@ -40,8 +37,8 @@ public class ExtractorMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(iItemHandler -> {
-            this.addSlot(new EunithiceFuelSlot(iItemHandler, 0, 15, 14));
-            this.addSlot(new EunithiceFuelSlot(iItemHandler, 1, 15, 57));
+            this.addSlot(new EunithiceFuelSlot(iItemHandler, 0, 15, 17));
+            this.addSlot(new EunithiceFuelSlot(iItemHandler, 1, 15, 54));
             this.addSlot(new EunithiceHammerOnlySlot(iItemHandler, 2, 69, 23));
             this.addSlot(new EunithiceNormalItemSlot(iItemHandler, 3, 69, 48));
             this.addSlot(new EunithiceResultSlot(iItemHandler, 4, 109, 26));

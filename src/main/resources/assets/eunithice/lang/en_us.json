@@ -51,6 +51,7 @@
   "tooltip.eunithice.fruit_dish":"\u00A77What even is this?",
   "tooltip.eunithice.burn_core":"\u00A77Burns for 800 ticks, per durability",
   "tooltip.eunithice.extraction_core":"\u00A75\u00A7oIt is vibrating with an unknown energy",
+  "tooltip.eunithice.extractor_hover":"§4§n§lDoes not retain fluid when broken",
 
   "eunithice.tooltip.liquid.amount.with.capacity":"%s / %s mB",
   "eunithice.tooltip.liquid.amount":"%s mB",

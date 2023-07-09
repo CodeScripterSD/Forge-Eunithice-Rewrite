@@ -11,9 +11,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Optional;
 
+@OnlyIn(Dist.CLIENT)
 public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(Eunithice.MODID, "textures/gui/extractor_gui.png");
     private FluidTankRenderer renderer;
@@ -26,23 +29,23 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
     protected void init() {
         super.init();
         assignFluidRenderer();
-        this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
     }
 
     private void assignFluidRenderer() {
-        renderer = new FluidTankRenderer(16000, true, 16, 59);
+        renderer = new FluidTankRenderer(4000, true, 16, 53);
     }
 
-    @Override
     protected void renderLabels(PoseStack pPoseStack, int pMouseX, int pMouseY) {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
+        this.font.draw(pPoseStack, this.title, (float)this.titleLabelX, (float)this.titleLabelY, 4210752);
+        this.font.draw(pPoseStack, this.playerInventoryTitle, (float)this.inventoryLabelX, (float)this.inventoryLabelY, 4210752);
         renderFluidAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
     }
 
     private void renderFluidAreaTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
-        if (isMouseAboveArea(pMouseX, pMouseY, x, y, 42, 14)) {
+        if (isMouseAboveArea(pMouseX, pMouseY, x, y, 42, 17)) {
             renderTooltip(pPoseStack, renderer.getTooltip(menu.getFluidStack(), TooltipFlag.Default.NORMAL),
                     Optional.empty(), pMouseX - x, pMouseY - y);
         }
@@ -59,7 +62,7 @@ public class ExtractorScreen extends AbstractContainerScreen<ExtractorMenu> {
         this.blit(pPoseStack, x, y,0,0, imageWidth, imageHeight);
 
         renderProgress(pPoseStack, x, y);
-        renderer.render(pPoseStack, x + 42, y + 14, menu.getFluidStack());
+        renderer.render(pPoseStack, x + 42, y + 17, menu.getFluidStack());
 
     }
 

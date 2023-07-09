@@ -98,6 +98,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
         };
     }
 
+    @Nonnull
     @Override
     public Component getDisplayName() {
         return new TranslatableComponent("block_entity.eunithice.display_name.extractor");
@@ -162,7 +163,7 @@ public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    private final FluidTank FLUID_TANK = new FluidTank(16000) {
+    private final FluidTank FLUID_TANK = new FluidTank(4000) {
         @Override
         protected void onContentsChanged() {
             setChanged();
