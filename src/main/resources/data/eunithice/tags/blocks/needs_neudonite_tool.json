@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "eunithice:iron_plate_block",
+    "eunithice:compressed_iron_plate_block",
+    "eunithice:heavy_compressed_iron_plate_block",
+    "#minecraft:needs_iron_tool",
+    "eunithice:gold_plate_block",
+    "eunithice:compressed_gold_plate_block",
+    "eunithice:heavy_compressed_gold_plate_block",
+    "eunithice:diamond_plate_block",
+    "eunithice:compressed_diamond_plate_block",
+    "eunithice:heavy_compressed_diamond_plate_block"
+  ]
+}

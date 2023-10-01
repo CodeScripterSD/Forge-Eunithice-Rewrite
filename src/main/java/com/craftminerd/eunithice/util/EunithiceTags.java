@@ -24,7 +24,7 @@ public class EunithiceTags {
     }
 
     public static class Blocks {
-
+        public static final TagKey<Block> NEEDS_NEUDONITE_TOOL = tag("needs_neudonite_tool");
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Eunithice.MODID, name));
         }

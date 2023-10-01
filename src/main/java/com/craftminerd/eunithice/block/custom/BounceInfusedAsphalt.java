@@ -27,7 +27,8 @@ public class BounceInfusedAsphalt extends Block {
 
     private void bounceUp(Entity entity) {
         Vec3 vec3 = entity.getDeltaMovement();
-        if (((Math.abs(vec3.x) > 0.25D) || (Math.abs(vec3.z) > 0.25D)) && !(vec3.y < 0.0D)) {
+        double speed = Math.sqrt(Math.pow(vec3.x, 2d) + Math.pow(vec3.z, 2d));
+        if ((speed > 0.25) && !(vec3.y < 0.0D)) {
 
             double bounceFactor = 0;
             float fairSpeedMultFactor = 1.2F;
@@ -39,7 +40,7 @@ public class BounceInfusedAsphalt extends Block {
 //                bounceFactor = fairSpeedMultFactor * Math.abs(vec3.z);
 //            }
 
-            bounceFactor = fairSpeedMultFactor * Math.sqrt(Math.pow(vec3.x, 2d)+Math.pow(vec3.z, 2d));
+            bounceFactor = fairSpeedMultFactor * speed;
 
             double d0 = entity instanceof LivingEntity ? 1.2D : 1.0D;
             entity.setDeltaMovement(vec3.x, bounceFactor * d0, vec3.z);

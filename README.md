@@ -1,17 +1,23 @@
-# Forge Eunithice 0.0.3-1.18.2
+# Forge Eunithice 0.0.2-1.18.2
 
-A Forge 1.18.2 Minecraft Mod
+A Forge Minecraft Mod
 
-_Note: Every single thing is subject to change_
+[Latest Release](https://github.com/CodeScripterSD/Forge-Eunithice-Rewrite/releases/tag/1.18.2-0.0.2)  
+[Latest Release Patch Notes](#version-002-released)
 
+_Note: Every single thing is subject to change_  
 _Note 2: You will need a lot of resources to progress in this mod._
 
-
 ## Version 0.0.3 (Unreleased)
-#### Additions
+
+### Additions
+
+- Added a tag for blocks specifically mineable by Neudonite Tools
+- Nuedonite Blocks may be used as a base for beacons
+- Neudonite Ingots may be used as payment for beacons
 - Added an Autosmelt enchantment, blocks mined with a tool using this enchantment will have their normal drops smelted. Incompatible with Silk Touch
-- Added a new fluid "Extraction Fluid" (Basically retextured water - infinite source)
-  - Used in Extractor for increasing ore gains
+- Added a new fluid "Chroma" (Doesn't act like a fluid due to lacking fluid API)
+  - Extends usage of Extraction Core in Extractor recipes; Extraction Core now turns into Chroma
 - Added Neudonite Tools and Armor
 - Added Deepslate Neudonite Ore and modified Neudonite spawn rate and range. (New range: -20 to 40)
 - Added configs for Neudonite Ore vein spawning & size
@@ -23,7 +29,11 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Added new Effect, "Weakened"
   - Does nothing on its own, used in conjunction with Serrated Blade
 - Added Stone Door and Trapdoor
-#### Changes
+  
+### Changes
+
+- Asphalt now has a more significant speed-up
+- Burn Core now has an animated texture
 - Honey/Bounce Infused Asphalt trades have been moved from LVL 4 to LVL 2 and halved the cost
 - Extraction cores now supply Extraction Fluid for extractor recipes
 - Extractor recipes can now support multiple outputs
@@ -40,19 +50,27 @@ _Note 2: You will need a lot of resources to progress in this mod._
   - Tier 1 from 640 to 128
   - Tier 2 from 5120 to 1024
 - Changed recipe for Speed Imbued Asphalt to mimic the other Infused variant's recipes
-#### Fixes
+
+### Fixes
+
 - Fixed some wrong code in the Withered Thorns enchantment
 - Burn Core now works when used by a dispenser
 - Fixed a bug in Extractor & Asphalt Infuser
   - Previously would use a durability item past 0, leading to negative values
 - Fixed some recipes that use the tier_one_hammer to use all tiers of hammers
-#### Removals
+
+### Removals
+
+- Removed Iron Core and Iron Core Fragment
+- Removed Withering Thorns enchantment
 - Removed handheld ender chest
   - Moved to a new mod, "Handheld Utilities"
 - Removed Iron/Gold/Diamond plated tool sets and armor
 
 ## Version 0.0.2 (Released)
-#### Additions
+
+### Additions
+
 - Added 3 "Gels"
   - [Honey Gel], [Bounce Gel], [Speed Gel] (Textures will be added in a later update)
   - Used in Asphalt Infuser to create Infused variants of Asphalt
@@ -64,7 +82,9 @@ _Note 2: You will need a lot of resources to progress in this mod._
     - Apply gels to asphalt blocks
   - Extractor
     - Use Cores and Hammers to extract resources
-#### Changes
+
+### Changes
+
 - Made Revival Sandwich less overpowered
   - Regeneration 3 for 40 seconds
   - Resistance 2 for 3 minutes
@@ -82,7 +102,9 @@ _Note 2: You will need a lot of resources to progress in this mod._
     - Uses Neudonite Ingots instead of Gold Plates
     - Uses Iron Ingots instead of Sticks
     - Uses Iron Plate instead of Iron Core
-#### New Recipes
+
+### New Recipes
+
 - Crafting Station Recipes
   - Asphalt from extracting Honey, Bounce, or Speed Infused variants
   - Charcoal
@@ -116,6 +138,7 @@ _Note 2: You will need a lot of resources to progress in this mod._
     - Infusing Asphalt with Speed Gel -> 8 Speed Infused Asphalt
 
 ## Version 0.0.1 (Released)
+
 - Iron, Gold, and Diamond Plates for excessive micro-crafting
 - 2 Tiers of hammer used for producing plates and other micro-crafting recipes
 - 3 Sets of "Plated" blocks
@@ -123,7 +146,7 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - 3 Tiers of tools/armor
   - Plated Iron, Plated Gold, Plated Diamond (upgraded from their respective sets and definitely not cheap)
 - Set of 4 "Asphalts"
-  - Normal 
+  - Normal
     - Minor speed increase while walking on it
   - Speed Infused
     - Multiplies your x+z motion while standing on it, creating an effect like ice that makes you move faster (Unless holding sneak)

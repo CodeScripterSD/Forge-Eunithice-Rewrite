@@ -8,22 +8,17 @@
   "item.eunithice.raw_neudonite": "Raw Neudonite",
   "item.eunithice.leuridium_ingot": "Leuridium Ingot",
 
-  "item.eunithice.tier_one_hammer": "Iron Hammer",
-  "item.eunithice.tier_two_hammer": "Extremely Heavy Iron Hammer",
-  "item.eunithice.handheld_ender_chest": "Handheld Ender Chest",
-  "item.eunithice.handheld_crafting_table": "Handheld Crafting Table",
-  "item.eunithice.motion_controller": "Motion Inverter",
+  "item.eunithice.tier_one_hammer": "Tier One Hammer",
+  "item.eunithice.tier_two_hammer": "Tier Two Hammer",
   "item.eunithice.burn_core": "Burn Core",
   "item.eunithice.extraction_core": "Extraction Core",
   "item.eunithice.iron_plate": "Iron Plate",
-  "item.eunithice.iron_core_fragment": "Fragment of Iron",
-  "item.eunithice.iron_core": "Iron Purity",
   "item.eunithice.gold_plate": "Gold Plate",
   "item.eunithice.diamond_plate": "Diamond Plate",
   "item.eunithice.speed_gel": "Speed Gel",
   "item.eunithice.bounce_gel": "Bounce Gel",
   "item.eunithice.honey_gel": "Honey Gel",
-  "item.eunithice.extraction_bucket": "Extraction Fluid Bucket",
+  "item.eunithice.extraction_bucket": "Chroma Bucket",
 
   "item.eunithice.neudonite_shovel": "Neudonite Shovel",
   "item.eunithice.neudonite_hoe": "Neudonite Hoe",
@@ -41,7 +36,7 @@
   "item.eunithice.leurite_grains":"Leurite Grains",
   "item.eunithice.meatball_soup":"Meatball Soup",
   "item.eunithice.vegetable_salad":"Veggie Salad",
-  "item.eunithice.fruit_dish":"Fruit Side Dish",
+  "item.eunithice.fruit_dish":"Fruit Bowl",
   "item.eunithice.revival_sandwich":"Revival Sandwich",
   "item.eunithice.leurite_bread":"Leurite Bread",
 
@@ -92,5 +87,5 @@
   "block.eunithice.stone_trapdoor":"Stone Trapdoor",
   "block.eunithice.stone_door":"Stone Door",
 
-  "fluid.eunithice.extraction_fluid": "Extraction Fluid"
+  "fluid.eunithice.extraction_fluid": "Chroma"
 }

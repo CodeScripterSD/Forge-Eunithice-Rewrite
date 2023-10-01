@@ -13,10 +13,10 @@ public class EunithiceCommonConfigs {
     static {
         BUILDER.push("Ore Generation");
 
-        NEUDONITE_ORE_VEINS_PER_CHUNK = BUILDER.comment("How many Neudonite Ore veins spawn per chunk").worldRestart()
-                        .define("Neudonite Veins Per Chunk", 8);
-        NEUDONITE_ORE_VEIN_SIZE = BUILDER.comment("How many Neudonite Ore blocks spawn per vein").worldRestart()
-                        .defineInRange("Neudonite Vein Size", 7, 2, 30);
+        NEUDONITE_ORE_VEINS_PER_CHUNK = BUILDER.comment("How many Neudonite Ore veins spawn per chunk", "Default: 8").worldRestart()
+                        .define("neudoniteOreVeinsPerChunk", 8);
+        NEUDONITE_ORE_VEIN_SIZE = BUILDER.comment("How many Neudonite Ore blocks spawn per vein", "Default: 7").worldRestart()
+                        .defineInRange("neudoniteOreVeinSize", 7, 2, 30);
 
         BUILDER.pop();
         SPEC = BUILDER.build();

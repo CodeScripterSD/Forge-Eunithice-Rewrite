@@ -78,7 +78,7 @@ public class EunithiceBlocks {
             () -> new Block(BlockBehaviour.Properties
                     .of(Material.STONE, MaterialColor.COLOR_BLACK)
                     .strength(1f, 6f)
-                    .speedFactor(1.1f)),
+                    .speedFactor(1.2f)),
             Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> RAW_NEUDONITE_BLOCK = registerBlock("raw_neudonite_block",

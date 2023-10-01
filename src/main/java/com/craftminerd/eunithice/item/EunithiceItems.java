@@ -78,16 +78,6 @@ public class EunithiceItems {
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
             ));
 
-    public static final RegistryObject<Item> IRON_CORE = ITEMS.register("iron_core",
-            () -> new Item(new Item.Properties()
-                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-            ));
-
-    public static final RegistryObject<Item> IRON_CORE_FRAGMENT = ITEMS.register("iron_core_fragment",
-            () -> new Item(new Item.Properties()
-                    .tab(Eunithice.EUNITHICE_ITEMS_TAB)
-            ));
-
     public static final RegistryObject<Item> GOLD_PLATE = ITEMS.register("gold_plate",
             () -> new Item(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
@@ -164,7 +154,7 @@ public class EunithiceItems {
 
 
     public static final RegistryObject<SerratedBlade> SERRATED_BLADE = ITEMS.register("serrated_blade",
-            () -> new SerratedBlade(EunithiceToolTiers.DRIPSTONE, 3, -2.4f, new Item.Properties()
+            () -> new SerratedBlade(EunithiceToolTiers.SERRATED, 3, -2.4f, new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)));
 
     //NEUDONITE GEAR
