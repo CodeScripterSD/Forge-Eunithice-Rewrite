@@ -22,7 +22,7 @@ public class EunithiceToolTiers {
 
     static {
         NEUDONITE = TierSortingRegistry.registerTier(
-                new ForgeTier(2, 750, 10.0f, 2.6f, 16,
+                new ForgeTier(2, 750, 7.0f, 2.6f, 16,
                         EunithiceTags.Blocks.NEEDS_NEUDONITE_TOOL, () -> Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get())),
                 new ResourceLocation(Eunithice.MODID, "neudonite"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND)
         );
