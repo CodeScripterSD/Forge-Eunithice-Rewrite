@@ -12,24 +12,49 @@ _Note 2: You will need a lot of resources to progress in this mod._
 
 ### Additions
 
+#### Blocks
 - Added Darkwood
-- Added a tag for blocks specifically mineable by Neudonite Tools
-- Nuedonite Blocks may be used as a base for beacons
-- Neudonite Ingots may be used as payment for beacons
-- Added an Autosmelt enchantment, blocks mined with a tool using this enchantment will have their normal drops smelted. Incompatible with Silk Touch
+  - New wood variant, currently missing Sign and Boat
+- Added Stone Door and Trapdoor
 - Added a new fluid "Chroma" (Doesn't act like a fluid due to lacking fluid API)
   - Extends usage of Extraction Core in Extractor recipes; Extraction Core now turns into Chroma
-- Added Neudonite Tools and Armor
-- Added Deepslate Neudonite Ore and modified Neudonite spawn rate and range. (New range: -20 to 40)
+- Added Deepslate Neudonite Ore
+#### Enchantments
+- Added an "Autosmelt" enchantment, blocks mined with a tool using this enchantment will have their normal drops smelted. Incompatible with Silk Touch
+- Added a "Firing Speed" enchantment
+  - Levels 1-4
+  - Decreases the cool down on Shortbow items
+- Added a "Teleportitis" enchantment
+  - Levels 2-4
+  - Inspired by Hypixel Skyblock's "Aspect of the End" item
+  - Right click to teleport forward a short distance proportional to its level
+#### Gear
+- Added "Experimental Shortbow"
+  - Inspired by Hypixel Skyblock's Juju Shortbow
+  - Shoots arrow instantly upon right click, but has a cool down
+- Added 3 new Tool and Armor Tiers
+  - Neudonite
+  - Lymine
+  - Myelite
+#### Misc
+- Eunithice's Metal Blocks may be used as a base for beacons
+  - Neudonite, Lymine, and Myelite
+- Eunithice's Metal Ingots may be used as payment for beacons
+  - Neudonite, Lymine, and Myelite
+#### Technical
+- Added a tag for shortbow items so that other mods can allow Eunithice's "Firing Speed" enchantment
+  - The enchantment has no base implementation; implementation must be done by the other mod's developer
+- Added a tag for blocks specifically mineable by each of Eunithice's tool tiers
+- Modified Neudonite spawn rate and range. (New range: -20 to 40)
 - Added configs for Neudonite Ore vein spawning & size
 - Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
 - Added Serrated Blade
   - Uses old Diamond Plated Sword texture as a placeholder
   - Damage increases the more kills you have with it
-- Added Stone Door and Trapdoor
   
 ### Changes
 
+- Gave Speed, Bounce, and Honey gels independent textures
 - Asphalt now has a more significant speed-up
 - Burn Core now has an animated texture
 - Honey/Bounce Infused Asphalt trades have been moved from LVL 4 to LVL 2 and halved the cost
@@ -92,7 +117,7 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Iron Core is obsolete
 - Tweaked recipes
   - Bounce Infused Asphalt, Honey Infused Asphalt
-    - Asphalt replaces the Speed Infused Asphalt
+    - Now requires Asphalt instead of Speed Infused Asphalt
   - Gold Plate, Iron Plate
     - Now can be crafted with all hammer levels
   - Handheld Ender Chest
