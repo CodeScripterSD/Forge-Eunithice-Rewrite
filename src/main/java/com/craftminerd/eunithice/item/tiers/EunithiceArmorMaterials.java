@@ -13,16 +13,16 @@ import java.util.function.Supplier;
 
 public enum EunithiceArmorMaterials implements ArmorMaterial {
     NEUDONITE("neudonite",26,
-            new int[] { 2, 6, 6, 3 }, 11,
-            SoundEvents.ARMOR_EQUIP_IRON, 0.5f, 0.0f,
+            new int[] { 3, 5, 6, 3 }, 10,
+            SoundEvents.ARMOR_EQUIP_IRON, 0f, 0.0f,
             () -> Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get())),
     LYMINE("lymine",32,
-            new int[] { 6, 9, 8, 5 }, 24,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.2f,
+            new int[] { 3, 7, 9, 3 }, 14,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.05f,
             () -> Ingredient.of(EunithiceItems.LYMINE.get())),
     MYELITE("myelite",48,
-            new int[] { 8, 10, 9, 7 }, 30,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.5f,
+            new int[] { 4, 7, 9, 5 }, 18,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f,
             () -> Ingredient.of(EunithiceItems.MYELITE_INGOT.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

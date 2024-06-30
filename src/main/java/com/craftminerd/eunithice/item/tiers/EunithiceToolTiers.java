@@ -22,7 +22,7 @@ public class EunithiceToolTiers {
 
     static {
         NEUDONITE = TierSortingRegistry.registerTier(
-                new ForgeTier(2, 750, 7.0f, 2.6f, 16,
+                new ForgeTier(2, 750, 7.5f, 2.6f, 16,
                         EunithiceTags.Blocks.NEEDS_NEUDONITE_TOOL, () -> Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get())),
                 new ResourceLocation(Eunithice.MODID, "neudonite"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND)
         );
@@ -34,13 +34,13 @@ public class EunithiceToolTiers {
 //        );
 
         LYMINE = TierSortingRegistry.registerTier(
-                new ForgeTier(4, 2591, 20.0f, 4.0f, 21,
+                new ForgeTier(4, 2591, 12.0f, 4.0f, 21,
                         EunithiceTags.Blocks.NEEDS_LYMINE_TOOL, () -> Ingredient.of(EunithiceItems.LYMINE.get())),
                 new ResourceLocation(Eunithice.MODID, "lymine"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE)
         );
 
         MYELITE = TierSortingRegistry.registerTier(
-                new ForgeTier(4, 4000, 50.0f, 6.6f, 28,
+                new ForgeTier(4, 4000, 20.0f, 6.6f, 28,
                         EunithiceTags.Blocks.NEEDS_MYELITE_TOOL, () -> Ingredient.of(EunithiceItems.MYELITE_INGOT.get())),
                 new ResourceLocation(Eunithice.MODID, "myelite"), List.of(Tiers.NETHERITE), List.of()
         );
