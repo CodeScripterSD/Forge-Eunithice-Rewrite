@@ -6,12 +6,14 @@
     ]
   },
   "criteria": {
-    "has_hammer": {
+    "has_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "eunithice:hammers"
+            "items": [
+              "minecraft:diamond"
+            ]
           }
         ]
       }
@@ -25,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_hammer",
+      "has_diamond",
       "has_the_recipe"
     ]
   ]

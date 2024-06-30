@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "eunithice:extraction_fluid",
+    "eunithice:chroma_fluid",
     "minecraft:water",
     "minecraft:lava"
   ]

@@ -24,7 +24,15 @@ public class EunithiceTags {
     }
 
     public static class Blocks {
+        public static final TagKey<Block> FORGE_ORES = forgeTag("ores");
+        public static final TagKey<Block> NEEDS_WOODEN_TOOL = forgeTag("needs_wooden_tool");
+        public static final TagKey<Block> NEEDS_NETHERITE_TOOL = forgeTag("needs_netherite_tool");
+
+        public static final TagKey<Block> DARKWOOD_LOGS = tag("darkwood_logs");
+        public static final TagKey<Block> MINEABLE_MULTITOOL = tag("mineable/multitool");
         public static final TagKey<Block> NEEDS_NEUDONITE_TOOL = tag("needs_neudonite_tool");
+        public static final TagKey<Block> NEEDS_LYMINE_TOOL = tag("needs_lymine_tool");
+        public static final TagKey<Block> NEEDS_MYELITE_TOOL = tag("needs_myelite_tool");
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Eunithice.MODID, name));
         }
@@ -35,8 +43,14 @@ public class EunithiceTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> HAMMERS = tag("hammers");
+        public static final TagKey<Item> FORGE_CROPS = forgeTag("crops");
+        public static final TagKey<Item> FORGE_SEEDS = forgeTag("seeds");
+
+        public static final TagKey<Item> DARKWOOD_LOGS = tag("darkwood_logs");
+//        public static final TagKey<Item> HAMMERS = tag("hammers");
         public static final TagKey<Item> CORES = tag("cores");
+        public static final TagKey<Item> SHORTBOWS = tag("shortbows");
+
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(Eunithice.MODID, name));
         }

@@ -16,7 +16,7 @@ public class EunithiceMenuTypes {
         MENUS.register(eventBus);
     }
 
-    public static final RegistryObject<MenuType<AsphaltInfuserMenu>> ASPHALT_INFUSER_MENU = registerMenuType(AsphaltInfuserMenu::new,"asphalt_infuser_menu");
+    public static final RegistryObject<MenuType<AsphaltInfuserMenu>> ASPHALT_INFUSER_MENU = registerMenuType(AsphaltInfuserMenu::new,"infuser_menu");
     public static final RegistryObject<MenuType<ExtractorMenu>> EXTRACTOR_MENU = registerMenuType(ExtractorMenu::new,"extractor_menu");
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {

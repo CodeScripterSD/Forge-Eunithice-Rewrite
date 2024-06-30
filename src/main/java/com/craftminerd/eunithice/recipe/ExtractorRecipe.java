@@ -94,7 +94,8 @@ public class ExtractorRecipe implements Recipe<SimpleContainer> {
         public ExtractorRecipe fromJson(ResourceLocation id, JsonObject json) {
             String s = GsonHelper.getAsString(json, "group", "");
             NonNullList<Ingredient> ingredients = ingredientsFromJson(GsonHelper.getAsJsonArray(json, "ingredients"));
-            FluidStack fluid = FluidJSONUtil.readFluid(json.get("fluid").getAsJsonObject());
+            NonNullList<FluidStack> fluids = fluidsFromJson(GsonHelper.getAsJsonArray(json, "fluids"));
+//            FluidStack fluids = FluidJSONUtil.readFluid(json.get("fluid").getAsJsonObject());
 
             boolean ignoreDurability = GsonHelper.getAsBoolean(json, "ignore_durability");
 
@@ -102,10 +103,12 @@ public class ExtractorRecipe implements Recipe<SimpleContainer> {
                 throw new JsonParseException("No ingredients for Extraction recipe");
             } else if (ingredients.size() > 3) {
                 throw new JsonParseException("Too many ingredients for recipe. The maximum is 3.");
+            } else if (fluids.size() > 1) {
+                throw new JsonParseException("Too many fluids for recipe. The maximum is 1.");
             } else {
                 NonNullList<ItemStack> resultItems = itemsFromJson(GsonHelper.getAsJsonArray(json, "results"));
 //                ItemStack itemStack = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json,"result"));
-                return new ExtractorRecipe(id,s,resultItems,ingredients, fluid, ignoreDurability);
+                return new ExtractorRecipe(id,s,resultItems,ingredients, fluids.get(0), ignoreDurability);
             }
         }
 
@@ -116,6 +119,18 @@ public class ExtractorRecipe implements Recipe<SimpleContainer> {
                 Ingredient ingredient = Ingredient.fromJson(ingredientArray.get(i));
                 if (!ingredient.isEmpty()) {
                     nonnulllist.add(ingredient);
+                }
+            }
+            return nonnulllist;
+        }
+
+        private static NonNullList<FluidStack> fluidsFromJson(JsonArray fluidsArray) {
+            NonNullList<FluidStack> nonnulllist = NonNullList.create();
+
+            for (int i = 0; i < fluidsArray.size(); ++i) {
+                FluidStack fluid = FluidJSONUtil.readFluid(fluidsArray.get(i).getAsJsonObject());
+                if (!fluid.isEmpty()) {
+                    nonnulllist.add(fluid);
                 }
             }
             return nonnulllist;

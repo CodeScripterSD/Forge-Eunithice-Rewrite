@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:lymine_omnitool"
+    ]
+  },
+  "criteria": {
+    "has_lymine_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:lymine_pickaxe"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:lymine_omnitool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lymine_pickaxe",
+      "has_the_recipe"
+    ]
+  ]
+}

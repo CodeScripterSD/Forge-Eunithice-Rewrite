@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:myelite_block"
+    }
+  ],
+  "result": {
+    "item": "eunithice:myelite_ingot",
+    "count": 9
+  }
+}

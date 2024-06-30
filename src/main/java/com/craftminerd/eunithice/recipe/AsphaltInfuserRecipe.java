@@ -79,12 +79,12 @@ public class AsphaltInfuserRecipe implements Recipe<SimpleContainer> {
     public static class Type implements RecipeType<AsphaltInfuserRecipe> {
         private Type() {}
         public static final Type INSTANCE = new Type();
-        public static final String ID = "asphalt_infuser";
+        public static final String ID = "infuser";
     }
 
     public static class Serializer implements RecipeSerializer<AsphaltInfuserRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(Eunithice.MODID, "asphalt_infuser");
+        public static final ResourceLocation ID = new ResourceLocation(Eunithice.MODID, "infuser");
 
         @Override
         public AsphaltInfuserRecipe fromJson(ResourceLocation id, JsonObject json) {

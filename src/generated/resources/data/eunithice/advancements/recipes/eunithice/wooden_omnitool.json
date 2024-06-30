@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:wooden_omnitool"
+    ]
+  },
+  "criteria": {
+    "has_wooden_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:wooden_pickaxe"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:wooden_omnitool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wooden_pickaxe",
+      "has_the_recipe"
+    ]
+  ]
+}

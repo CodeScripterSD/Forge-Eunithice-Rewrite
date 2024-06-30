@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ASP",
+    "H# ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "eunithice:neudonite_pickaxe"
+    },
+    "A": {
+      "item": "eunithice:neudonite_axe"
+    },
+    "S": {
+      "item": "eunithice:neudonite_shovel"
+    },
+    "H": {
+      "item": "eunithice:neudonite_hoe"
+    }
+  },
+  "result": {
+    "item": "eunithice:neudonite_omnitool"
+  }
+}

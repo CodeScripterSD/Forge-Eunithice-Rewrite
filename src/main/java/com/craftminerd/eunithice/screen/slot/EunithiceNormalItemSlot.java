@@ -13,6 +13,6 @@ public class EunithiceNormalItemSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(@NotNull ItemStack stack) {
-        return !stack.is(EunithiceTags.Items.HAMMERS) && !stack.is(EunithiceTags.Items.CORES);
+        return /*!stack.is(EunithiceTags.Items.HAMMERS) && */!stack.is(EunithiceTags.Items.CORES);
     }
 }

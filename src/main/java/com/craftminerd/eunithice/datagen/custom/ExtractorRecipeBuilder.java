@@ -2,6 +2,7 @@ package com.craftminerd.eunithice.datagen.custom;
 
 import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.recipe.ExtractorRecipe;
+import com.craftminerd.eunithice.util.FluidJSONUtil;
 import com.craftminerd.eunithice.util.ItemStackJSONUtil;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -89,10 +90,12 @@ public class ExtractorRecipeBuilder implements RecipeBuilder {
                 recipeIngredients.add(recipeItem.toJson());
             }
             pJson.add("ingredients", recipeIngredients);
-            JsonObject fluidObject = new JsonObject();
-            fluidObject.addProperty("FluidName", stack.getFluid().getRegistryName().toString());
-            fluidObject.addProperty("Amount", stack.getAmount());
-            pJson.add("fluid", fluidObject);
+//            JsonObject fluidObject = new JsonObject();
+//            fluidObject.addProperty("fluidname", stack.getFluid().getRegistryName().toString());
+//            fluidObject.addProperty("amount", stack.getAmount());
+            JsonArray recipeFluids = new JsonArray();
+            recipeFluids.add(FluidJSONUtil.toJson(stack));
+            pJson.add("fluids", recipeFluids);
             JsonArray recipeResults = new JsonArray();
             for (ItemStack resultItem : resultItems) {
                 if (!resultItem.isEmpty())

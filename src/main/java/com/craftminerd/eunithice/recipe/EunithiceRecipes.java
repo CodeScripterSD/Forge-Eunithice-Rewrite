@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class EunithiceRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Eunithice.MODID);
 
-    public static final RegistryObject<RecipeSerializer<AsphaltInfuserRecipe>> ASPHALT_INFUSER_RECIPE_SERIALIZER = SERIALIZERS.register("asphalt_infuser", ()->
+    public static final RegistryObject<RecipeSerializer<AsphaltInfuserRecipe>> ASPHALT_INFUSER_RECIPE_SERIALIZER = SERIALIZERS.register("infuser", ()->
             AsphaltInfuserRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<ExtractorRecipe>> EXTRACTOR_RECIPE_SERIALIZER = SERIALIZERS.register("extraction", ()->

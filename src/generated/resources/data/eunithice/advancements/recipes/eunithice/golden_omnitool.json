@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:golden_omnitool"
+    ]
+  },
+  "criteria": {
+    "has_golden_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_pickaxe"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:golden_omnitool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_golden_pickaxe",
+      "has_the_recipe"
+    ]
+  ]
+}

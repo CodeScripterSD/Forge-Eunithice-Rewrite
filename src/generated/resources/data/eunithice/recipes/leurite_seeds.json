@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "?#?",
-    "#Q#",
-    "?#?"
+    " D ",
+    "GSG",
+    " D "
   ],
   "key": {
-    "?": {
-      "item": "eunithice:gold_plate_block"
+    "G": {
+      "item": "minecraft:gold_ingot"
     },
-    "#": {
-      "item": "minecraft:diamond_block"
+    "D": {
+      "item": "minecraft:diamond"
     },
-    "Q": {
-      "tag": "eunithice:hammers"
+    "S": {
+      "tag": "forge:seeds"
     }
   },
   "result": {

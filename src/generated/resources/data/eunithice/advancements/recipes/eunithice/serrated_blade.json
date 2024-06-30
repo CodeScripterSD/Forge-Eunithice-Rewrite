@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_leurite_grains": {
+    "has_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "eunithice:leurite_grains"
+              "minecraft:diamond"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_leurite_grains",
+      "has_diamond",
       "has_the_recipe"
     ]
   ]

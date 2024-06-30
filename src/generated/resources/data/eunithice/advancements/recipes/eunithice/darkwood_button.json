@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:darkwood_button"
+    ]
+  },
+  "criteria": {
+    "has_darkwood_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:darkwood_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:darkwood_button"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_darkwood_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

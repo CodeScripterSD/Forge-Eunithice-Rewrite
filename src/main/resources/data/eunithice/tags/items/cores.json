@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "eunithice:extraction_core",
-    "eunithice:burn_core",
-    "eunithice:iron_core"
+    "eunithice:burn_core"
   ]
 }

@@ -1,12 +1,21 @@
 {
-  "container.eunithice.handheld_ender_chest": "Handheld Ender Chest",
-  "container.eunithice.handheld_crafting_table": "Crafting",
+  "item.eunithice.kickback_test": "Kickback Test Item [NYI]",
 
-  "effect.eunithice.weakened": "Weakened",
+  "item.eunithice.wooden_omnitool": "Wooden Omnitool",
+  "item.eunithice.golden_omnitool": "Golden Omnitool",
+  "item.eunithice.stone_omnitool": "Stone Omnitool",
+  "item.eunithice.iron_omnitool": "Iron Omnitool",
+  "item.eunithice.diamond_omnitool": "Diamond Omnitool",
+  "item.eunithice.netherite_omnitool": "Netherite Omnitool",
+  "item.eunithice.neudonite_omnitool": "Neudonite Omnitool",
+  "item.eunithice.lymine_omnitool": "Lymine Omnitool",
+  "item.eunithice.myelite_omnitool": "Myelite Omnitool",
 
   "item.eunithice.neudonite_ingot": "Neudonite Ingot",
   "item.eunithice.raw_neudonite": "Raw Neudonite",
-  "item.eunithice.leuridium_ingot": "Leuridium Ingot",
+  "item.eunithice.leurium_ingot": "Leurium Ingot",
+  "item.eunithice.lymine": "Lymine",
+  "item.eunithice.myelite_ingot": "Myelite Ingot",
 
   "item.eunithice.tier_one_hammer": "Tier One Hammer",
   "item.eunithice.tier_two_hammer": "Tier Two Hammer",
@@ -18,7 +27,7 @@
   "item.eunithice.speed_gel": "Speed Gel",
   "item.eunithice.bounce_gel": "Bounce Gel",
   "item.eunithice.honey_gel": "Honey Gel",
-  "item.eunithice.extraction_bucket": "Chroma Bucket",
+  "item.eunithice.chroma_bucket": "Chroma Bucket",
 
   "item.eunithice.neudonite_shovel": "Neudonite Shovel",
   "item.eunithice.neudonite_hoe": "Neudonite Hoe",
@@ -30,7 +39,39 @@
   "item.eunithice.neudonite_leggings": "Neudonite Leggings",
   "item.eunithice.neudonite_boots": "Neudonite Boots",
 
+  "item.eunithice.leurium_shovel": "Leurium Shovel",
+  "item.eunithice.leurium_hoe": "Leurium Hoe",
+  "item.eunithice.leurium_axe": "Leurium Axe",
+  "item.eunithice.leurium_pickaxe": "Leurium Pickaxe",
+  "item.eunithice.leurium_sword": "Leurium Sword",
+  "item.eunithice.leurium_helmet": "Leurium Helmet",
+  "item.eunithice.leurium_chestplate": "Leurium Chestplate",
+  "item.eunithice.leurium_leggings": "Leurium Leggings",
+  "item.eunithice.leurium_boots": "Leurium Boots",
+
+  "item.eunithice.lymine_shovel": "Lymine Shovel",
+  "item.eunithice.lymine_hoe": "Lymine Hoe",
+  "item.eunithice.lymine_axe": "Lymine Axe",
+  "item.eunithice.lymine_pickaxe": "Lymine Pickaxe",
+  "item.eunithice.lymine_sword": "Lymine Sword",
+  "item.eunithice.lymine_helmet": "Lymine Helmet",
+  "item.eunithice.lymine_chestplate": "Lymine Chestplate",
+  "item.eunithice.lymine_leggings": "Lymine Leggings",
+  "item.eunithice.lymine_boots": "Lymine Boots",
+
+  "item.eunithice.myelite_shovel": "Myelite Shovel",
+  "item.eunithice.myelite_hoe": "Myelite Hoe",
+  "item.eunithice.myelite_axe": "Myelite Axe",
+  "item.eunithice.myelite_pickaxe": "Myelite Pickaxe",
+  "item.eunithice.myelite_sword": "Myelite Sword",
+  "item.eunithice.myelite_helmet": "Myelite Helmet",
+  "item.eunithice.myelite_chestplate": "Myelite Chestplate",
+  "item.eunithice.myelite_leggings": "Myelite Leggings",
+  "item.eunithice.myelite_boots": "Myelite Boots",
+
   "item.eunithice.serrated_blade": "Serrated Blade",
+
+  "item.eunithice.experimental_bow": "Experimental Shortbow",
 
   "block.eunithice.leurite_crop":"Leurite Seeds",
   "item.eunithice.leurite_grains":"Leurite Grains",
@@ -47,9 +88,28 @@
   "tooltip.eunithice.burn_core":"\u00A77Burns for 800 ticks, per durability",
   "tooltip.eunithice.extraction_core":"\u00A75\u00A7oIt is vibrating with an unknown energy",
   "tooltip.eunithice.extractor_hover":"§4§n§lDoes not retain fluid when broken",
+  "tooltip.eunithice.damage_increase_per_kill": "§7This item gains damage after every kill",
+  "tooltip.eunithice.kills_counter": "§7Kills: %s",
+  "tooltip.eunithice.shortbow": "§6Shortbow: Instantly shoots!",
 
   "eunithice.tooltip.liquid.amount.with.capacity":"%s / %s mB",
   "eunithice.tooltip.liquid.amount":"%s mB",
+
+  "block.eunithice.darkwood_log": "Darkwood Log",
+  "block.eunithice.darkwood_wood": "Darkwood Wood",
+  "block.eunithice.stripped_darkwood_log": "Stripped Darkwood Log",
+  "block.eunithice.stripped_darkwood_wood": "Stripped Darkwood Wood",
+  "block.eunithice.darkwood_planks": "Darkwood Planks",
+  "block.eunithice.darkwood_stairs": "Darkwood Stairs",
+  "block.eunithice.darkwood_slab": "Darkwood Slab",
+  "block.eunithice.darkwood_fence": "Darkwood Fence",
+  "block.eunithice.darkwood_fence_gate": "Darkwood Fence Gate",
+  "block.eunithice.darkwood_button": "Darkwood Button",
+  "block.eunithice.darkwood_pressure_plate": "Darkwood Pressure Plate",
+  "block.eunithice.darkwood_door": "Darkwood Door",
+  "block.eunithice.darkwood_trapdoor": "Darkwood Trapdoor",
+  "block.eunithice.darkwood_leaves": "Darkwood Leaves",
+  "block.eunithice.darkwood_sapling": "Darkwood Sapling",
 
   "block.eunithice.iron_plate_block": "Plated Iron Block",
   "block.eunithice.compressed_iron_plate_block": "Compressed Iron Block",
@@ -71,21 +131,31 @@
   "block.eunithice.raw_neudonite_block": "Block of Raw Neudonite",
   "block.eunithice.neudonite_block": "Neudonite Block",
   "block.eunithice.neudonite_ore": "Neudonite Ore",
+  "block.eunithice.leurium_block": "Leurium Block",
+  "block.eunithice.lymine_block": "Lymine Block",
+  "block.eunithice.myelite_block": "Myelite Block",
   "block.eunithice.deepslate_neudonite_ore": "Deepslate Neudonite Ore",
 
+  "block.eunithice.infuser":"Infuser [NYI]",
   "block.eunithice.asphalt_infuser":"Asphalt Infuser",
-  "block_entity.eunithice.display_name.asphalt_infuser": "Asphalt Infuser",
+  "block_entity.eunithice.display_name.infuser": "Asphalt Infuser",
   "block.eunithice.extractor":"Extractor",
   "block_entity.eunithice.display_name.extractor": "Extractor",
   "block.eunithice.display_case":"Display Case",
 
-  "enchantment.eunithice.withered_thorns": "Withered Thorns",
   "enchantment.eunithice.smelting": "Smelting",
+  "enchantment.eunithice.smelting.desc": "Automatically smelts the item that a block would normally drop.",
+  "enchantment.eunithice.teleportitis": "Teleportitis",
+  "enchantment.eunithice.teleportitis.desc": "Right click to teleport forward a short distance.",
+  "enchantment.eunithice.firing_speed": "Firing Speed",
+  "enchantment.eunithice.firing_speed.desc": "Decreases the cooldown between shots on Eunithice's Shortbow items.",
 
   "itemGroup.eunithice": "Eunithice",
 
   "block.eunithice.stone_trapdoor":"Stone Trapdoor",
   "block.eunithice.stone_door":"Stone Door",
 
-  "fluid.eunithice.extraction_fluid": "Chroma"
+  "fluid.eunithice.chroma_fluid": "Chroma",
+
+  "eunithice.compat.jei.infusing_category": "Infusing"
 }

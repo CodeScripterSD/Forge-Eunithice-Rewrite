@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "eunithice:darkwood_logs"
+    }
+  ],
+  "result": {
+    "item": "eunithice:darkwood_planks",
+    "count": 4
+  }
+}

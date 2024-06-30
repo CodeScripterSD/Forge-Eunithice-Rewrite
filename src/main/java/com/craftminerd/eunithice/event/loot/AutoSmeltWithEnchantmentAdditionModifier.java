@@ -1,5 +1,6 @@
 package com.craftminerd.eunithice.event.loot;
 
+import com.craftminerd.eunithice.Eunithice;
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.SimpleContainer;
@@ -14,16 +15,12 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AutoSmeltWithEnchantmentAdditionModifier extends LootModifier {
 
-    /**
-     * Constructs a LootModifier.
-     *
-     * @param conditionsIn the ILootConditions that need to be matched before the loot is modified.
-     */
-    protected AutoSmeltWithEnchantmentAdditionModifier(LootItemCondition[] conditionsIn) {
+    public AutoSmeltWithEnchantmentAdditionModifier(LootItemCondition[] conditionsIn) {
         super(conditionsIn);
     }
 
@@ -45,8 +42,8 @@ public class AutoSmeltWithEnchantmentAdditionModifier extends LootModifier {
 
     public static class Serializer extends GlobalLootModifierSerializer<AutoSmeltWithEnchantmentAdditionModifier> {
         @Override
-        public AutoSmeltWithEnchantmentAdditionModifier read(ResourceLocation location, JsonObject object, LootItemCondition[] ailootcondition) {
-            return new AutoSmeltWithEnchantmentAdditionModifier(ailootcondition);
+        public AutoSmeltWithEnchantmentAdditionModifier read(ResourceLocation location, JsonObject object, LootItemCondition[] conditionsIn) {
+            return new AutoSmeltWithEnchantmentAdditionModifier(conditionsIn);
         }
 
         @Override

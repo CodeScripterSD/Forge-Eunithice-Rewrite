@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "entries": [
+    "eunithice:smelting_block_drop",
+    "eunithice:smelting_entity_drop"
+  ]
+}

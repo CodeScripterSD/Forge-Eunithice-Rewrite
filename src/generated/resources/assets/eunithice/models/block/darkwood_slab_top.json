@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "eunithice:block/darkwood_planks",
+    "bottom": "eunithice:block/darkwood_planks",
+    "top": "eunithice:block/darkwood_planks"
+  }
+}

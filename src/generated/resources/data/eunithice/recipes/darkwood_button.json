@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:darkwood_planks"
+    }
+  ],
+  "result": {
+    "item": "eunithice:darkwood_button"
+  }
+}

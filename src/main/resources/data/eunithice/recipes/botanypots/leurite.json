@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "botanypots"
+        }
+      ],
+      "recipe":
+        {
+          "type": "botanypots:crop",
+          "seed": {
+            "item": "eunithice:leurite_seeds"
+          },
+          "categories": [
+            "dirt",
+            "farmland"
+          ],
+          "growthTicks": 1200,
+          "display": {
+            "type": "botanypots:aging",
+            "block": "eunithice:leurite_crop"
+          },
+          "drops": [
+            {
+              "chance": 1.00,
+              "output": {
+                "item": "eunithice:leurite_grains"
+              }
+            },
+            {
+              "chance": 0.15,
+              "output": {
+                "item": "eunithice:leurite_seeds"
+              },
+              "minRolls": 1,
+              "maxRolls": 2
+            }
+          ]
+        }
+    }
+  ]
+}

@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_iron_plate": {
+    "has_stone_slab": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "eunithice:iron_plate"
+              "minecraft:stone_slab"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_iron_plate",
+      "has_stone_slab",
       "has_the_recipe"
     ]
   ]

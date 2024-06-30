@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ASP",
+    "H# ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "eunithice:myelite_pickaxe"
+    },
+    "A": {
+      "item": "eunithice:myelite_axe"
+    },
+    "S": {
+      "item": "eunithice:myelite_shovel"
+    },
+    "H": {
+      "item": "eunithice:myelite_hoe"
+    }
+  },
+  "result": {
+    "item": "eunithice:myelite_omnitool"
+  }
+}

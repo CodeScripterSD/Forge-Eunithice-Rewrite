@@ -1,7 +1,7 @@
 package com.craftminerd.eunithice.screen;
 
 import com.craftminerd.eunithice.block.EunithiceBlocks;
-import com.craftminerd.eunithice.block.entity.stations.AsphaltInfuserBlockEntity;
+import com.craftminerd.eunithice.block.blockentities.stations.AsphaltInfuserBlockEntity;
 import com.craftminerd.eunithice.screen.slot.*;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;

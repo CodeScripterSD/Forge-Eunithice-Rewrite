@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:neudonite_omnitool"
+    ]
+  },
+  "criteria": {
+    "has_neudonite_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:neudonite_pickaxe"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:neudonite_omnitool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_neudonite_pickaxe",
+      "has_the_recipe"
+    ]
+  ]
+}

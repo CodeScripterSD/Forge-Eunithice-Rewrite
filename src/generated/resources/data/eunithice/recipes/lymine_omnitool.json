@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ASP",
+    "H# ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "eunithice:lymine_pickaxe"
+    },
+    "A": {
+      "item": "eunithice:lymine_axe"
+    },
+    "S": {
+      "item": "eunithice:lymine_shovel"
+    },
+    "H": {
+      "item": "eunithice:lymine_hoe"
+    }
+  },
+  "result": {
+    "item": "eunithice:lymine_omnitool"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eunithice:block/infuser" },
+    "facing=east": { "model": "eunithice:block/infuser", "y": 90 },
+    "facing=south": { "model": "eunithice:block/infuser", "y": 180 },
+    "facing=west": { "model": "eunithice:block/infuser", "y": 270 }
+  }
+}

@@ -31,10 +31,11 @@ displayName="Eunithice" #mandatory
 # A text field displayed in the mod UI
 credits="Major credit goes to Kaupenjoe (https://github.com/Kaupenjoe, https://www.youtube.com/@ModdingByKaupenjoe) for providing excellent resources on Minecraft modding." #optional
 # A text field displayed in the mod UI
-authors="craftminerD/CodeScripter (me)" #optional
+authors="craftminerD/CodeScripter" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Eunithice is a mod that currently lacks a real central topic. The mod so-far includes:
+Eunithice is a mod that currently lacks a real central topic. So far, the mod includes:
++ New blocks
 + New fluid
 + New block entities & recipes
 + New items
@@ -44,22 +45,22 @@ Eunithice is a mod that currently lacks a real central topic. The mod so-far inc
 + A new enchantment
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-#[[dependencies.examplemod]] #optional
-#    # the modid of the dependency
-#    modId="forge" #mandatory
-#    # Does this dependency have to exist - if not, ordering below must be specified
-#    mandatory=true #mandatory
-#    # The version range of the dependency
-#    versionRange="[40,)" #mandatory
-#    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-#    ordering="NONE"
-#    # Side this dependency is applied on - BOTH, CLIENT or SERVER
-#    side="BOTH"
-## Here's another dependency
-#[[dependencies.examplemod]]
-#    modId="minecraft"
-#    mandatory=true
-## This version range declares a minimum of the current minecraft version up to but not including the next major version
-#    versionRange="[1.18.2,1.19)"
-#    ordering="NONE"
-#    side="BOTH"
+[[dependencies.eunithice]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[40,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.eunithice]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"

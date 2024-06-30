@@ -1,7 +1,6 @@
 package com.craftminerd.eunithice.item.tiers;
 
 import com.craftminerd.eunithice.Eunithice;
-import com.craftminerd.eunithice.block.EunithiceBlocks;
 import com.craftminerd.eunithice.item.EunithiceItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -13,9 +12,18 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum EunithiceArmorMaterials implements ArmorMaterial {
-    NEUDONITE("neudonite",26, new int[] { 2, 6, 6, 3 }, 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
-        return Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get());
-    });
+    NEUDONITE("neudonite",26,
+            new int[] { 2, 6, 6, 3 }, 11,
+            SoundEvents.ARMOR_EQUIP_IRON, 0.5f, 0.0f,
+            () -> Ingredient.of(EunithiceItems.NEUDONITE_INGOT.get())),
+    LYMINE("lymine",32,
+            new int[] { 6, 9, 8, 5 }, 24,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.2f,
+            () -> Ingredient.of(EunithiceItems.LYMINE.get())),
+    MYELITE("myelite",48,
+            new int[] { 8, 10, 9, 7 }, 30,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.5f,
+            () -> Ingredient.of(EunithiceItems.MYELITE_INGOT.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final int durabilityMultiplier;

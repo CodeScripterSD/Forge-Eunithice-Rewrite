@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:lymine_block"
+    }
+  ],
+  "result": {
+    "item": "eunithice:lymine",
+    "count": 9
+  }
+}

@@ -17,4 +17,9 @@ public class EunithiceFuelSlot extends SlotItemHandler {
     public boolean mayPlace(@NotNull ItemStack stack) {
         return stack.is(EunithiceTags.Items.CORES) || stack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).isPresent();
     }
+
+    @Override
+    public int getMaxStackSize() {
+        return 1;
+    }
 }

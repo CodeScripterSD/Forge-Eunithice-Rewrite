@@ -8,10 +8,11 @@ A Forge Minecraft Mod
 _Note: Every single thing is subject to change_  
 _Note 2: You will need a lot of resources to progress in this mod._
 
-## Version 0.0.3 (Unreleased)
+## Version 0.0.3 (In Development)
 
 ### Additions
 
+- Added Darkwood
 - Added a tag for blocks specifically mineable by Neudonite Tools
 - Nuedonite Blocks may be used as a base for beacons
 - Neudonite Ingots may be used as payment for beacons
@@ -24,10 +25,7 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
 - Added Serrated Blade
   - Uses old Diamond Plated Sword texture as a placeholder
-  - Each hit adds a stack of "Weakened" effect
-  - Deals extra damage depending on how many stacks of Weakened are on the target
-- Added new Effect, "Weakened"
-  - Does nothing on its own, used in conjunction with Serrated Blade
+  - Damage increases the more kills you have with it
 - Added Stone Door and Trapdoor
   
 ### Changes
@@ -53,11 +51,9 @@ _Note 2: You will need a lot of resources to progress in this mod._
 
 ### Fixes
 
-- Fixed some wrong code in the Withered Thorns enchantment
 - Burn Core now works when used by a dispenser
 - Fixed a bug in Extractor & Asphalt Infuser
   - Previously would use a durability item past 0, leading to negative values
-- Fixed some recipes that use the tier_one_hammer to use all tiers of hammers
 
 ### Removals
 
@@ -66,6 +62,9 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Removed handheld ender chest
   - Moved to a new mod, "Handheld Utilities"
 - Removed Iron/Gold/Diamond plated tool sets and armor
+- Removed Plated variants of Iron/Gold/Diamond blocks
+- Removed hammers
+- Removed plates
 
 ## Version 0.0.2 (Released)
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "eunithice:darkwood_planks"
+    }
+  },
+  "result": {
+    "item": "eunithice:darkwood_stairs",
+    "count": 4
+  }
+}

@@ -1,22 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "DRD",
-    "@R@",
-    "D#D"
+    "R",
+    "R",
+    "D"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "@": {
-      "item": "eunithice:leurite_grains"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    },
     "R": {
       "item": "minecraft:pointed_dripstone"
+    },
+    "D": {
+      "item": "minecraft:diamond_sword"
     }
   },
   "result": {

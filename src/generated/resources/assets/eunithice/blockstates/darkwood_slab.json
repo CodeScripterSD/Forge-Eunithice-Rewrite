@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "eunithice:block/darkwood_slab_top"
+    },
+    "type=bottom": {
+      "model": "eunithice:block/darkwood_slab"
+    },
+    "type=double": {
+      "model": "eunithice:block/darkwood_planks"
+    }
+  }
+}

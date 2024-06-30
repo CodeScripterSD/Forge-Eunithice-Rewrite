@@ -1,7 +1,7 @@
 package com.craftminerd.eunithice.screen;
 
 import com.craftminerd.eunithice.block.EunithiceBlocks;
-import com.craftminerd.eunithice.block.entity.stations.ExtractorBlockEntity;
+import com.craftminerd.eunithice.block.blockentities.stations.ExtractorBlockEntity;
 import com.craftminerd.eunithice.screen.slot.EunithiceFuelSlot;
 import com.craftminerd.eunithice.screen.slot.EunithiceHammerOnlySlot;
 import com.craftminerd.eunithice.screen.slot.EunithiceNormalItemSlot;

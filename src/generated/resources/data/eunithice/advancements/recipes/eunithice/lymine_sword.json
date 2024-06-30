@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:lymine_sword"
+    ]
+  },
+  "criteria": {
+    "has_lymine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:lymine"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:lymine_sword"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lymine",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "eunithice:asphalt",
+    "eunithice:speed_infused_asphalt",
+    "eunithice:honey_infused_asphalt",
+    "eunithice:bounce_infused_asphalt",
+    "eunithice:super_speed_infused_asphalt",
+    "eunithice:iron_plate_trapdoor",
+    "eunithice:iron_plate_door",
+    "eunithice:infuser",
+    "eunithice:extractor",
+    "eunithice:raw_neudonite_block",
+    "eunithice:neudonite_ore",
+    "eunithice:deepslate_neudonite_ore",
+    "eunithice:neudonite_block",
+    "eunithice:lymine_block",
+    "eunithice:myelite_block",
+    "eunithice:stone_trapdoor",
+    "eunithice:stone_door"
+  ]
+}
