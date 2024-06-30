@@ -19,6 +19,7 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Added a new fluid "Chroma" (Doesn't act like a fluid due to lacking fluid API)
   - Extends usage of Extraction Core in Extractor recipes; Extraction Core now turns into Chroma
 - Added Deepslate Neudonite Ore
+- Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
 #### Enchantments
 - Added an "Autosmelt" enchantment, blocks mined with a tool using this enchantment will have their normal drops smelted. Incompatible with Silk Touch
 - Added a "Firing Speed" enchantment
@@ -36,6 +37,9 @@ _Note 2: You will need a lot of resources to progress in this mod._
   - Neudonite
   - Lymine
   - Myelite
+- Added Serrated Blade
+  - Uses old Diamond Plated Sword texture as a placeholder
+  - Damage increases the more kills you have with it
 #### Misc
 - Eunithice's Metal Blocks may be used as a base for beacons
   - Neudonite, Lymine, and Myelite
@@ -47,10 +51,6 @@ _Note 2: You will need a lot of resources to progress in this mod._
 - Added a tag for blocks specifically mineable by each of Eunithice's tool tiers
 - Modified Neudonite spawn rate and range. (New range: -20 to 40)
 - Added configs for Neudonite Ore vein spawning & size
-- Added much stronger Speed Infused Asphalt variant, Calcified Speed Infused Asphalt (Name will definitely change, this was named as a joke)
-- Added Serrated Blade
-  - Uses old Diamond Plated Sword texture as a placeholder
-  - Damage increases the more kills you have with it
   
 ### Changes
 
