@@ -190,6 +190,8 @@ public class EunithiceBlocks {
                     .speedFactor(1.4f)),
             Eunithice.EUNITHICE_ITEMS_TAB);
 
+    // In the future I plan to make the grass variants actually spread
+    // But making vanilla grass spread to dirt stairs and slabs is probably too complicated to be worth the effort
     public static final RegistryObject<Block> DIRT_STAIRS = registerBlock("dirt_stairs",
             () -> new StairBlock(Blocks.DIRT::defaultBlockState, BlockBehaviour.Properties
                     .copy(Blocks.DIRT))

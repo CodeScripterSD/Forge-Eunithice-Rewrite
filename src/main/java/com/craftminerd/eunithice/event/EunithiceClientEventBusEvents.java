@@ -62,7 +62,10 @@ public class EunithiceClientEventBusEvents {
                         EunithiceBlocks.DARKWOOD_LEAVES.get()
         );
         event.getBlockColors().register((state, blockAndTintGetter, pos, pTintIndex) -> {
-            return blockAndTintGetter != null && pos != null ? BiomeColors.getAverageGrassColor(blockAndTintGetter, pos) : GrassColor.get(0.5D, 1.0D);
+            if (pTintIndex == 1) {
+                return blockAndTintGetter != null && pos != null ? BiomeColors.getAverageGrassColor(blockAndTintGetter, pos) : GrassColor.get(0.5D, 1.0D);
+            }
+            return -1;
         }, EunithiceBlocks.GRASS_SLAB.get(), EunithiceBlocks.GRASS_STAIRS.get());
     }
 
