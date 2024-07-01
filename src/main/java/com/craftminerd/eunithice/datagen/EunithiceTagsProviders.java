@@ -159,7 +159,12 @@ public class EunithiceTagsProviders {
                     EunithiceBlocks.STONE_TRAPDOOR.get(),
                     EunithiceBlocks.STONE_DOOR.get()
             );
-            tag(BlockTags.MINEABLE_WITH_SHOVEL);
+            tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
+                    EunithiceBlocks.GRASS_SLAB.get(),
+                    EunithiceBlocks.GRASS_STAIRS.get(),
+                    EunithiceBlocks.DIRT_SLAB.get(),
+                    EunithiceBlocks.DIRT_STAIRS.get()
+            );
             tag(BlockTags.BEACON_BASE_BLOCKS).add(
                     EunithiceBlocks.NEUDONITE_BLOCK.get(),
                     EunithiceBlocks.LYMINE_BLOCK.get(),
@@ -222,8 +227,8 @@ public class EunithiceTagsProviders {
         private void MakeVanillaItemTags() {
             tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
                     EunithiceItems.NEUDONITE_INGOT.get(),
-                    EunithiceItems.LYMINE.get(),
-                    EunithiceItems.MYELITE_INGOT.get()
+                    EunithiceItems.LYMINE_INGOT.get(),
+                    EunithiceItems.MYELITE.get()
             );
             copy(BlockTags.DOORS, ItemTags.DOORS);
             copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);

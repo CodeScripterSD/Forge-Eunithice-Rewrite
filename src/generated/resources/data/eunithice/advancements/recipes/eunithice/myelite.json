@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "eunithice:myelite_ingot_smithing"
+      "eunithice:myelite"
     ]
   },
   "criteria": {
-    "has_dragon_breath": {
+    "has_chorus_fruit": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:dragon_breath"
+              "minecraft:chorus_fruit"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "eunithice:myelite_ingot_smithing"
+        "recipe": "eunithice:myelite"
       }
     }
   },
   "requirements": [
     [
-      "has_dragon_breath",
+      "has_chorus_fruit",
       "has_the_recipe"
     ]
   ]

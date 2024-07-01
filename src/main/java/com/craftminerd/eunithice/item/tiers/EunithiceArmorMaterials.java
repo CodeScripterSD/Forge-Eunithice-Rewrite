@@ -19,11 +19,11 @@ public enum EunithiceArmorMaterials implements ArmorMaterial {
     LYMINE("lymine",32,
             new int[] { 3, 7, 9, 3 }, 14,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.05f,
-            () -> Ingredient.of(EunithiceItems.LYMINE.get())),
+            () -> Ingredient.of(EunithiceItems.LYMINE_INGOT.get())),
     MYELITE("myelite",48,
             new int[] { 4, 7, 9, 5 }, 18,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f,
-            () -> Ingredient.of(EunithiceItems.MYELITE_INGOT.get()));
+            () -> Ingredient.of(EunithiceItems.MYELITE.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final int durabilityMultiplier;

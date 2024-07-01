@@ -64,6 +64,8 @@ public class EunithiceBlockStateProvider extends BlockStateProvider {
 
         stairsBlock((StairBlock) EunithiceBlocks.DARKWOOD_STAIRS.get(), blockTexture(EunithiceBlocks.DARKWOOD_PLANKS.get()));
         slabBlock((SlabBlock) EunithiceBlocks.DARKWOOD_SLAB.get(), blockTexture(EunithiceBlocks.DARKWOOD_PLANKS.get()), blockTexture(EunithiceBlocks.DARKWOOD_PLANKS.get()));
+        stairsBlock((StairBlock) EunithiceBlocks.DIRT_STAIRS.get(), blockTexture(Blocks.DIRT));
+        slabBlock((SlabBlock) EunithiceBlocks.DIRT_SLAB.get(), blockTexture(Blocks.DIRT), blockTexture(Blocks.DIRT));
         fenceBlock((FenceBlock) EunithiceBlocks.DARKWOOD_FENCE.get(), blockTexture(EunithiceBlocks.DARKWOOD_PLANKS.get()));
         fenceGateBlock((FenceGateBlock) EunithiceBlocks.DARKWOOD_FENCE_GATE.get(), blockTexture(EunithiceBlocks.DARKWOOD_PLANKS.get()));
         buttonBlock((ButtonBlock) EunithiceBlocks.DARKWOOD_BUTTON.get(), blockTexture(EunithiceBlocks.DARKWOOD_PLANKS.get()));

@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "eunithice:lymine"
+      "eunithice:myelite_from_myelite_block"
     ]
   },
   "criteria": {
-    "has_blaze_powder": {
+    "has_myelite_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:blaze_powder"
+              "eunithice:myelite_block"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "eunithice:lymine"
+        "recipe": "eunithice:myelite_from_myelite_block"
       }
     }
   },
   "requirements": [
     [
-      "has_blaze_powder",
+      "has_myelite_block",
       "has_the_recipe"
     ]
   ]

@@ -4,7 +4,6 @@ import com.craftminerd.eunithice.Eunithice;
 import com.craftminerd.eunithice.item.EunithiceItems;
 import com.craftminerd.eunithice.util.EunithiceTags;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -35,13 +34,13 @@ public class EunithiceToolTiers {
 
         LYMINE = TierSortingRegistry.registerTier(
                 new ForgeTier(4, 2591, 12.0f, 4.0f, 21,
-                        EunithiceTags.Blocks.NEEDS_LYMINE_TOOL, () -> Ingredient.of(EunithiceItems.LYMINE.get())),
+                        EunithiceTags.Blocks.NEEDS_LYMINE_TOOL, () -> Ingredient.of(EunithiceItems.LYMINE_INGOT.get())),
                 new ResourceLocation(Eunithice.MODID, "lymine"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE)
         );
 
         MYELITE = TierSortingRegistry.registerTier(
                 new ForgeTier(4, 4000, 20.0f, 6.6f, 28,
-                        EunithiceTags.Blocks.NEEDS_MYELITE_TOOL, () -> Ingredient.of(EunithiceItems.MYELITE_INGOT.get())),
+                        EunithiceTags.Blocks.NEEDS_MYELITE_TOOL, () -> Ingredient.of(EunithiceItems.MYELITE.get())),
                 new ResourceLocation(Eunithice.MODID, "myelite"), List.of(Tiers.NETHERITE), List.of()
         );
 

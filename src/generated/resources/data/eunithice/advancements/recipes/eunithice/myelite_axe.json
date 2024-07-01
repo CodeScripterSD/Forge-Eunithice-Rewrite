@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_myelite_ingot": {
+    "has_myelite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "eunithice:myelite_ingot"
+              "eunithice:myelite"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_myelite_ingot",
+      "has_myelite",
       "has_the_recipe"
     ]
   ]

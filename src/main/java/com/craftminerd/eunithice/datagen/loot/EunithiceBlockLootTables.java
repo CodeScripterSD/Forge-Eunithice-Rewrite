@@ -3,6 +3,9 @@ package com.craftminerd.eunithice.datagen.loot;
 import com.craftminerd.eunithice.block.EunithiceBlocks;
 import com.craftminerd.eunithice.block.blocks.LeuriteCrop;
 import com.craftminerd.eunithice.item.EunithiceItems;
+import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.item.Item;
@@ -11,12 +14,16 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 
 public class EunithiceBlockLootTables extends BlockLoot {
+    private static final LootItemCondition.Builder HAS_SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))));
     private static final float[] NORMAL_LEAVES_SAPLING_CHANCES = new float[] { 0.05F, 0.0625F, 0.083333336F, 0.1F };
     @Override
     protected void addTables() {
@@ -37,6 +44,10 @@ public class EunithiceBlockLootTables extends BlockLoot {
         this.add(EunithiceBlocks.DARKWOOD_LEAVES.get(), createLeavesDrops(EunithiceBlocks.DARKWOOD_LEAVES.get(), EunithiceBlocks.DARKWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(EunithiceBlocks.ASPHALT.get());
+        this.dropSelf(EunithiceBlocks.DIRT_STAIRS.get());
+        this.dropSelf(EunithiceBlocks.DIRT_SLAB.get());
+        this.add(EunithiceBlocks.GRASS_STAIRS.get(), createSingleItemTableWithSilkTouch(EunithiceBlocks.GRASS_STAIRS.get(), EunithiceBlocks.DIRT_STAIRS.get()));
+        this.add(EunithiceBlocks.GRASS_SLAB.get(), createSingleItemTableWithSilkTouch(EunithiceBlocks.GRASS_SLAB.get(), EunithiceBlocks.DIRT_SLAB.get()));
         this.dropSelf(EunithiceBlocks.RAW_NEUDONITE_BLOCK.get());
         this.dropSelf(EunithiceBlocks.NEUDONITE_BLOCK.get());
         this.dropSelf(EunithiceBlocks.LYMINE_BLOCK.get());

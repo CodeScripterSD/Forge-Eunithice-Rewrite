@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "eunithice:lymine_from_lymine_block"
+      "eunithice:lymine_ingot_from_lymine_block"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "eunithice:lymine_from_lymine_block"
+        "recipe": "eunithice:lymine_ingot_from_lymine_block"
       }
     }
   },

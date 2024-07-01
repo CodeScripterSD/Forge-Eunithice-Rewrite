@@ -14,8 +14,8 @@
   "item.eunithice.neudonite_ingot": "Neudonite Ingot",
   "item.eunithice.raw_neudonite": "Raw Neudonite",
   "item.eunithice.leurium_ingot": "Leurium Ingot",
-  "item.eunithice.lymine": "Lymine",
-  "item.eunithice.myelite_ingot": "Myelite Ingot",
+  "item.eunithice.lymine_ingot": "Lymine Ingot",
+  "item.eunithice.myelite": "Myelite",
 
   "item.eunithice.tier_one_hammer": "Tier One Hammer",
   "item.eunithice.tier_two_hammer": "Tier Two Hammer",
@@ -110,6 +110,11 @@
   "block.eunithice.darkwood_trapdoor": "Darkwood Trapdoor",
   "block.eunithice.darkwood_leaves": "Darkwood Leaves",
   "block.eunithice.darkwood_sapling": "Darkwood Sapling",
+
+  "block.eunithice.dirt_slab": "Dirt Slab",
+  "block.eunithice.dirt_stairs": "Dirt Stairs",
+  "block.eunithice.grass_slab": "Grass Slab",
+  "block.eunithice.grass_stairs": "Grass Stairs",
 
   "block.eunithice.iron_plate_block": "Plated Iron Block",
   "block.eunithice.compressed_iron_plate_block": "Compressed Iron Block",

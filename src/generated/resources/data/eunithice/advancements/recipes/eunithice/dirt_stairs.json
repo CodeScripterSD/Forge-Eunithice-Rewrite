@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "eunithice:myelite_ingot_from_myelite_block"
+      "eunithice:dirt_stairs"
     ]
   },
   "criteria": {
-    "has_myelite_block": {
+    "has_dirt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "eunithice:myelite_block"
+              "minecraft:dirt"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "eunithice:myelite_ingot_from_myelite_block"
+        "recipe": "eunithice:dirt_stairs"
       }
     }
   },
   "requirements": [
     [
-      "has_myelite_block",
+      "has_dirt",
       "has_the_recipe"
     ]
   ]

@@ -1,4 +1,9 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "eunithice:grass_slab",
+    "eunithice:grass_stairs",
+    "eunithice:dirt_slab",
+    "eunithice:dirt_stairs"
+  ]
 }

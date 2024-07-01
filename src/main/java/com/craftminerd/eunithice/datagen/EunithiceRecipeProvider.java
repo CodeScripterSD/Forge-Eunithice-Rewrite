@@ -79,57 +79,57 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_BOOTS.get())
-                .define('#', EunithiceItems.LYMINE.get())
+                .define('#', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("# #")
                 .pattern("# #")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_CHESTPLATE.get())
-                .define('#', EunithiceItems.LYMINE.get())
+                .define('#', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("# #")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_HELMET.get())
-                .define('#', EunithiceItems.LYMINE.get())
+                .define('#', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("###")
                 .pattern("# #")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_LEGGINGS.get())
-                .define('#', EunithiceItems.LYMINE.get())
+                .define('#', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("###")
                 .pattern("# #")
                 .pattern("# #")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_BOOTS.get())
-                .define('#', EunithiceItems.MYELITE_INGOT.get())
+                .define('#', EunithiceItems.MYELITE.get())
                 .pattern("# #")
                 .pattern("# #")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_CHESTPLATE.get())
-                .define('#', EunithiceItems.MYELITE_INGOT.get())
+                .define('#', EunithiceItems.MYELITE.get())
                 .pattern("# #")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_HELMET.get())
-                .define('#', EunithiceItems.MYELITE_INGOT.get())
+                .define('#', EunithiceItems.MYELITE.get())
                 .pattern("###")
                 .pattern("# #")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_LEGGINGS.get())
-                .define('#', EunithiceItems.MYELITE_INGOT.get())
+                .define('#', EunithiceItems.MYELITE.get())
                 .pattern("###")
                 .pattern("# #")
                 .pattern("# #")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
 
         ////////////////
@@ -147,6 +147,9 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
         eunithiceTrapdoor(pFinishedRecipeConsumer, EunithiceBlocks.DARKWOOD_TRAPDOOR.get(), EunithiceBlocks.DARKWOOD_PLANKS.get());
         eunithiceButton(pFinishedRecipeConsumer, EunithiceBlocks.DARKWOOD_BUTTON.get(), EunithiceBlocks.DARKWOOD_PLANKS.get());
         eunithicePressurePlate(pFinishedRecipeConsumer, EunithiceBlocks.DARKWOOD_PRESSURE_PLATE.get(), EunithiceBlocks.DARKWOOD_PLANKS.get());
+
+        eunithiceSlab(pFinishedRecipeConsumer, EunithiceBlocks.DIRT_SLAB.get(), Blocks.DIRT);
+        eunithiceStairs(pFinishedRecipeConsumer, EunithiceBlocks.DIRT_STAIRS.get(), Blocks.DIRT);
 
         ShapelessRecipeBuilder.shapeless(EunithiceBlocks.ASPHALT.get(), 4)
                 .requires(Items.BLACK_DYE)
@@ -282,58 +285,56 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .save(pFinishedRecipeConsumer);
 
         eunithiceNetheriteSmithing(pFinishedRecipeConsumer, EunithiceItems.DIAMOND_OMNITOOL.get(), EunithiceItems.NETHERITE_OMNITOOL.get());
-        eunithiceSmithing(pFinishedRecipeConsumer, EunithiceItems.NEUDONITE_INGOT.get(), Items.DRAGON_BREATH, EunithiceItems.MYELITE_INGOT.get());
+//        eunithiceSmithing(pFinishedRecipeConsumer, Items.DIAMOND, Items.POPPED_CHORUS_FRUIT, EunithiceItems.MYELITE.get());
 
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_SWORD.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.LYMINE.get())
+                .define('@', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("@")
                 .pattern("@")
                 .pattern("#")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_PICKAXE.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.LYMINE.get())
+                .define('@', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("@@@")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_AXE.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.LYMINE.get())
+                .define('@', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("@@")
                 .pattern("#@")
                 .pattern("# ")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_SHOVEL.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.LYMINE.get())
+                .define('@', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("@")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE_HOE.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.LYMINE.get())
+                .define('@', EunithiceItems.LYMINE_INGOT.get())
                 .pattern("@@")
                 .pattern("# ")
                 .pattern("# ")
-                .unlockedBy(getHasName(EunithiceItems.LYMINE.get()), has(EunithiceItems.LYMINE.get()))
+                .unlockedBy(getHasName(EunithiceItems.LYMINE_INGOT.get()), has(EunithiceItems.LYMINE_INGOT.get()))
                 .save(pFinishedRecipeConsumer);
 
-        ShapedRecipeBuilder.shaped(EunithiceItems.LYMINE.get(), 2)
-                .define('Q', Items.QUARTZ)
-                .define('A', Items.AMETHYST_SHARD)
-                .define('B', Items.BLAZE_POWDER)
+        ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE.get(), 1)
+                .define('C', Items.POPPED_CHORUS_FRUIT)
                 .define('D', Items.DIAMOND)
-                .pattern("BAB")
-                .pattern("QDQ")
-                .pattern("BAB")
-                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(Items.BLAZE_POWDER))
+                .pattern("CDC")
+                .pattern("DCD")
+                .pattern("CDC")
+                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
                 .save(pFinishedRecipeConsumer);
 
         ShapedRecipeBuilder.shaped(EunithiceItems.LEURITE_SEEDS.get(), 2)
@@ -387,43 +388,43 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_SWORD.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.MYELITE_INGOT.get())
+                .define('@', EunithiceItems.MYELITE.get())
                 .pattern("@")
                 .pattern("@")
                 .pattern("#")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_PICKAXE.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.MYELITE_INGOT.get())
+                .define('@', EunithiceItems.MYELITE.get())
                 .pattern("@@@")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_AXE.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.MYELITE_INGOT.get())
+                .define('@', EunithiceItems.MYELITE.get())
                 .pattern("@@")
                 .pattern("#@")
                 .pattern("# ")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_SHOVEL.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.MYELITE_INGOT.get())
+                .define('@', EunithiceItems.MYELITE.get())
                 .pattern("@")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.MYELITE_HOE.get())
                 .define('#', Items.STICK)
-                .define('@', EunithiceItems.MYELITE_INGOT.get())
+                .define('@', EunithiceItems.MYELITE.get())
                 .pattern("@@")
                 .pattern("# ")
                 .pattern("# ")
-                .unlockedBy(getHasName(EunithiceItems.MYELITE_INGOT.get()), has(EunithiceItems.MYELITE_INGOT.get()))
+                .unlockedBy(getHasName(EunithiceItems.MYELITE.get()), has(EunithiceItems.MYELITE.get()))
                 .save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(EunithiceItems.SERRATED_BLADE.get())
                 .define('R', Items.POINTED_DRIPSTONE)
@@ -758,8 +759,8 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
 //                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.HONEY_INFUSED_ASPHALT.get()), Ingredient.of(EunithiceItems.EXTRACTION_CORE.get())),
 //                EunithiceBlocks.ASPHALT.get(), 1, false);
 
-        simple3x3PackingCorrelation(pFinishedRecipeConsumer, EunithiceItems.LYMINE.get(), EunithiceBlocks.LYMINE_BLOCK.get());
-        simple3x3PackingCorrelation(pFinishedRecipeConsumer, EunithiceItems.MYELITE_INGOT.get(), EunithiceBlocks.MYELITE_BLOCK.get());
+        simple3x3PackingCorrelation(pFinishedRecipeConsumer, EunithiceItems.LYMINE_INGOT.get(), EunithiceBlocks.LYMINE_BLOCK.get());
+        simple3x3PackingCorrelation(pFinishedRecipeConsumer, EunithiceItems.MYELITE.get(), EunithiceBlocks.MYELITE_BLOCK.get());
     }
 
     public static void eunithiceFence(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike fence, ItemLike material) {

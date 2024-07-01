@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "eunithice:lymine_block"
+      "item": "eunithice:myelite_block"
     }
   ],
   "result": {
-    "item": "eunithice:lymine",
+    "item": "eunithice:myelite",
     "count": 9
   }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "eunithice:block/grass_slab_top"
+    },
+    "type=bottom": {
+      "model": "eunithice:block/grass_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/grass_block"
+    }
+  }
+}

@@ -106,7 +106,7 @@ public class EunithiceItems {
 
     //// LYMINE
 
-    public static final RegistryObject<Item> LYMINE = ITEMS.register("lymine",
+    public static final RegistryObject<Item> LYMINE_INGOT = ITEMS.register("lymine_ingot",
             () -> new Item(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
                     .fireResistant()));
@@ -158,7 +158,7 @@ public class EunithiceItems {
     
     //// MYELITE
 
-    public static final RegistryObject<Item> MYELITE_INGOT = ITEMS.register("myelite_ingot",
+    public static final RegistryObject<Item> MYELITE = ITEMS.register("myelite",
             () -> new Item(new Item.Properties()
                     .tab(Eunithice.EUNITHICE_ITEMS_TAB)
                     .fireResistant()));

@@ -187,8 +187,23 @@ public class EunithiceBlocks {
                     .of(Material.STONE, MaterialColor.COLOR_BLACK)
                     .strength(1f, 6f)
                     .requiresCorrectToolForDrops()
-                    .speedFactor(1.2f)),
+                    .speedFactor(1.4f)),
             Eunithice.EUNITHICE_ITEMS_TAB);
+
+    public static final RegistryObject<Block> DIRT_STAIRS = registerBlock("dirt_stairs",
+            () -> new StairBlock(Blocks.DIRT::defaultBlockState, BlockBehaviour.Properties
+                    .copy(Blocks.DIRT))
+            , Eunithice.EUNITHICE_ITEMS_TAB);
+    public static final RegistryObject<Block> GRASS_STAIRS = registerBlock("grass_stairs",
+            () -> new StairBlock(Blocks.DIRT::defaultBlockState, BlockBehaviour.Properties
+                    .of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS))
+            , Eunithice.EUNITHICE_ITEMS_TAB);
+    public static final RegistryObject<Block> DIRT_SLAB = registerBlock("dirt_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIRT))
+            , Eunithice.EUNITHICE_ITEMS_TAB);
+    public static final RegistryObject<Block> GRASS_SLAB = registerBlock("grass_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK))
+            , Eunithice.EUNITHICE_ITEMS_TAB);
 
     public static final RegistryObject<Block> RAW_NEUDONITE_BLOCK = registerBlock("raw_neudonite_block",
             () -> new Block(BlockBehaviour.Properties

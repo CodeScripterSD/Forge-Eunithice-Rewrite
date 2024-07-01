@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_myelite_ingot": {
+    "has_myelite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_myelite_ingot",
+      "has_myelite",
       "has_the_recipe"
     ]
   ]
