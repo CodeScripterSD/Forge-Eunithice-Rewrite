@@ -174,6 +174,13 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 .save(pFinishedRecipeConsumer, new ResourceLocation(Eunithice.MODID,
                         Blocks.GRASS_BLOCK.asItem().getRegistryName().getPath()+"_from_"+EunithiceBlocks.GRASS_SLAB.get().asItem().getRegistryName().getPath()));
 
+        ShapelessRecipeBuilder.shapeless(EunithiceItems.LYMINE_INGOT.get(), 1)
+                .requires(Items.NETHERITE_INGOT)
+                .requires(Items.NETHER_WART_BLOCK, 2)
+                .requires(Items.DIAMOND)
+                .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+                .save(pFinishedRecipeConsumer);
+
         ShapelessRecipeBuilder.shapeless(EunithiceBlocks.ASPHALT.get(), 4)
                 .requires(Items.BLACK_DYE)
                 .requires(Items.SAND, 2)
