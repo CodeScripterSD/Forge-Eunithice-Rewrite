@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:dirt_from_dirt_slab"
+    ]
+  },
+  "criteria": {
+    "has_dirt_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:dirt_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:dirt_from_dirt_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dirt_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

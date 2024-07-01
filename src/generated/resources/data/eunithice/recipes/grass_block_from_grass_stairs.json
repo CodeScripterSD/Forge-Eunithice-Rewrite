@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:grass_stairs"
+    },
+    {
+      "item": "eunithice:grass_stairs"
+    },
+    {
+      "item": "eunithice:grass_stairs"
+    },
+    {
+      "item": "eunithice:grass_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:grass_block",
+    "count": 6
+  }
+}

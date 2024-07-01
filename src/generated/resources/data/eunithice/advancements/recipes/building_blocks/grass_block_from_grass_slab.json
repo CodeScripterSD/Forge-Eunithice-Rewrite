@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eunithice:grass_block_from_grass_slab"
+    ]
+  },
+  "criteria": {
+    "has_grass_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eunithice:grass_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eunithice:grass_block_from_grass_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_grass_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -150,6 +150,29 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
 
         eunithiceSlab(pFinishedRecipeConsumer, EunithiceBlocks.DIRT_SLAB.get(), Blocks.DIRT);
         eunithiceStairs(pFinishedRecipeConsumer, EunithiceBlocks.DIRT_STAIRS.get(), Blocks.DIRT);
+        eunithiceSlab(pFinishedRecipeConsumer, EunithiceBlocks.GRASS_SLAB.get(), Blocks.GRASS_BLOCK);
+        eunithiceStairs(pFinishedRecipeConsumer, EunithiceBlocks.GRASS_STAIRS.get(), Blocks.GRASS_BLOCK);
+
+        ShapelessRecipeBuilder.shapeless(Blocks.DIRT, 6)
+                .requires(EunithiceBlocks.DIRT_STAIRS.get(), 4)
+                .unlockedBy(getHasName(EunithiceBlocks.DIRT_STAIRS.get()), has(EunithiceBlocks.DIRT_STAIRS.get()))
+                .save(pFinishedRecipeConsumer, new ResourceLocation(Eunithice.MODID,
+                        Blocks.DIRT.asItem().getRegistryName().getPath()+"_from_"+EunithiceBlocks.DIRT_STAIRS.get().asItem().getRegistryName().getPath()));
+        ShapelessRecipeBuilder.shapeless(Blocks.DIRT, 1)
+                .requires(EunithiceBlocks.DIRT_SLAB.get(), 2)
+                .unlockedBy(getHasName(EunithiceBlocks.DIRT_SLAB.get()), has(EunithiceBlocks.DIRT_SLAB.get()))
+                .save(pFinishedRecipeConsumer, new ResourceLocation(Eunithice.MODID,
+                        Blocks.DIRT.asItem().getRegistryName().getPath()+"_from_"+EunithiceBlocks.DIRT_SLAB.get().asItem().getRegistryName().getPath()));
+        ShapelessRecipeBuilder.shapeless(Blocks.GRASS_BLOCK, 6)
+                .requires(EunithiceBlocks.GRASS_STAIRS.get(), 4)
+                .unlockedBy(getHasName(EunithiceBlocks.GRASS_STAIRS.get()), has(EunithiceBlocks.GRASS_STAIRS.get()))
+                .save(pFinishedRecipeConsumer, new ResourceLocation(Eunithice.MODID,
+                        Blocks.GRASS_BLOCK.asItem().getRegistryName().getPath()+"_from_"+EunithiceBlocks.GRASS_STAIRS.get().asItem().getRegistryName().getPath()));
+        ShapelessRecipeBuilder.shapeless(Blocks.GRASS_BLOCK, 1)
+                .requires(EunithiceBlocks.GRASS_SLAB.get(), 2)
+                .unlockedBy(getHasName(EunithiceBlocks.GRASS_SLAB.get()), has(EunithiceBlocks.GRASS_SLAB.get()))
+                .save(pFinishedRecipeConsumer, new ResourceLocation(Eunithice.MODID,
+                        Blocks.GRASS_BLOCK.asItem().getRegistryName().getPath()+"_from_"+EunithiceBlocks.GRASS_SLAB.get().asItem().getRegistryName().getPath()));
 
         ShapelessRecipeBuilder.shapeless(EunithiceBlocks.ASPHALT.get(), 4)
                 .requires(Items.BLACK_DYE)
@@ -620,7 +643,7 @@ public class EunithiceRecipeProvider extends RecipeProvider implements IConditio
                 NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceItems.HONEY_GEL.get()), Ingredient.of(EunithiceBlocks.ASPHALT.get())),
                 EunithiceBlocks.HONEY_INFUSED_ASPHALT.get(), 2, false);
 
-
+        // Temporarily disabled as they cause a disconnect on servers
 
 //        eunithiceItemExtracting(pFinishedRecipeConsumer,
 //                NonNullList.of(Ingredient.EMPTY, Ingredient.of(EunithiceBlocks.SPEED_INFUSED_ASPHALT.get().asItem())),

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:dirt_slab"
+    },
+    {
+      "item": "eunithice:dirt_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dirt"
+  }
+}

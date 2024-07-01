@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:dirt_stairs"
+    },
+    {
+      "item": "eunithice:dirt_stairs"
+    },
+    {
+      "item": "eunithice:dirt_stairs"
+    },
+    {
+      "item": "eunithice:dirt_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dirt",
+    "count": 6
+  }
+}

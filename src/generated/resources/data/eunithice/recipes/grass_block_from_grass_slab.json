@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eunithice:grass_slab"
+    },
+    {
+      "item": "eunithice:grass_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:grass_block"
+  }
+}
