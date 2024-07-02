@@ -1,4 +1,4 @@
-# Forge Eunithice 0.0.2-1.18.2
+# Forge Eunithice 1.18.2
 
 A Forge Minecraft Mod
 
